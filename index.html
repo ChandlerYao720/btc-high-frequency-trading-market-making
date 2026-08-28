@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A verified BTC perpetual microstructure forecasting and constrained historical maker-simulation portfolio project."
+    />
+    <meta name="color-scheme" content="dark" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="BTC Microstructure Research" />
+    <meta
+      property="og:description"
+      content="Point-in-time market data, microstructure factors, execution-aware learning, and transparent maker-simulation evidence."
+    />
+    <title>BTC Microstructure Research</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2307100c'/%3E%3Cpath d='M18 20l14 12-14 12M35 44h12' fill='none' stroke='%237fffc1' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&amp;family=Space+Mono:wght@400;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="skip">Skip to research evidence</a>
+
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="brand" href="#overview" aria-label="BTC Microstructure Research home">
+        <span class="brand-prompt" aria-hidden="true">$</span>
+        <span>btc.microstructure</span>
+      </a>
+      <nav class="desktop-nav" aria-label="Research sections">
+        <a href="#factors" data-i18n="navSignals">Signals</a>
+        <a href="#market-making" data-i18n="navExecution">Execution</a>
+        <a href="#system" data-i18n="navSystem">System</a>
+        <a href="#boundaries" data-i18n="navLimits">Boundaries</a>
+      </nav>
+      <button
+        class="language-toggle"
+        id="languageToggle"
+        type="button"
+        aria-label="切换为中文"
+        aria-pressed="false"
+      >
+        <span aria-hidden="true">EN</span>
+        <span class="toggle-track" aria-hidden="true"><span></span></span>
+        <span aria-hidden="true">中文</span>
+      </button>
+    </header>
+
+    <main id="main">
+      <section class="hero section-shell" id="overview" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="heroEyebrow">CHRONOLOGICAL OUT-OF-SAMPLE RESEARCH</p>
+          <h1 id="hero-title" data-i18n="heroTitle">
+            Forecasting the next move is only useful when the order survives contact with the market.
+          </h1>
+          <p class="hero-lede" data-i18n="heroLead">
+            A point-in-time BTC perpetual research stack connecting tick trades and one-second order-book states to
+            microstructure factors, an execution-aware tree model, and a constrained historical maker simulation.
+          </p>
+          <div class="hero-tags" aria-label="Research scope">
+            <span id="scopePeriod">Loading evaluation window…</span>
+            <span id="scopeLeverage">Loading leverage…</span>
+            <span id="scopeOrders">Loading order rules…</span>
+          </div>
+        </div>
+
+        <div class="hero-terminal" aria-label="Headline evidence">
+          <div class="terminal-titlebar" aria-hidden="true">
+            <span class="terminal-dot active"></span><span class="terminal-dot"></span><span class="terminal-dot"></span>
+            <span>evidence.log</span>
+          </div>
+          <div class="terminal-body">
+            <div class="command"><span>$</span> <span data-i18n="heroCommand">show --locked-evidence</span></div>
+            <div class="metric-grid" id="headlineMetrics" aria-live="polite">
+              <article class="metric-card">
+                <p data-i18n="metricAccuracy">Extreme direction accuracy</p>
+                <strong id="metricAccuracy">—</strong>
+                <small id="metricAccuracyContext">—</small>
+              </article>
+              <article class="metric-card">
+                <p data-i18n="metricRankIc">Mean daily Rank IC</p>
+                <strong id="metricRankIc">—</strong>
+                <small id="metricRankIcContext">—</small>
+              </article>
+              <article class="metric-card">
+                <p data-i18n="metricThroughput">Hot factor throughput</p>
+                <strong id="metricThroughput">—</strong>
+                <small id="metricThroughputContext">—</small>
+              </article>
+              <article class="metric-card metric-card-warn">
+                <p data-i18n="metricNetReturn">Simulated net return</p>
+                <strong id="metricNetReturn">—</strong>
+                <small id="metricNetReturnContext">—</small>
+              </article>
+            </div>
+            <p class="terminal-note" id="heroBoundary">Loading evidence boundary…</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="evidence-ribbon" aria-label="Primary interpretation">
+        <div class="section-shell ribbon-grid">
+          <p class="ribbon-label" data-i18n="ribbonLabel">READ THE RESULT CORRECTLY</p>
+          <p id="ribbonText">Loading interpretation…</p>
+        </div>
+      </section>
+
+      <section class="section-shell research-section" id="replay" aria-labelledby="replay-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-index" data-i18n="sectionReplay">01 / EVENT WINDOW</p>
+            <h2 id="replay-title" data-i18n="replayTitle">A score becomes a quote, a fill, and then inventory.</h2>
+          </div>
+          <p data-i18n="replayIntro">
+            Explore a consecutive window from the locked simulation. Price and score paths are indexed for display;
+            fills, quote bias, inventory direction, and regime come from the same event sequence.
+          </p>
+        </div>
+
+        <div class="terminal-panel replay-panel">
+          <div class="terminal-titlebar" aria-hidden="true">
+            <span class="terminal-dot active"></span><span class="terminal-dot"></span><span class="terminal-dot"></span>
+            <span>decision-window.trace</span>
+          </div>
+          <div class="replay-chart-wrap">
+            <svg id="traceChart" class="chart chart-trace" role="img" aria-labelledby="trace-title trace-desc">
+              <title id="trace-title">Indexed bid, ask, mid-price, and model score</title>
+              <desc id="trace-desc">A locked historical decision window with an interactive cursor.</desc>
+            </svg>
+            <div class="chart-legend" aria-label="Trace legend">
+              <span><i class="legend-line mid"></i><span data-i18n="legendMid">Mid</span></span>
+              <span><i class="legend-line spread"></i><span data-i18n="legendBidAsk">Bid / ask</span></span>
+              <span><i class="legend-line score"></i><span data-i18n="legendScore">Score</span></span>
+              <span><i class="legend-marker fill"></i><span data-i18n="legendFill">Fill</span></span>
+            </div>
+          </div>
+          <div class="replay-controls">
+            <label for="traceCursor" data-i18n="cursorLabel">Inspect decision state</label>
+            <input id="traceCursor" type="range" min="0" max="0" value="0" step="1" />
+            <output id="traceCursorOutput" for="traceCursor">—</output>
+          </div>
+          <div class="state-grid" id="traceState" aria-live="polite">
+            <article><span data-i18n="stateScore">Score</span><strong id="stateScore">—</strong></article>
+            <article><span data-i18n="stateQuote">Quote skew</span><strong id="stateQuote">—</strong></article>
+            <article><span data-i18n="stateFill">Observed fill</span><strong id="stateFill">—</strong></article>
+            <article><span data-i18n="stateInventory">Inventory</span><strong id="stateInventory">—</strong></article>
+            <article><span data-i18n="stateRegime">Regime</span><strong id="stateRegime">—</strong></article>
+            <article><span data-i18n="stateOverride">Override</span><strong id="stateOverride">—</strong></article>
+          </div>
+        </div>
+        <p class="figure-caption" data-i18n="replayCaption">
+          Data: a fixed window from the locked historical simulation. Boundary: touch and opposing volume indicate a
+          fill opportunity; the replay does not reconstruct exchange queue position.
+        </p>
+      </section>
+
+      <section class="section-shell research-section" id="factors" aria-labelledby="factors-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-index" data-i18n="sectionFactors">02 / SIGNAL EVIDENCE</p>
+            <h2 id="factors-title" data-i18n="factorsTitle">Microstructure—not low-frequency context—carries the forecast.</h2>
+          </div>
+          <p data-i18n="factorsIntro">
+            The ablation keeps the test window fixed. B0 uses low-frequency context; B1 adds the frozen microstructure
+            information set; M1 keeps B1 data and capacity but changes the learning objective.
+          </p>
+        </div>
+
+        <div class="two-column-chart-grid">
+          <article class="panel chart-panel">
+            <div class="panel-header">
+              <div>
+                <p class="panel-kicker" data-i18n="familyKicker">FACTOR FAMILIES</p>
+                <h3 data-i18n="familyTitle">Daily ordering evidence by family</h3>
+              </div>
+              <span class="status-tag" data-i18n="oosTag">OOS</span>
+            </div>
+            <div id="factorBars" class="bar-chart" role="img" aria-label="Factor family mean daily Rank IC"></div>
+            <details class="data-fallback">
+              <summary data-i18n="tableToggle">View accessible data table</summary>
+              <div class="table-scroll"><table id="factorTable"></table></div>
+            </details>
+          </article>
+
+          <article class="panel chart-panel">
+            <div class="panel-header">
+              <div>
+                <p class="panel-kicker" data-i18n="ablationKicker">B0 → B1 → M1</p>
+                <h3 data-i18n="ablationTitle">Same test, isolated changes</h3>
+              </div>
+              <span class="status-tag" data-i18n="sameSampleTag">SAME SAMPLE</span>
+            </div>
+            <div id="modelAblation" class="model-ablation"></div>
+            <div class="callout" id="microstructureCallout">—</div>
+          </article>
+        </div>
+
+        <article class="panel chart-panel coverage-panel">
+          <div class="panel-header">
+            <div>
+              <p class="panel-kicker" data-i18n="coverageKicker">ACCURACY × COVERAGE</p>
+              <h3 data-i18n="coverageTitle">The extreme-tail result is not a single isolated point.</h3>
+            </div>
+            <p class="panel-side-note" id="coverageSummary">—</p>
+          </div>
+          <svg id="coverageChart" class="chart" role="img" aria-labelledby="coverage-title coverage-desc">
+            <title id="coverage-title">Direction accuracy by prediction coverage</title>
+            <desc id="coverage-desc">A six-point out-of-sample coverage curve.</desc>
+          </svg>
+          <details class="data-fallback">
+            <summary data-i18n="tableToggle">View accessible data table</summary>
+            <div class="table-scroll"><table id="coverageTable"></table></div>
+          </details>
+        </article>
+      </section>
+
+      <section class="section-shell research-section" id="objective" aria-labelledby="objective-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-index" data-i18n="sectionObjective">03 / LEARNING OBJECTIVE</p>
+            <h2 id="objective-title" data-i18n="objectiveTitle">The custom objective changes economic emphasis, not model capacity.</h2>
+          </div>
+          <p data-i18n="objectiveIntro">
+            Both models consume the identical frozen feature matrix and tree budget. Standard L2 fits average return
+            error; the execution-aware objective also emphasizes extreme direction and passive-order economics during training.
+          </p>
+        </div>
+
+        <div class="objective-grid">
+          <article class="objective-card baseline-card">
+            <p class="panel-kicker">B1 / L2</p>
+            <h3 data-i18n="b1Title">Standard regression</h3>
+            <p data-i18n="b1Body">Fits squared return error across the common sample and supplies the fair same-information baseline.</p>
+            <div class="objective-flow" aria-label="Standard L2 flow">
+              <span data-i18n="featuresNode">Frozen features</span><i aria-hidden="true"></i><span data-i18n="l2Node">L2 gradient</span><i aria-hidden="true"></i><span data-i18n="scoreNode">Return score</span>
+            </div>
+          </article>
+          <article class="objective-card focal-card">
+            <p class="panel-kicker" data-i18n="objectiveM1Kicker">M1 / EXECUTION-AWARE</p>
+            <h3 data-i18n="m1Title">Composite training economics</h3>
+            <p data-i18n="m1Body">Combines upper-tail, lower-tail, passive maker-margin, and prediction-error terms; future outcomes appear only in training supervision.</p>
+            <div class="loss-parts" aria-label="Composite objective components">
+              <span data-i18n="lossUp">Upper tail</span><span data-i18n="lossDown">Lower tail</span><span data-i18n="lossMaker">Maker margin</span><span data-i18n="lossReg">Error control</span>
+            </div>
+          </article>
+        </div>
+        <div class="objective-evidence" id="objectiveEvidence">—</div>
+      </section>
+
+      <section class="section-shell research-section" id="market-making" aria-labelledby="market-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-index" data-i18n="sectionMarket">04 / MARKET MAKING</p>
+            <h2 id="market-title" data-i18n="marketTitle">The account made money in the fee scenario; price and spread economics did not.</h2>
+          </div>
+          <p data-i18n="marketIntro">
+            A transparent result needs both sides: net account performance and the attribution that produced it. The
+            model's defensible execution gain is lower adverse selection, not superior net Sharpe versus symmetric quoting.
+          </p>
+        </div>
+
+        <div class="boundary-banner" role="note">
+          <span aria-hidden="true">!</span>
+          <p id="marketBoundary">Loading fee and execution boundary…</p>
+        </div>
+
+        <div class="stat-row" id="marketStats">
+          <article><span data-i18n="statReturn">Net return</span><strong id="marketReturn">—</strong><small data-i18n="statReturnNote">fee-scenario simulation</small></article>
+          <article><span data-i18n="statSharpe">Sharpe</span><strong id="marketSharpe">—</strong><small data-i18n="statSharpeNote">UTC daily, annualized</small></article>
+          <article><span data-i18n="statDrawdown">Maximum drawdown</span><strong id="marketDrawdown">—</strong><small data-i18n="statDrawdownNote">sequential equity</small></article>
+          <article><span data-i18n="statAdverse">Adverse selection</span><strong id="marketAdverse">—</strong><small data-i18n="statAdverseNote">relative reduction at the long markout</small></article>
+        </div>
+
+        <div class="market-grid">
+          <article class="panel chart-panel equity-panel">
+            <div class="panel-header">
+              <div>
+                <p class="panel-kicker" data-i18n="equityKicker">EQUITY + DRAWDOWN</p>
+                <h3 data-i18n="equityTitle">Model skew versus symmetric quoting</h3>
+              </div>
+              <div class="mini-legend" aria-label="Equity chart legend">
+                <span><i class="legend-line m1"></i>M1</span><span><i class="legend-line symmetric"></i><span data-i18n="symmetricLabel">Symmetric</span></span>
+              </div>
+            </div>
+            <svg id="equityChart" class="chart" role="img" aria-labelledby="equity-title equity-desc">
+              <title id="equity-title">M1 and symmetric maker equity with M1 drawdown</title>
+              <desc id="equity-desc">Chronological historical simulation under identical fees and leverage.</desc>
+            </svg>
+            <p class="figure-caption" id="equityCaption">—</p>
+          </article>
+
+          <article class="panel chart-panel attribution-panel">
+            <div class="panel-header">
+              <div>
+                <p class="panel-kicker" data-i18n="attributionKicker">PNL ATTRIBUTION</p>
+                <h3 data-i18n="attributionTitle">Fee credit is visible, not hidden.</h3>
+              </div>
+            </div>
+            <div id="attributionBars" class="attribution-bars" role="img" aria-label="M1 PnL attribution as return on initial equity"></div>
+            <p class="attribution-total" id="attributionTotal">—</p>
+            <details class="data-fallback">
+              <summary data-i18n="tableToggle">View accessible data table</summary>
+              <div class="table-scroll"><table id="attributionTable"></table></div>
+            </details>
+          </article>
+        </div>
+
+        <div class="execution-facts" id="executionFacts"></div>
+      </section>
+
+      <section class="section-shell research-section" id="regimes" aria-labelledby="regimes-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-index" data-i18n="sectionRegimes">05 / REGIME STABILITY</p>
+            <h2 id="regimes-title" data-i18n="regimeTitle">Prediction stays positive across regimes; execution does not.</h2>
+          </div>
+          <p data-i18n="regimeIntro">
+            Volatility and liquidity thresholds were fitted on training data and then frozen. Toggle between forecast
+            ordering and simulated return to see where evidence remains stable and where economics break.
+          </p>
+        </div>
+        <div class="segmented-control" role="group" aria-label="Regime metric">
+          <button type="button" class="active" data-regime-view="prediction" aria-pressed="true" data-i18n="regimePrediction">Prediction Rank IC</button>
+          <button type="button" data-regime-view="execution" aria-pressed="false" data-i18n="regimeExecution">Simulated return</button>
+        </div>
+        <div id="regimeHeatmap" class="heatmap" role="img" aria-label="Volatility by liquidity regime heatmap"></div>
+        <div class="heatmap-legend" id="regimeLegend"></div>
+        <details class="data-fallback">
+          <summary data-i18n="tableToggle">View accessible data table</summary>
+          <div class="table-scroll"><table id="regimeTable"></table></div>
+        </details>
+      </section>
+
+      <section class="section-shell research-section" id="system" aria-labelledby="system-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-index" data-i18n="sectionSystem">06 / SYSTEM</p>
+            <h2 id="system-title" data-i18n="systemTitle">Training supervision ends before the live-time decision path begins.</h2>
+          </div>
+          <p data-i18n="systemIntro">
+            The system separates historical labels and fitting from frozen scoring, inventory-aware quote sizing,
+            constrained execution, and sequential account attribution.
+          </p>
+        </div>
+
+        <div class="architecture-shell">
+          <svg
+            class="architecture"
+            viewBox="0 0 1280 720"
+            role="img"
+            aria-labelledby="arch-title arch-desc"
+            preserveAspectRatio="xMidYMid meet"
+          >
+            <title id="arch-title">Point-in-time BTC research and maker-simulation data flow</title>
+            <desc id="arch-desc">Four lanes distinguish data and features, training, live decisions, and execution with accounting.</desc>
+            <defs>
+              <pattern id="arch-dots" width="22" height="22" patternUnits="userSpaceOnUse">
+                <circle cx="11" cy="11" r="0.8" fill="rgba(245,245,245,.06)"></circle>
+              </pattern>
+              <marker id="arch-arr-muted" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+                <path d="M0,0 L8,4 L0,8 Z" fill="#8a9992"></path>
+              </marker>
+              <marker id="arch-arr-accent" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+                <path d="M0,0 L8,4 L0,8 Z" fill="#7fffc1"></path>
+              </marker>
+              <marker id="arch-arr-link" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+                <path d="M0,0 L8,4 L0,8 Z" fill="#d8e4df"></path>
+              </marker>
+            </defs>
+            <rect width="1280" height="720" rx="12" fill="#111714"></rect>
+            <rect width="1280" height="720" rx="12" fill="url(#arch-dots)"></rect>
+            <rect x="40" y="120" width="1200" height="96" fill="rgba(245,245,245,.018)"></rect>
+            <rect x="40" y="344" width="1200" height="96" fill="rgba(245,245,245,.018)"></rect>
+            <g stroke="#29332e" stroke-width="1">
+              <line x1="40" y1="120" x2="1240" y2="120"></line>
+              <line x1="40" y1="216" x2="1240" y2="216"></line>
+              <line x1="40" y1="232" x2="1240" y2="232"></line>
+              <line x1="40" y1="328" x2="1240" y2="328"></line>
+              <line x1="40" y1="344" x2="1240" y2="344"></line>
+              <line x1="40" y1="440" x2="1240" y2="440"></line>
+              <line x1="40" y1="456" x2="1240" y2="456"></line>
+              <line x1="40" y1="552" x2="1240" y2="552"></line>
+              <line x1="40" y1="600" x2="1240" y2="600"></line>
+              <line x1="152" y1="80" x2="152" y2="552"></line>
+            </g>
+
+            <g class="arch-arrows" fill="none" stroke="#8a9992" stroke-width="2" marker-end="url(#arch-arr-muted)">
+              <path d="M308 168 H348"></path>
+              <path d="M484 168 H524"></path>
+              <path d="M416 204 V280 H524"></path>
+              <path d="M660 168 H768 V244"></path>
+              <path d="M660 280 H700"></path>
+              <path d="M768 316 V356"></path>
+              <path d="M836 392 H876"></path>
+              <path d="M944 428 V468" stroke-dasharray="7 6"></path>
+            </g>
+            <path d="M1012 504 H1052" fill="none" stroke="#7fffc1" stroke-width="3" marker-end="url(#arch-arr-accent)"></path>
+            <rect x="970" y="442" width="124" height="24" rx="4" fill="#111714"></rect>
+            <text x="1032" y="459" text-anchor="middle" class="arch-arrow-label" data-i18n="archQuoteArrow">bounded quotes</text>
+            <path d="M1120 528 V560 H768 V528" fill="none" stroke="#d8e4df" stroke-width="2" marker-end="url(#arch-arr-link)"></path>
+            <path d="M836 504 H876" fill="none" stroke="#d8e4df" stroke-width="2" stroke-dasharray="7 6" marker-end="url(#arch-arr-link)"></path>
+
+            <g class="arch-steps">
+              <g transform="translate(216 68)"><rect x="-22" y="-16" width="44" height="24" rx="12"></rect><text y="1">01</text><text y="30" data-i18n="archStep1">INGEST</text></g>
+              <g transform="translate(392 68)"><rect x="-22" y="-16" width="44" height="24" rx="12"></rect><text y="1">02</text><text y="30" data-i18n="archStep2">ALIGN</text></g>
+              <g transform="translate(568 68)"><rect x="-22" y="-16" width="44" height="24" rx="12"></rect><text y="1">03</text><text y="30" data-i18n="archStep3">TARGET</text></g>
+              <g transform="translate(744 68)"><rect x="-22" y="-16" width="44" height="24" rx="12"></rect><text y="1">04</text><text y="30" data-i18n="archStep4">LEARN</text></g>
+              <g class="focal" transform="translate(920 68)"><rect x="-22" y="-16" width="44" height="24" rx="12"></rect><text y="1">05</text><text y="30" data-i18n="archStep5">QUOTE</text></g>
+              <g transform="translate(1096 68)"><rect x="-22" y="-16" width="44" height="24" rx="12"></rect><text y="1">06</text><text y="30" data-i18n="archStep6">ACCOUNT</text></g>
+            </g>
+
+            <g class="arch-lanes">
+              <text x="96" y="162" data-i18n="archLane1a">DATA +</text><text x="96" y="180" data-i18n="archLane1b">FEATURES</text>
+              <text x="96" y="274" data-i18n="archLane2a">TRAINING</text><text x="96" y="292" data-i18n="archLane2b">ONLY</text>
+              <text x="96" y="386" data-i18n="archLane3a">LIVE-TIME</text><text x="96" y="404" data-i18n="archLane3b">DECISION</text>
+              <text x="96" y="498" data-i18n="archLane4a">EXECUTION +</text><text x="96" y="516" data-i18n="archLane4b">ACCOUNT</text>
+            </g>
+
+            <g class="arch-node" transform="translate(172 132)">
+              <rect width="136" height="72" rx="8"></rect><text x="68" y="29" data-i18n="archDataTitle">Market feeds</text><text x="68" y="48" data-i18n="archDataSub">trades · L1 · L10</text><text x="10" y="65" class="arch-chip">RAW</text>
+            </g>
+            <g class="arch-node" transform="translate(348 132)">
+              <rect width="136" height="72" rx="8"></rect><text x="68" y="29" data-i18n="archPanelTitle">Point-in-time panel</text><text x="68" y="48" data-i18n="archPanelSub">backward alignment</text><text x="10" y="65" class="arch-chip">1S</text>
+            </g>
+            <g class="arch-node" transform="translate(524 132)">
+              <rect width="136" height="72" rx="8"></rect><text x="68" y="29" data-i18n="archFactorTitle">Frozen factors</text><text x="68" y="48" data-i18n="archFactorSub">market state</text><text x="10" y="65" class="arch-chip">FX</text>
+            </g>
+            <g class="arch-node" transform="translate(524 244)">
+              <rect width="136" height="72" rx="8"></rect><text x="68" y="29" data-i18n="archTargetTitle">Future label</text><text x="68" y="48" data-i18n="archTargetSub">training supervision</text><text x="10" y="65" class="arch-chip">Y</text>
+            </g>
+            <g class="arch-node" transform="translate(700 244)">
+              <rect width="136" height="72" rx="8"></rect><text x="68" y="29" data-i18n="archModelTitle">B0 · B1 · M1</text><text x="68" y="48" data-i18n="archModelSub">frozen trees</text><text x="10" y="65" class="arch-chip">GBM</text>
+            </g>
+            <g class="arch-node" transform="translate(700 356)">
+              <rect width="136" height="72" rx="8"></rect><text x="68" y="29" data-i18n="archScoreTitle">Frozen score</text><text x="68" y="48" data-i18n="archScoreSub">no future input</text><text x="10" y="65" class="arch-chip">P</text>
+            </g>
+            <g class="arch-node" transform="translate(876 356)">
+              <rect width="136" height="72" rx="8"></rect><text x="68" y="29" data-i18n="archQuoteTitle">Inventory skew</text><text x="68" y="48" data-i18n="archQuoteSub">two-sided quote</text><text x="10" y="65" class="arch-chip">Q</text>
+            </g>
+            <g class="arch-node control" transform="translate(876 468)">
+              <rect width="136" height="72" rx="8"></rect><text x="68" y="29" data-i18n="archRiskTitle">Risk gates</text><text x="68" y="48" data-i18n="archRiskSub">depth · exposure · state</text><text x="10" y="65" class="arch-chip">RISK</text>
+            </g>
+            <g class="arch-node focal" transform="translate(1052 468)">
+              <rect width="136" height="72" rx="8"></rect><text x="68" y="29" data-i18n="archExecTitle">Execution proxy</text><text x="68" y="48" data-i18n="archExecSub">touch + volume</text><text x="10" y="65" class="arch-chip">FILL</text>
+            </g>
+            <g class="arch-node account" transform="translate(700 468)">
+              <rect width="136" height="72" rx="8"></rect><text x="68" y="29" data-i18n="archAccountTitle">Account ledger</text><text x="68" y="48" data-i18n="archAccountSub">PnL · episodes · state</text><text x="10" y="65" class="arch-chip">EQ</text>
+            </g>
+
+            <g class="arch-legend">
+              <text x="48" y="636" data-i18n="archLegend">FLOW</text>
+              <line x1="152" y1="632" x2="200" y2="632" stroke="#8a9992" stroke-width="2" marker-end="url(#arch-arr-muted)"></line>
+              <text x="216" y="638" data-i18n="archLegendData">data / parameter handoff</text>
+              <line x1="468" y1="632" x2="516" y2="632" stroke="#7fffc1" stroke-width="3" marker-end="url(#arch-arr-accent)"></line>
+              <text x="532" y="638" data-i18n="archLegendFocal">focal quote-to-fill path</text>
+              <line x1="820" y1="632" x2="868" y2="632" stroke="#d8e4df" stroke-width="2" marker-end="url(#arch-arr-link)"></line>
+              <text x="884" y="638" data-i18n="archLegendState">account state feedback</text>
+            </g>
+          </svg>
+        </div>
+        <p class="figure-caption" data-i18n="archCaption">
+          Current implemented system, balanced overview. Ten nodes are retained from the full mechanism map; low-level
+          storage, model serialization, and diagnostic branches are collapsed. The accent marks the quote-to-fill handoff.
+        </p>
+
+        <div class="system-stats" id="systemStats"></div>
+      </section>
+
+      <section class="section-shell research-section" id="boundaries" aria-labelledby="boundaries-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-index" data-i18n="sectionBoundaries">07 / METHODS + BOUNDARIES</p>
+            <h2 id="boundaries-title" data-i18n="boundariesTitle">The evidence is useful because the boundaries are explicit.</h2>
+          </div>
+          <p data-i18n="boundariesIntro">
+            The project freezes the market, horizon, model family, validation budget, fees, leverage, order types, risk
+            limits, and one-time test before public evaluation.
+          </p>
+        </div>
+
+        <div class="methods-grid">
+          <article class="method-card">
+            <span>01</span><h3 data-i18n="methodDataTitle">Point-in-time data</h3><p id="methodData">—</p>
+          </article>
+          <article class="method-card">
+            <span>02</span><h3 data-i18n="methodModelTitle">Fair model ablation</h3><p id="methodModel">—</p>
+          </article>
+          <article class="method-card">
+            <span>03</span><h3 data-i18n="methodOrderTitle">Order discipline</h3><p id="methodOrder">—</p>
+          </article>
+          <article class="method-card">
+            <span>04</span><h3 data-i18n="methodEvidenceTitle">Evidence status</h3><p id="methodEvidence">—</p>
+          </article>
+        </div>
+
+        <div class="boundary-table-wrap">
+          <table class="boundary-table">
+            <caption data-i18n="boundaryTableCaption">What the result supports—and what it does not</caption>
+            <thead><tr><th data-i18n="supports">Supports</th><th data-i18n="doesNotSupport">Does not support</th></tr></thead>
+            <tbody id="boundaryRows"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="section-shell footer-inner">
+        <p><span class="brand-prompt" aria-hidden="true">$</span> <span data-i18n="footerLine">research evidence, not a trading solicitation</span></p>
+        <a href="#overview" data-i18n="backToTop">Back to top ↑</a>
+      </div>
+    </footer>
+
+    <noscript>
+      <div class="noscript">This research page needs JavaScript to load the verified metric file and bilingual charts.</div>
+    </noscript>
+  </body>
+</html>
