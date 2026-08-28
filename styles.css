@@ -1018,6 +1018,11 @@ input[type="range"] {
   padding: 20px;
 }
 
+.stat-row .stat-return {
+  border-color: rgba(127, 255, 193, 0.36);
+  background: linear-gradient(145deg, rgba(18, 42, 29, 0.96), rgba(10, 24, 17, 0.98));
+}
+
 .stat-row strong {
   display: block;
   margin-bottom: 6px;

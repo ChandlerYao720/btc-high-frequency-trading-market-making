@@ -19,14 +19,14 @@ const copy = {
     heroEyebrow: "BTC/USDT PERPETUAL · ONE-SECOND RESEARCH",
     heroTitle: "High-Frequency Futures Price Prediction & Market-Making Strategy",
     heroLead:
-      "A point-in-time research stack mapping tick trades and one-second L1/L10 states into market-microstructure factors, a 30-second execution-aware forecast, five-second quote decisions, and constrained two-sided market-making simulation.",
+      "A point-in-time research stack mapping tick trades and one-second L1/L10 states into market-microstructure factors, a mid-price simple-return forecast from executable t+1s to t+31s, five-second quote decisions, and constrained two-sided market-making simulation.",
     heroCommand: "show --locked-evidence",
     heroSignalAction: "Inspect prediction evidence",
     heroMakerAction: "Explore market-making research",
-    metricAccuracy: "Extreme direction accuracy",
+    metricAccuracy: "High-confidence 30-second direction accuracy",
     metricRankIc: "Mean daily Rank IC",
     metricThroughput: "Hot factor throughput",
-    metricMakerImprovement: "30-second adverse-selection reduction",
+    metricNetReturn: "Cumulative net return",
     ribbonLabel: "VERIFIED RESEARCH SIGNAL",
     sectionReplay: "01 / EVENT WINDOW",
     replayTitle: "A score becomes a quote, a fill, and then inventory.",
@@ -75,10 +75,11 @@ const copy = {
     lossDown: "Lower tail",
     lossMaker: "Maker margin",
     lossReg: "Error control",
-    marketTitle: "Model-driven quote skew improved fill quality and drawdown control.",
+    marketTitle: "The 30-second alpha feeds a risk-gated market-making strategy.",
     sectionMarket: "04 / MARKET MAKING",
     marketIntro:
-      "The 30-second score tilts two-sided quote size while inventory control, fees, leverage, and execution rules remain fixed. The comparison isolates what the prediction signal changes in historical maker simulation.",
+      "The 30-second score tilts two-sided quote size while inventory control, fees, leverage, and execution rules remain fixed. Return, risk, and fill-quality evidence come from the same chronological historical simulation.",
+    statReturn: "Cumulative net return",
     statDrawdown: "Maximum drawdown",
     statAdverse: "Adverse selection",
     statAdverseNote: "relative reduction at 30 seconds",
@@ -87,7 +88,7 @@ const copy = {
     statFill: "Fill-opportunity rate",
     statFillNote: "historical touch + volume proxy",
     modelEquityKicker: "MODEL STRATEGY PATH",
-    modelEquityTitle: "Locked out-of-sample model equity, normalized to 100",
+    modelEquityTitle: "Model-only out-of-sample equity and drawdown",
     feeLeverageTag: "FROZEN FEES · 1×",
     quotePathKicker: "ALPHA → QUOTE",
     quotePathTitle: "Where the forecast changes market making",
@@ -148,10 +149,10 @@ const copy = {
     archLegendState: "account state feedback",
     archCaption:
       "Current implemented system, balanced overview. Ten nodes are retained from the full mechanism map; low-level storage, model serialization, and diagnostic branches are collapsed. The accent marks the risk-gated quote-to-fill handoff.",
-    boundariesTitle: "Evidence-first research with frozen scope and execution controls.",
+    boundariesTitle: "Built for reproducible research and execution-aware decisions.",
     sectionBoundaries: "07 / METHODS + BOUNDARIES",
     boundariesIntro:
-      "The project freezes the market, horizon, model family, validation budget, fees, leverage, order types, risk limits, and one-time test before public evaluation.",
+      "The project freezes the market, horizon, model family, validation protocol, fees, leverage, order types, risk limits, and one-time test before public evaluation.",
     methodDataTitle: "Point-in-time data",
     methodModelTitle: "Fair model ablation",
     methodOrderTitle: "Order discipline",
@@ -171,14 +172,14 @@ const copy = {
     heroEyebrow: "BTC/USDT 永续合约 · 秒级研究",
     heroTitle: "期货合约高频价格预测与做市策略",
     heroLead:
-      "一套点时正确（确保每次决策只读取当时已知信息）的研究体系，将逐笔成交和一秒 L1/L10 盘口状态转化为市场微观结构因子、30 秒执行感知预测、5 秒报价决策与受约束的双边做市仿真。",
+      "一套点时正确（确保每次决策只读取当时已知信息）的研究体系，将逐笔成交和一秒 L1/L10 盘口状态转化为市场微观结构因子、从可执行时点 t+1 秒至 t+31 秒的中间价简单收益率预测、5 秒报价决策与受约束的双边做市仿真。",
     heroCommand: "展示 --锁定证据",
     heroSignalAction: "查看价格预测证据",
     heroMakerAction: "查看做市研究",
-    metricAccuracy: "极端方向准确率",
+    metricAccuracy: "高置信度三十秒方向准确率",
     metricRankIc: "日度秩信息系数均值",
     metricThroughput: "热启动因子吞吐",
-    metricMakerImprovement: "三十秒逆向选择降幅",
+    metricNetReturn: "累计净收益",
     ribbonLabel: "已验证的研究证据",
     sectionReplay: "01 / 事件窗口",
     replayTitle: "模型分数依次转化为报价、成交与库存。",
@@ -226,10 +227,11 @@ const copy = {
     lossDown: "下跌尾部",
     lossMaker: "做市边际",
     lossReg: "误差约束",
-    marketTitle: "模型驱动的报价偏斜改善了成交质量与回撤控制。",
+    marketTitle: "三十秒 Alpha 信号进入风险约束下的双边做市策略。",
     sectionMarket: "04 / 做市仿真",
     marketIntro:
-      "三十秒预测分数用于调整双边报价规模，库存控制、费率、杠杆与执行规则保持一致；这一比较用于隔离预测信号在历史做市仿真中带来的变化。",
+      "三十秒预测分数用于调整双边报价规模，库存控制、费率、杠杆与执行规则保持一致；收益、风险与成交质量证据全部来自同一次按时间顺序运行的历史仿真。",
+    statReturn: "累计净收益",
     statDrawdown: "最大回撤",
     statAdverse: "逆向选择",
     statAdverseNote: "三十秒成交后价格变化的相对改善",
@@ -238,7 +240,7 @@ const copy = {
     statFill: "报价成交机会率",
     statFillNote: "历史触价与成交量执行代理",
     modelEquityKicker: "模型策略路径",
-    modelEquityTitle: "锁定时间外模型净值，初始值归一化为 100",
+    modelEquityTitle: "仅模型策略的时间外净值与回撤",
     feeLeverageTag: "冻结费率 · 一倍杠杆",
     quotePathKicker: "ALPHA → 报价",
     quotePathTitle: "预测信号如何进入做市决策",
@@ -299,10 +301,10 @@ const copy = {
     archLegendState: "账户状态反馈",
     archCaption:
       "当前已实现系统的平衡概览。图中保留完整机制图的十个节点，并折叠底层存储、模型序列化与诊断分支；高亮路径标识经过风险闸门的报价到成交交接。",
-    boundariesTitle: "以冻结范围和执行约束支撑可核验研究证据。",
+    boundariesTitle: "研究链路可复核，执行决策有约束。",
     sectionBoundaries: "07 / 方法与边界",
     boundariesIntro:
-      "项目在公开评价前冻结市场、预测期限、模型族、验证预算、费率、杠杆、订单类型、风险限制与一次性测试。",
+      "项目在公开评价前冻结市场、预测期限、模型族、验证协议、费率、杠杆、订单类型、风险限制与一次性测试。",
     methodDataTitle: "点时数据",
     methodModelTitle: "公平模型消融",
     methodOrderTitle: "订单纪律",
@@ -542,8 +544,8 @@ function renderHero() {
   text(
     "metricAccuracyContext",
     zh
-      ? `${d.evidence.predictionHorizonSeconds} 秒期限 · ${percent(h.requestedCoverage, 1)} 覆盖率 · 样本数 ${number(h.sampleCount)}`
-      : `${d.evidence.predictionHorizonSeconds}s horizon · ${percent(h.requestedCoverage, 1)} coverage · N=${number(h.sampleCount)}`,
+      ? `预测分数最高 / 最低各 0.1% · 合计 ${percent(h.requestedCoverage, 1)} · N=${number(h.sampleCount)}`
+      : `top / bottom 0.1% each · ${percent(h.requestedCoverage, 1)} total · N=${number(h.sampleCount)}`,
   );
   text("metricRankIc", number(h.rankIc, 4));
   text(
@@ -559,25 +561,25 @@ function renderHero() {
       ? `${number(b.inputRows)} 行输入 · ${number(b.factorCount)} 个因子 · ${number(b.repetitions)} 次热启动中位数`
       : `${number(b.inputRows)} input rows · ${number(b.factorCount)} factors · median of ${number(b.repetitions)} hot runs`,
   );
-  text("metricMakerImprovement", percent(mm.comparison.relativeAdverseSelectionReduction, 2, true));
+  text("metricNetReturn", percent(mm.m1.cumulativeNetReturn, 2, true));
   text(
-    "metricMakerImprovementContext",
+    "metricNetReturnContext",
     zh
-      ? "模型偏斜 vs 零预测信号、库存约束挂单消融"
-      : "model skew vs zero-signal, inventory-controlled quoting ablation",
+      ? "时间外历史仿真 · Gate 机构做市费率情景 · 一倍杠杆"
+      : "historical OOS · Gate institutional MM fee scenario · 1×",
   );
 
   text(
     "heroBoundary",
     zh
-      ? `全部指标来自同一次按时间顺序划分的时间外测试。做市部分采用历史触价与成交量执行代理、${number(a.leverage, 0)} 倍杠杆及冻结机构费率，不重建真实队列，也不代表实盘表现。`
-      : `Every metric comes from one locked chronological out-of-sample test. Market making uses a historical touch-and-volume execution proxy, ${number(a.leverage, 0)}× leverage, and the frozen institutional fee schedule; it does not reconstruct live queue position.`,
+      ? `全部指标来自同一次按时间顺序划分的时间外测试。做市收益采用历史触价与成交量执行代理、${number(a.leverage, 0)} 倍杠杆及 Gate 机构做市费率情景（Maker ${percent(a.maker_fee, 3, true)}、紧急 Taker ${percent(a.taker_fee, 3, true)}、不计邀请返佣），不重建真实队列，也不代表实盘表现。`
+      : `Every metric comes from one locked chronological out-of-sample test. Market-making return uses a historical touch-and-volume execution proxy, ${number(a.leverage, 0)}× leverage, and the Gate institutional market-maker fee scenario (Maker ${percent(a.maker_fee, 3, true)}, emergency Taker ${percent(a.taker_fee, 3, true)}, zero affiliate rebate); it does not reconstruct live queue position or represent live performance.`,
   );
   text(
     "ribbonText",
     zh
-      ? `微观结构信息相对低频背景将三十秒极端方向准确率提高 ${percentPoint(d.prediction.microstructureAccuracyDeltaPp, 2)}、日度秩信息系数提高 ${signedNumber(d.prediction.microstructureRankIcDelta, 4)}；模型报价偏斜进一步将三十秒逆向选择降低 ${percent(mm.comparison.relativeAdverseSelectionReduction, 2)}，并把最大回撤幅度从 ${percent(mm.riskComparison.baselineMaximumDrawdown, 2)} 降至 ${percent(mm.riskComparison.m1MaximumDrawdown, 2)}。`
-      : `Microstructure information added ${percentPoint(d.prediction.microstructureAccuracyDeltaPp, 2)} of 30-second extreme-direction accuracy and ${signedNumber(d.prediction.microstructureRankIcDelta, 4)} of mean daily Rank IC over low-frequency context. Model-driven quote skew then reduced 30-second adverse selection by ${percent(mm.comparison.relativeAdverseSelectionReduction, 2)} and lowered maximum drawdown from ${percent(mm.riskComparison.baselineMaximumDrawdown, 2)} to ${percent(mm.riskComparison.m1MaximumDrawdown, 2)}.`,
+      ? `在 ${number(d.data.eligibleSamples)} 个时间外样本上，微观结构信息相对低频背景将三十秒高置信度方向准确率提高 ${percentPoint(d.prediction.microstructureAccuracyDeltaPp, 2)}、日度秩信息系数提高 ${signedNumber(d.prediction.microstructureRankIcDelta, 4)}；模型策略在 Gate 机构做市费率情景与一倍杠杆下取得 ${percent(mm.m1.cumulativeNetReturn, 2, true)} 累计净收益和 ${percent(mm.m1.maximumDrawdown, 2)} 最大回撤，报价偏斜同时将三十秒逆向选择降低 ${percent(mm.comparison.relativeAdverseSelectionReduction, 2)}。`
+      : `Across ${number(d.data.eligibleSamples)} out-of-sample observations, microstructure information added ${percentPoint(d.prediction.microstructureAccuracyDeltaPp, 2)} of high-confidence 30-second direction accuracy and ${signedNumber(d.prediction.microstructureRankIcDelta, 4)} of mean daily Rank IC over low-frequency context. Under the Gate institutional market-maker fee scenario at 1× leverage, the model strategy delivered ${percent(mm.m1.cumulativeNetReturn, 2, true)} cumulative net return with ${percent(mm.m1.maximumDrawdown, 2)} maximum drawdown, while quote skew reduced 30-second adverse selection by ${percent(mm.comparison.relativeAdverseSelectionReduction, 2)}.`,
   );
 }
 
@@ -794,11 +796,17 @@ function renderMarketStats() {
   text(
     "marketBoundary",
     zh
-      ? `按时间顺序划分的时间外历史仿真采用 ${number(a.leverage, 0)} 倍杠杆、正常只挂单（post-only）、紧急只减仓（reduce-only）、挂单费率 ${percent(a.maker_fee, 3, true)} 与吃单费率 ${percent(a.taker_fee, 3, true)}。零信号比较对象保留同一库存惩罚、报价预算与执行规则；它是用于隔离预测信号的消融，而不是单独优化的做市策略。成交规则是历史执行代理，不是实盘队列模型。`
-      : `Chronological out-of-sample historical simulation at ${number(a.leverage, 0)}× leverage, with post-only normal quotes, reduce-only emergency exits, ${percent(a.maker_fee, 3, true)} maker fees, and ${percent(a.taker_fee, 3, true)} taker fees. The zero-signal control retains the same inventory penalty, quote budget, and execution rules; it is a signal ablation, not a separately optimized market-making strategy. Fills use a historical execution proxy, not a live queue model.`,
+      ? `按时间顺序划分的时间外历史仿真采用 ${number(a.leverage, 0)} 倍杠杆、正常只挂单（post-only）、紧急只减仓（reduce-only），以及 Gate 机构做市费率情景：Maker ${percent(a.maker_fee, 3, true)}、紧急 Taker ${percent(a.taker_fee, 3, true)}、不计邀请返佣。零信号比较对象只用于隔离预测信号，不展示其收益；成交规则是历史执行代理，不是实盘队列模型。`
+      : `Chronological out-of-sample historical simulation at ${number(a.leverage, 0)}× leverage, with post-only normal quotes, reduce-only emergency exits, and the Gate institutional market-maker fee scenario: Maker ${percent(a.maker_fee, 3, true)}, emergency Taker ${percent(a.taker_fee, 3, true)}, and zero affiliate rebate. The zero-signal control is used only to isolate the prediction input; its return is not presented. Fills use a historical execution proxy, not a live queue model.`,
   );
-  text("marketAdverse", percent(mm.comparison.relativeAdverseSelectionReduction, 2, true));
-  text("marketMarkout", percent(m1.markout30s, 4, true));
+  text("marketReturn", percent(m1.cumulativeNetReturn, 2, true));
+  text(
+    "marketReturnNote",
+    zh
+      ? "时间外 · Gate 机构做市费率情景 · 一倍杠杆"
+      : "OOS · Gate institutional MM fee scenario · 1× leverage",
+  );
+  text("marketAdverse", `−${percent(mm.comparison.relativeAdverseSelectionReduction, 2)}`);
   text("marketDrawdown", percent(m1.maximumDrawdown, 2));
   text(
     "marketDrawdownNote",
@@ -810,6 +818,7 @@ function renderMarketStats() {
 }
 
 function renderModelEquity() {
+  const m1 = state.data.marketMaking.m1;
   const series = state.data.marketMaking.modelEquity;
   const svg = el("modelEquityChart");
   const compactChart = window.matchMedia("(max-width: 560px)").matches;
@@ -860,8 +869,8 @@ function renderModelEquity() {
   text(
     "modelEquityCaption",
     zh
-      ? "仅展示模型策略自身的时间外净值路径，不叠加零信号基准收益。曲线包含冻结机构费率、一倍杠杆与历史触价成交量执行代理；它是研究仿真证据，不代表实盘收益。"
-      : "Model strategy only; the zero-signal return path is intentionally excluded. The curve includes the frozen institutional fee schedule, 1× leverage, and the historical touch-and-volume execution proxy; it is simulation evidence, not live performance.",
+      ? `模型策略净值指数由 100 增至 ${number(m1.finalEquity / m1.initialEquity * 100, 2)}，对应 ${percent(m1.cumulativeNetReturn, 2, true)} 累计净收益；曲线采用 Gate 机构做市费率情景、一倍杠杆与历史触价成交量执行代理，不叠加零信号消融收益，也不代表实盘表现。`
+      : `The model-strategy equity index rose from 100 to ${number(m1.finalEquity / m1.initialEquity * 100, 2)}, a ${percent(m1.cumulativeNetReturn, 2, true)} cumulative net return. The curve uses the Gate institutional market-maker fee scenario, 1× leverage, and the historical touch-and-volume execution proxy; the zero-signal return path is excluded, and this is not live performance.`,
   );
   el("modelEquityTable").innerHTML = tableMarkup(
     zh ? ["日期", "净值指数", "日度回撤"] : ["Date", "Equity index", "Daily drawdown"],
@@ -930,6 +939,7 @@ function renderExecutionFacts() {
   const facts = [
     [zh ? "完整库存回合" : "Completed episodes", number(m1.episodeCount)],
     [zh ? "报价成交机会率" : "Fill-opportunity rate", percent(m1.makerFillOpportunityRate, 2)],
+    [zh ? "三十秒成交后价格变化" : "30-second post-fill change", percent(m1.markout30s, 4, true)],
     [zh ? "紧急吃单率" : "Emergency taker rate", percent(m1.emergencyTakerRate, 2)],
     [zh ? "平均持有时间" : "Average holding time", `${number(m1.averageHoldingSeconds, 2)}${zh ? " 秒" : "s"}`],
     [zh ? "最大绝对敞口" : "Maximum absolute exposure", percent(m1.maximumAbsoluteExposure, 2)],
@@ -1059,18 +1069,18 @@ function renderMethods() {
 
   const rows = zh
     ? [
-        ["三十秒收益排序在全部九种冻结市场状态中为正。", "对其他资产、交易所与预测期限的泛化。"],
-        ["微观结构信息相对低频背景具有独立预测增量。", "公开具体因子公式或把模型分数解释为已校准收益幅度。"],
-        ["执行感知目标在同信息集与同容量下提高经济效用。", "自定义目标在测试期进一步提高方向准确率或秩信息系数。"],
-        ["同控制条件下，模型报价偏斜降低三十秒逆向选择与最大回撤。", "零信号消融是单独优化的生产级做市策略。"],
-        ["只挂单、只减仓、一倍杠杆与敞口硬约束组成完整状态机。", "真实队列位置、部分成交、网络延迟、实盘收益或生产就绪。"],
+        ["微观结构信息具有独立预测增量，三十秒收益排序在九种冻结市场状态中全部为正。", "对其他资产、交易所与预测期限的自动泛化。"],
+        [`${percent(d.prediction.headline.accuracy, 2)} 准确率对应预测分数最高与最低各 0.1% 的 ${number(d.prediction.headline.sampleCount)} 个三十秒事件。`, `全样本均具有 ${percent(d.prediction.headline.accuracy, 2)} 胜率，或模型分数已经校准为收益幅度。`],
+        [`在 Gate 机构做市费率情景、一倍杠杆和时间外历史仿真下取得 ${percent(d.marketMaking.m1.cumulativeNetReturn, 2)} 累计净收益。`, "实盘收益、所有账户都具备该费率资格，或结果不依赖成交代理。"],
+        ["同控制条件下，模型报价偏斜降低三十秒逆向选择与最大回撤。", "零信号消融是独立优化的生产级基准，或其收益可用于比较。"],
+        ["只挂单、只减仓、盘口深度上限与敞口硬约束组成完整状态机。", "真实队列位置、部分成交、网络延迟或生产就绪。"],
       ]
     : [
-        ["Positive 30-second return ordering in all nine frozen market regimes.", "Generalization to other assets, venues, or forecast horizons."],
-        ["Independent predictive lift from microstructure over low-frequency context.", "Public factor formulas or a calibrated expected-return magnitude."],
-        ["Higher economic utility from the execution-aware objective at equal information and capacity.", "Higher test direction accuracy or Rank IC from the custom objective."],
-        ["Lower 30-second adverse selection and maximum drawdown from model quote skew under common controls.", "A separately optimized production market maker represented by the zero-signal ablation."],
-        ["A complete state machine with post-only, reduce-only, 1× leverage, and hard exposure limits.", "Real queue position, partial fills, network latency, live profits, or production readiness."],
+        ["Independent predictive lift from microstructure and positive 30-second return ordering in all nine frozen regimes.", "Automatic generalization to other assets, venues, or forecast horizons."],
+        [`${percent(d.prediction.headline.accuracy, 2)} accuracy on ${number(d.prediction.headline.sampleCount)} 30-second events in the top and bottom 0.1% of model scores.`, `${percent(d.prediction.headline.accuracy, 2)} full-sample accuracy or a forecast score calibrated as return magnitude.`],
+        [`${percent(d.marketMaking.m1.cumulativeNetReturn, 2)} cumulative net return in historical OOS simulation under the Gate institutional fee scenario at 1× leverage.`, "Live performance, universal fee-tier eligibility, or independence from the fill proxy."],
+        ["Lower 30-second adverse selection and maximum drawdown from model quote skew under common controls.", "A separately optimized production benchmark or a return comparison against the zero-signal ablation."],
+        ["A complete state machine with post-only, reduce-only, depth caps, and hard exposure limits.", "Real queue position, partial fills, network latency, or production readiness."],
       ];
   el("boundaryRows").innerHTML = rows.map((row) => `<tr><td>${escapeHtml(row[0])}</td><td>${escapeHtml(row[1])}</td></tr>`).join("");
 }

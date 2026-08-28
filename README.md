@@ -10,12 +10,21 @@ An interactive BTC/USDT perpetual research showcase spanning tick trades, one-se
 
 Inspect the synchronized event window, factor and model ablations, accuracy-versus-coverage curve, model-driven quote skew, post-fill price changes, risk path, market regimes, and end-to-end research architecture. The page opens in English and switches instantly to Chinese from the upper-right control.
 
-## Verified highlights
+[![High-frequency futures price prediction and market-making strategy](assets/preview.jpg)](https://chandleryao720.github.io/btc-high-frequency-trading-market-making/)
 
-- 60.46% directional accuracy on 13,644 30-second extreme events at 0.2% coverage.
-- 0.1007 mean daily time-series Rank IC across 395 out-of-sample days.
-- 3.65M factor rows/s on 86,700 rows, 4.43× the equivalent Pandas path.
-- Model-driven quote skew reduced 30-second adverse selection by 8.72% and lowered maximum drawdown from 2.17% to 1.61% versus the zero-signal, inventory-controlled quoting ablation.
+## Quant snapshot
+
+Verified chronological out-of-sample historical simulation from **2025-04-01 to 2026-04-30**, constrained to **1× leverage**.
+
+| Metric | Result | Metric | Result |
+| --- | ---: | --- | ---: |
+| Cumulative net return | **+397.85%** | Maximum drawdown | **1.61%** |
+| 30-second high-confidence direction accuracy | **60.46%** | Mean daily time-series Rank IC | **0.1007** |
+| Microstructure accuracy lift vs low-frequency context | **+9.63 pp** | Custom-objective execution-utility lift vs L2 | **+56.2%** |
+| 30-second adverse-selection reduction | **8.72%** | Maximum-drawdown reduction | **26.1%** |
+| Factor throughput | **3.65M rows/s** | Speedup vs Pandas | **4.43×** |
+
+The return is net of the frozen Gate institutional market-maker fee scenario (**Maker −0.015%, emergency Taker +0.020%, zero affiliate rebate**) and includes the sequential inventory account. The direction result covers the 13,644 events in the top and bottom 0.1% of model scores—**0.2% of 6,822,116 eligible samples in total**—and must not be read as full-sample accuracy. The quote-skew comparison uses a zero-signal, inventory-controlled ablation to isolate the prediction input; its return is intentionally not presented as a benchmark.
 
 ## View locally
 
@@ -27,4 +36,4 @@ Then open `http://127.0.0.1:8000/`. The site has no framework build step and no 
 
 ## Evidence boundary
 
-All public metrics load from one locked chronological out-of-sample evaluation. The market-making section uses a touch-and-volume execution proxy under the frozen institutional fee schedule at 1× leverage; it does not model queue position or represent live trading. The zero-signal comparator holds quote controls fixed to isolate the prediction signal and is not a separately optimized production market-making strategy.
+All public metrics load from one locked chronological out-of-sample evaluation. The market-making section uses a historical touch-and-volume execution proxy under the frozen Gate institutional market-maker fee scenario at 1× leverage; it does not model queue position, partial fills, or network latency and does not represent live trading or personal fee-tier eligibility. The zero-signal comparator holds quote controls fixed to isolate the prediction signal and is not a separately optimized production market-making strategy.

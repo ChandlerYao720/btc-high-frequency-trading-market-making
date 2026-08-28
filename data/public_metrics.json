@@ -283,6 +283,9 @@
       "visible_l1_depth_cap": 0.01
     },
     "m1": {
+      "initialEquity": 100000.0,
+      "finalEquity": 497850.60791123967,
+      "cumulativeNetReturn": 3.978506079112397,
       "averageHoldingSeconds": 18.164939132981623,
       "emergencyTakerRate": 0.07667649234773692,
       "episodeCount": 1611546,

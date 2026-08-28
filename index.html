@@ -90,7 +90,7 @@
             <div class="command"><span>$</span> <span data-i18n="heroCommand">show --locked-evidence</span></div>
             <div class="metric-grid" id="headlineMetrics" aria-live="polite">
               <article class="metric-card">
-                <p data-i18n="metricAccuracy">Extreme direction accuracy</p>
+                <p data-i18n="metricAccuracy">High-confidence 30-second direction accuracy</p>
                 <strong id="metricAccuracy">—</strong>
                 <small id="metricAccuracyContext">—</small>
               </article>
@@ -105,9 +105,9 @@
                 <small id="metricThroughputContext">—</small>
               </article>
               <article class="metric-card metric-card-focal">
-                <p data-i18n="metricMakerImprovement">30-second adverse-selection reduction</p>
-                <strong id="metricMakerImprovement">—</strong>
-                <small id="metricMakerImprovementContext">—</small>
+                <p data-i18n="metricNetReturn">Cumulative net return</p>
+                <strong id="metricNetReturn">—</strong>
+                <small id="metricNetReturnContext">—</small>
               </article>
             </div>
             <p class="terminal-note" id="heroBoundary">Loading evidence boundary…</p>
@@ -282,8 +282,8 @@
         </div>
 
         <div class="stat-row" id="marketStats">
+          <article class="stat-return"><span data-i18n="statReturn">Cumulative net return</span><strong id="marketReturn">—</strong><small id="marketReturnNote">—</small></article>
           <article><span data-i18n="statAdverse">Adverse selection</span><strong id="marketAdverse">—</strong><small data-i18n="statAdverseNote">relative reduction at 30 seconds</small></article>
-          <article><span data-i18n="statMarkout">30-second post-fill change</span><strong id="marketMarkout">—</strong><small data-i18n="statMarkoutNote">notional-weighted model fills</small></article>
           <article><span data-i18n="statDrawdown">Maximum drawdown</span><strong id="marketDrawdown">—</strong><small id="marketDrawdownNote">—</small></article>
           <article><span data-i18n="statFill">Fill-opportunity rate</span><strong id="marketFill">—</strong><small data-i18n="statFillNote">historical touch + volume proxy</small></article>
         </div>
@@ -293,7 +293,7 @@
             <div class="panel-header">
               <div>
                 <p class="panel-kicker" data-i18n="modelEquityKicker">MODEL STRATEGY PATH</p>
-                <h3 data-i18n="modelEquityTitle">Locked out-of-sample model equity, normalized to 100</h3>
+                <h3 data-i18n="modelEquityTitle">Model-only out-of-sample equity and drawdown</h3>
               </div>
               <span class="status-tag" data-i18n="feeLeverageTag">FROZEN FEES · 1×</span>
             </div>
@@ -505,10 +505,10 @@
         <div class="section-heading">
           <div>
             <p class="section-index" data-i18n="sectionBoundaries">07 / METHODS + BOUNDARIES</p>
-            <h2 id="boundaries-title" data-i18n="boundariesTitle">The evidence is useful because the boundaries are explicit.</h2>
+            <h2 id="boundaries-title" data-i18n="boundariesTitle">Built for reproducible research and execution-aware decisions.</h2>
           </div>
           <p data-i18n="boundariesIntro">
-            The project freezes the market, horizon, model family, validation budget, fees, leverage, order types, risk
+            The project freezes the market, horizon, model family, validation protocol, fees, leverage, order types, risk
             limits, and one-time test before public evaluation.
           </p>
         </div>
