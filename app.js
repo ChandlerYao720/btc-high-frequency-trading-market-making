@@ -93,8 +93,8 @@ const copy = {
       "The 30-second score tilts two-sided quote size while inventory control, fees, leverage, and execution rules remain fixed. Return, risk, and fill-quality evidence come from the same chronological historical simulation.",
     statReturn: "Cumulative net return",
     statDrawdown: "Maximum drawdown",
-    statAdverse: "Adverse selection",
-    statAdverseNote: "relative reduction at 30 seconds",
+    statAdverse: "Adverse-selection reduction",
+    statAdverseNote: "30-second post-fill adverse move vs. zero-signal control",
     statMarkout: "30-second post-fill change",
     statMarkoutNote: "notional-weighted model fills",
     statFill: "Fill-opportunity rate",
@@ -257,8 +257,8 @@ const copy = {
       "三十秒预测分数用于调整双边报价规模，库存控制、费率、杠杆与执行规则保持一致；收益、风险与成交质量证据全部来自同一次按时间顺序运行的历史仿真。",
     statReturn: "累计净收益",
     statDrawdown: "最大回撤",
-    statAdverse: "逆向选择",
-    statAdverseNote: "三十秒成交后价格变化的相对改善",
+    statAdverse: "逆向选择降低",
+    statAdverseNote: "相对零信号对照的三十秒成交后不利价格变化",
     statMarkout: "三十秒成交后价格变化",
     statMarkoutNote: "按模型成交名义金额加权",
     statFill: "报价成交机会率",
@@ -831,7 +831,7 @@ function renderMarketStats() {
       ? "时间外 · Gate 机构做市费率情景 · 一倍杠杆"
       : "OOS · Gate institutional MM fee scenario · 1× leverage",
   );
-  text("marketAdverse", `−${percent(mm.comparison.relativeAdverseSelectionReduction, 2)}`);
+  text("marketAdverse", `↓ ${percent(mm.comparison.relativeAdverseSelectionReduction, 2)}`);
   text("marketDrawdown", percent(m1.maximumDrawdown, 2));
   text(
     "marketDrawdownNote",
