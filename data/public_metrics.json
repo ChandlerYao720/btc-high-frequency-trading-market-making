@@ -282,4878 +282,2406 @@
       "taker_fee": 0.0002,
       "visible_l1_depth_cap": 0.01
     },
-    "selectedQuoteParameters": {
-      "base_quote_equity_fraction": 0.04,
-      "inventory_penalty_strength": 0.5
-    },
     "m1": {
-      "annualized_return": 3.407148069138862,
-      "annualized_volatility": 0.10485394793300425,
-      "average_absolute_exposure": 0.012902025007798813,
-      "average_holding_seconds": 18.164939132981623,
-      "calmar": 212.03026471432582,
-      "emergency_taker_rate": 0.07667649234773692,
-      "episode_count": 1611546,
-      "episode_win_rate": 0.7965996626841555,
-      "final_equity": 497850.60791123967,
-      "initial_equity": 100000.0,
-      "inventory_markout": -278133.0092399657,
-      "maker_credit": 1341336.5538793162,
-      "maker_fill_opportunity_rate": 0.6359676237431204,
-      "markout_30s": -3.095373218291642e-05,
-      "markout_5s": -3.2661025274223494e-05,
-      "maximum_absolute_exposure": 0.2836651950215725,
-      "maximum_drawdown": -0.016069159153903834,
-      "price_and_spread_contribution": -316625.363819748,
-      "profit_factor": 2.129257801914547,
-      "sharpe": 14.226049231362289,
-      "spread_capture": -38492.35457978231,
-      "taker_cost": 626860.5821483508,
-      "total_return": 3.978506079112397,
-      "turnover": 120683.31664321499
+      "averageHoldingSeconds": 18.164939132981623,
+      "emergencyTakerRate": 0.07667649234773692,
+      "episodeCount": 1611546,
+      "makerFillOpportunityRate": 0.6359676237431204,
+      "markout30s": -3.095373218291642e-05,
+      "maximumAbsoluteExposure": 0.2836651950215725,
+      "maximumDrawdown": 0.016069159153903834
     },
-    "symmetric": {
-      "annualized_return": 5.26501163311419,
-      "annualized_volatility": 0.12218866628037765,
-      "average_absolute_exposure": 0.009797946856051627,
-      "average_holding_seconds": 16.144577834465363,
-      "calmar": 242.2615246730863,
-      "emergency_taker_rate": 0.06922916731144842,
-      "episode_count": 1836969,
-      "episode_win_rate": 0.8347914417717447,
-      "final_equity": 728481.4876494352,
-      "initial_equity": 100000.0,
-      "inventory_markout": -383057.4723599492,
-      "maker_credit": 1713578.552171235,
-      "maker_fill_opportunity_rate": 0.6348889008717946,
-      "markout_30s": -3.3912508033283536e-05,
-      "markout_5s": -3.4149539809404134e-05,
-      "maximum_absolute_exposure": 0.14424555946742854,
-      "maximum_drawdown": -0.021732760248326377,
-      "price_and_spread_contribution": -469913.1666097523,
-      "profit_factor": 2.6732700297938834,
-      "sharpe": 15.115461795168622,
-      "spread_capture": -86855.6942498031,
-      "taker_cost": 615183.8979120406,
-      "total_return": 6.284814876494352,
-      "turnover": 144916.63085186927
+    "zeroSignalControl": {
+      "markout30s": -3.3912508033283536e-05,
+      "maximumDrawdown": 0.021732760248326377
+    },
+    "baselineDefinition": {
+      "publicLabel": "zero-signal inventory-controlled two-sided quoting control",
+      "predictionSignal": "zero",
+      "inventoryControlRetained": true,
+      "independentlyOptimized": false
     },
     "comparison": {
-      "information_ratio": -10.584733918398205,
-      "markout_30s_difference": 2.958775850367114e-06,
-      "net_return_difference": -2.3063087973819547,
-      "relative_adverse_selection_reduction": 0.08724733208948197,
-      "sharpe_difference": -0.8894125638063333
+      "markout30sDifference": 2.958775850367114e-06,
+      "relativeAdverseSelectionReduction": 0.08724733208948197
     },
-    "regimes": [
+    "riskComparison": {
+      "m1MaximumDrawdown": 0.016069159153903834,
+      "baselineMaximumDrawdown": 0.021732760248326377,
+      "relativeDrawdownReduction": 0.2606020141808123
+    },
+    "modelEquity": [
       {
-        "volatility": "low",
-        "liquidity": "ample",
-        "return": 2.754284746068092,
-        "markout30s": -8.406227945201934e-06
+        "index": 0,
+        "date": "2025-04-01",
+        "equityIndex": 99.9596,
+        "drawdownPct": 0.0
       },
       {
-        "volatility": "low",
-        "liquidity": "normal",
-        "return": 0.11819270611350716,
-        "markout30s": -1.7535272098698025e-05
+        "index": 1,
+        "date": "2025-04-02",
+        "equityIndex": 99.9644,
+        "drawdownPct": 0.0
       },
       {
-        "volatility": "low",
-        "liquidity": "tight",
-        "return": 0.03259655619561847,
-        "markout30s": -2.3881818743290698e-05
+        "index": 2,
+        "date": "2025-04-03",
+        "equityIndex": 99.8622,
+        "drawdownPct": -0.1022
       },
       {
-        "volatility": "medium",
-        "liquidity": "ample",
-        "return": 1.0304157383818517,
-        "markout30s": -3.704169182417533e-05
+        "index": 3,
+        "date": "2025-04-04",
+        "equityIndex": 99.79,
+        "drawdownPct": -0.1745
       },
       {
-        "volatility": "medium",
-        "liquidity": "normal",
-        "return": 0.09193446034738445,
-        "markout30s": -4.155609653723678e-05
+        "index": 4,
+        "date": "2025-04-05",
+        "equityIndex": 100.1114,
+        "drawdownPct": 0.0
       },
       {
-        "volatility": "medium",
-        "liquidity": "tight",
-        "return": 0.03412236257649783,
-        "markout30s": -4.441068359413791e-05
+        "index": 5,
+        "date": "2025-04-06",
+        "equityIndex": 100.3085,
+        "drawdownPct": 0.0
       },
       {
-        "volatility": "high",
-        "liquidity": "ample",
-        "return": -0.02997141062754381,
-        "markout30s": -8.190951514190264e-05
+        "index": 6,
+        "date": "2025-04-07",
+        "equityIndex": 99.7618,
+        "drawdownPct": -0.5451
       },
       {
-        "volatility": "high",
-        "liquidity": "normal",
-        "return": -0.02885673960846907,
-        "markout30s": -8.857336010920623e-05
+        "index": 7,
+        "date": "2025-04-08",
+        "equityIndex": 99.4791,
+        "drawdownPct": -0.8269
       },
       {
-        "volatility": "high",
-        "liquidity": "tight",
-        "return": -0.024212340334832553,
-        "markout30s": -9.186362338106248e-05
+        "index": 8,
+        "date": "2025-04-09",
+        "equityIndex": 99.115,
+        "drawdownPct": -1.1899
+      },
+      {
+        "index": 9,
+        "date": "2025-04-10",
+        "equityIndex": 98.9262,
+        "drawdownPct": -1.378
+      },
+      {
+        "index": 10,
+        "date": "2025-04-11",
+        "equityIndex": 98.8735,
+        "drawdownPct": -1.4306
+      },
+      {
+        "index": 11,
+        "date": "2025-04-12",
+        "equityIndex": 99.2161,
+        "drawdownPct": -1.0891
+      },
+      {
+        "index": 12,
+        "date": "2025-04-13",
+        "equityIndex": 99.2156,
+        "drawdownPct": -1.0895
+      },
+      {
+        "index": 13,
+        "date": "2025-04-14",
+        "equityIndex": 99.0989,
+        "drawdownPct": -1.2059
+      },
+      {
+        "index": 14,
+        "date": "2025-04-15",
+        "equityIndex": 99.3352,
+        "drawdownPct": -0.9703
+      },
+      {
+        "index": 15,
+        "date": "2025-04-16",
+        "equityIndex": 99.3411,
+        "drawdownPct": -0.9645
+      },
+      {
+        "index": 16,
+        "date": "2025-04-17",
+        "equityIndex": 99.7455,
+        "drawdownPct": -0.5613
+      },
+      {
+        "index": 17,
+        "date": "2025-04-18",
+        "equityIndex": 100.1796,
+        "drawdownPct": -0.1286
+      },
+      {
+        "index": 18,
+        "date": "2025-04-19",
+        "equityIndex": 100.8142,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 19,
+        "date": "2025-04-20",
+        "equityIndex": 101.33,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 20,
+        "date": "2025-04-21",
+        "equityIndex": 101.6568,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 21,
+        "date": "2025-04-22",
+        "equityIndex": 101.8937,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 22,
+        "date": "2025-04-23",
+        "equityIndex": 101.9609,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 23,
+        "date": "2025-04-24",
+        "equityIndex": 102.365,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 24,
+        "date": "2025-04-25",
+        "equityIndex": 102.6991,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 25,
+        "date": "2025-04-26",
+        "equityIndex": 103.1968,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 26,
+        "date": "2025-04-27",
+        "equityIndex": 103.6256,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 27,
+        "date": "2025-04-28",
+        "equityIndex": 104.037,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 28,
+        "date": "2025-04-29",
+        "equityIndex": 104.3964,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 29,
+        "date": "2025-04-30",
+        "equityIndex": 104.8669,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 30,
+        "date": "2025-05-01",
+        "equityIndex": 105.4348,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 31,
+        "date": "2025-05-02",
+        "equityIndex": 106.1376,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 32,
+        "date": "2025-05-03",
+        "equityIndex": 106.9431,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 33,
+        "date": "2025-05-04",
+        "equityIndex": 107.6994,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 34,
+        "date": "2025-05-05",
+        "equityIndex": 108.3016,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 35,
+        "date": "2025-05-06",
+        "equityIndex": 108.8207,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 36,
+        "date": "2025-05-07",
+        "equityIndex": 109.4437,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 37,
+        "date": "2025-05-08",
+        "equityIndex": 109.9796,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 38,
+        "date": "2025-05-09",
+        "equityIndex": 110.1113,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 39,
+        "date": "2025-05-10",
+        "equityIndex": 110.4749,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 40,
+        "date": "2025-05-11",
+        "equityIndex": 110.6659,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 41,
+        "date": "2025-05-12",
+        "equityIndex": 110.6621,
+        "drawdownPct": -0.0035
+      },
+      {
+        "index": 42,
+        "date": "2025-05-13",
+        "equityIndex": 110.9214,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 43,
+        "date": "2025-05-14",
+        "equityIndex": 111.0152,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 44,
+        "date": "2025-05-15",
+        "equityIndex": 111.1457,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 45,
+        "date": "2025-05-16",
+        "equityIndex": 111.4524,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 46,
+        "date": "2025-05-17",
+        "equityIndex": 111.8782,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 47,
+        "date": "2025-05-18",
+        "equityIndex": 112.0701,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 48,
+        "date": "2025-05-19",
+        "equityIndex": 112.1577,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 49,
+        "date": "2025-05-20",
+        "equityIndex": 112.5996,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 50,
+        "date": "2025-05-21",
+        "equityIndex": 112.5333,
+        "drawdownPct": -0.0589
+      },
+      {
+        "index": 51,
+        "date": "2025-05-22",
+        "equityIndex": 112.6569,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 52,
+        "date": "2025-05-23",
+        "equityIndex": 112.6358,
+        "drawdownPct": -0.0187
+      },
+      {
+        "index": 53,
+        "date": "2025-05-24",
+        "equityIndex": 112.9581,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 54,
+        "date": "2025-05-25",
+        "equityIndex": 113.4091,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 55,
+        "date": "2025-05-26",
+        "equityIndex": 113.8277,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 56,
+        "date": "2025-05-27",
+        "equityIndex": 114.1904,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 57,
+        "date": "2025-05-28",
+        "equityIndex": 114.5085,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 58,
+        "date": "2025-05-29",
+        "equityIndex": 114.8025,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 59,
+        "date": "2025-05-30",
+        "equityIndex": 114.9601,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 60,
+        "date": "2025-05-31",
+        "equityIndex": 115.3368,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 61,
+        "date": "2025-06-01",
+        "equityIndex": 115.7904,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 62,
+        "date": "2025-06-02",
+        "equityIndex": 116.1631,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 63,
+        "date": "2025-06-03",
+        "equityIndex": 116.7303,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 64,
+        "date": "2025-06-04",
+        "equityIndex": 117.2904,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 65,
+        "date": "2025-06-05",
+        "equityIndex": 117.5614,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 66,
+        "date": "2025-06-06",
+        "equityIndex": 118.4737,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 67,
+        "date": "2025-06-07",
+        "equityIndex": 119.2274,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 68,
+        "date": "2025-06-08",
+        "equityIndex": 119.8618,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 69,
+        "date": "2025-06-09",
+        "equityIndex": 120.5875,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 70,
+        "date": "2025-06-10",
+        "equityIndex": 121.2656,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 71,
+        "date": "2025-06-11",
+        "equityIndex": 121.7217,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 72,
+        "date": "2025-06-12",
+        "equityIndex": 122.2159,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 73,
+        "date": "2025-06-13",
+        "equityIndex": 121.8021,
+        "drawdownPct": -0.3386
+      },
+      {
+        "index": 74,
+        "date": "2025-06-14",
+        "equityIndex": 122.4256,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 75,
+        "date": "2025-06-15",
+        "equityIndex": 123.0495,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 76,
+        "date": "2025-06-16",
+        "equityIndex": 123.638,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 77,
+        "date": "2025-06-17",
+        "equityIndex": 123.8683,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 78,
+        "date": "2025-06-18",
+        "equityIndex": 124.2247,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 79,
+        "date": "2025-06-19",
+        "equityIndex": 124.6004,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 80,
+        "date": "2025-06-20",
+        "equityIndex": 125.0473,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 81,
+        "date": "2025-06-21",
+        "equityIndex": 125.3358,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 82,
+        "date": "2025-06-22",
+        "equityIndex": 124.9012,
+        "drawdownPct": -0.3468
+      },
+      {
+        "index": 83,
+        "date": "2025-06-23",
+        "equityIndex": 124.8614,
+        "drawdownPct": -0.3785
+      },
+      {
+        "index": 84,
+        "date": "2025-06-24",
+        "equityIndex": 125.0005,
+        "drawdownPct": -0.2675
+      },
+      {
+        "index": 85,
+        "date": "2025-06-25",
+        "equityIndex": 125.494,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 86,
+        "date": "2025-06-26",
+        "equityIndex": 125.9383,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 87,
+        "date": "2025-06-27",
+        "equityIndex": 126.4164,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 88,
+        "date": "2025-06-28",
+        "equityIndex": 126.7891,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 89,
+        "date": "2025-06-29",
+        "equityIndex": 127.627,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 90,
+        "date": "2025-06-30",
+        "equityIndex": 128.3283,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 91,
+        "date": "2025-07-01",
+        "equityIndex": 129.0107,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 92,
+        "date": "2025-07-02",
+        "equityIndex": 130.231,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 93,
+        "date": "2025-07-03",
+        "equityIndex": 131.036,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 94,
+        "date": "2025-07-04",
+        "equityIndex": 131.7874,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 95,
+        "date": "2025-07-05",
+        "equityIndex": 132.3399,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 96,
+        "date": "2025-07-06",
+        "equityIndex": 132.7004,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 97,
+        "date": "2025-07-07",
+        "equityIndex": 133.4887,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 98,
+        "date": "2025-07-08",
+        "equityIndex": 134.2923,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 99,
+        "date": "2025-07-09",
+        "equityIndex": 135.2518,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 100,
+        "date": "2025-07-10",
+        "equityIndex": 136.0792,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 101,
+        "date": "2025-07-11",
+        "equityIndex": 136.2869,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 102,
+        "date": "2025-07-12",
+        "equityIndex": 136.6817,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 103,
+        "date": "2025-07-13",
+        "equityIndex": 137.1284,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 104,
+        "date": "2025-07-14",
+        "equityIndex": 137.4283,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 105,
+        "date": "2025-07-15",
+        "equityIndex": 137.3756,
+        "drawdownPct": -0.0383
+      },
+      {
+        "index": 106,
+        "date": "2025-07-16",
+        "equityIndex": 137.5818,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 107,
+        "date": "2025-07-17",
+        "equityIndex": 137.649,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 108,
+        "date": "2025-07-18",
+        "equityIndex": 137.4426,
+        "drawdownPct": -0.15
+      },
+      {
+        "index": 109,
+        "date": "2025-07-19",
+        "equityIndex": 137.6072,
+        "drawdownPct": -0.0303
+      },
+      {
+        "index": 110,
+        "date": "2025-07-20",
+        "equityIndex": 137.6459,
+        "drawdownPct": -0.0022
+      },
+      {
+        "index": 111,
+        "date": "2025-07-21",
+        "equityIndex": 137.7223,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 112,
+        "date": "2025-07-22",
+        "equityIndex": 137.7808,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 113,
+        "date": "2025-07-23",
+        "equityIndex": 137.9395,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 114,
+        "date": "2025-07-24",
+        "equityIndex": 138.1069,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 115,
+        "date": "2025-07-25",
+        "equityIndex": 138.0384,
+        "drawdownPct": -0.0496
+      },
+      {
+        "index": 116,
+        "date": "2025-07-26",
+        "equityIndex": 138.4392,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 117,
+        "date": "2025-07-27",
+        "equityIndex": 139.0336,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 118,
+        "date": "2025-07-28",
+        "equityIndex": 139.0904,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 119,
+        "date": "2025-07-29",
+        "equityIndex": 139.1796,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 120,
+        "date": "2025-07-30",
+        "equityIndex": 139.4152,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 121,
+        "date": "2025-07-31",
+        "equityIndex": 139.7702,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 122,
+        "date": "2025-08-01",
+        "equityIndex": 139.1696,
+        "drawdownPct": -0.4297
+      },
+      {
+        "index": 123,
+        "date": "2025-08-02",
+        "equityIndex": 139.5055,
+        "drawdownPct": -0.1894
+      },
+      {
+        "index": 124,
+        "date": "2025-08-03",
+        "equityIndex": 140.0717,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 125,
+        "date": "2025-08-04",
+        "equityIndex": 140.3744,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 126,
+        "date": "2025-08-05",
+        "equityIndex": 140.4932,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 127,
+        "date": "2025-08-06",
+        "equityIndex": 140.8309,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 128,
+        "date": "2025-08-07",
+        "equityIndex": 141.8848,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 129,
+        "date": "2025-08-08",
+        "equityIndex": 143.4685,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 130,
+        "date": "2025-08-09",
+        "equityIndex": 146.4694,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 131,
+        "date": "2025-08-10",
+        "equityIndex": 149.3695,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 132,
+        "date": "2025-08-11",
+        "equityIndex": 151.3872,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 133,
+        "date": "2025-08-12",
+        "equityIndex": 154.4822,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 134,
+        "date": "2025-08-13",
+        "equityIndex": 156.3921,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 135,
+        "date": "2025-08-14",
+        "equityIndex": 157.8842,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 136,
+        "date": "2025-08-15",
+        "equityIndex": 160.472,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 137,
+        "date": "2025-08-16",
+        "equityIndex": 164.4002,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 138,
+        "date": "2025-08-17",
+        "equityIndex": 168.1753,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 139,
+        "date": "2025-08-18",
+        "equityIndex": 169.8637,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 140,
+        "date": "2025-08-19",
+        "equityIndex": 171.5215,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 141,
+        "date": "2025-08-20",
+        "equityIndex": 175.1902,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 142,
+        "date": "2025-08-21",
+        "equityIndex": 178.1085,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 143,
+        "date": "2025-08-22",
+        "equityIndex": 181.2427,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 144,
+        "date": "2025-08-23",
+        "equityIndex": 185.7863,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 145,
+        "date": "2025-08-24",
+        "equityIndex": 189.2359,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 146,
+        "date": "2025-08-25",
+        "equityIndex": 190.7798,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 147,
+        "date": "2025-08-26",
+        "equityIndex": 193.8716,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 148,
+        "date": "2025-08-27",
+        "equityIndex": 198.1254,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 149,
+        "date": "2025-08-28",
+        "equityIndex": 202.5317,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 150,
+        "date": "2025-08-29",
+        "equityIndex": 206.13,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 151,
+        "date": "2025-08-30",
+        "equityIndex": 211.7974,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 152,
+        "date": "2025-08-31",
+        "equityIndex": 217.4001,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 153,
+        "date": "2025-09-01",
+        "equityIndex": 220.5433,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 154,
+        "date": "2025-09-02",
+        "equityIndex": 224.6925,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 155,
+        "date": "2025-09-03",
+        "equityIndex": 229.3866,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 156,
+        "date": "2025-09-04",
+        "equityIndex": 233.7248,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 157,
+        "date": "2025-09-05",
+        "equityIndex": 238.9449,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 158,
+        "date": "2025-09-06",
+        "equityIndex": 243.9979,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 159,
+        "date": "2025-09-07",
+        "equityIndex": 249.4042,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 160,
+        "date": "2025-09-08",
+        "equityIndex": 255.1484,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 161,
+        "date": "2025-09-09",
+        "equityIndex": 260.7175,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 162,
+        "date": "2025-09-10",
+        "equityIndex": 264.9121,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 163,
+        "date": "2025-09-11",
+        "equityIndex": 265.9129,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 164,
+        "date": "2025-09-12",
+        "equityIndex": 267.374,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 165,
+        "date": "2025-09-13",
+        "equityIndex": 268.4509,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 166,
+        "date": "2025-09-14",
+        "equityIndex": 269.6465,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 167,
+        "date": "2025-09-15",
+        "equityIndex": 270.8861,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 168,
+        "date": "2025-09-16",
+        "equityIndex": 273.06,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 169,
+        "date": "2025-09-17",
+        "equityIndex": 274.8556,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 170,
+        "date": "2025-09-18",
+        "equityIndex": 276.7846,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 171,
+        "date": "2025-09-19",
+        "equityIndex": 279.0236,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 172,
+        "date": "2025-09-20",
+        "equityIndex": 281.1764,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 173,
+        "date": "2025-09-21",
+        "equityIndex": 284.9086,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 174,
+        "date": "2025-09-22",
+        "equityIndex": 286.583,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 175,
+        "date": "2025-09-23",
+        "equityIndex": 288.5932,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 176,
+        "date": "2025-09-24",
+        "equityIndex": 291.2966,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 177,
+        "date": "2025-09-25",
+        "equityIndex": 293.8602,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 178,
+        "date": "2025-09-26",
+        "equityIndex": 297.6121,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 179,
+        "date": "2025-09-27",
+        "equityIndex": 302.4244,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 180,
+        "date": "2025-09-28",
+        "equityIndex": 305.7354,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 181,
+        "date": "2025-09-29",
+        "equityIndex": 310.9286,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 182,
+        "date": "2025-09-30",
+        "equityIndex": 316.1337,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 183,
+        "date": "2025-10-01",
+        "equityIndex": 321.159,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 184,
+        "date": "2025-10-02",
+        "equityIndex": 325.4847,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 185,
+        "date": "2025-10-03",
+        "equityIndex": 329.3927,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 186,
+        "date": "2025-10-04",
+        "equityIndex": 334.5554,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 187,
+        "date": "2025-10-05",
+        "equityIndex": 337.7427,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 188,
+        "date": "2025-10-06",
+        "equityIndex": 340.524,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 189,
+        "date": "2025-10-07",
+        "equityIndex": 343.1528,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 190,
+        "date": "2025-10-08",
+        "equityIndex": 345.1752,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 191,
+        "date": "2025-10-09",
+        "equityIndex": 347.9982,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 192,
+        "date": "2025-10-10",
+        "equityIndex": 350.2175,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 193,
+        "date": "2025-10-11",
+        "equityIndex": 350.9254,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 194,
+        "date": "2025-10-12",
+        "equityIndex": 351.8181,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 195,
+        "date": "2025-10-13",
+        "equityIndex": 352.7756,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 196,
+        "date": "2025-10-14",
+        "equityIndex": 353.3098,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 197,
+        "date": "2025-10-15",
+        "equityIndex": 354.1067,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 198,
+        "date": "2025-10-16",
+        "equityIndex": 354.5903,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 199,
+        "date": "2025-10-17",
+        "equityIndex": 354.9998,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 200,
+        "date": "2025-10-18",
+        "equityIndex": 355.9222,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 201,
+        "date": "2025-10-19",
+        "equityIndex": 356.8552,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 202,
+        "date": "2025-10-20",
+        "equityIndex": 357.7971,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 203,
+        "date": "2025-10-21",
+        "equityIndex": 358.4785,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 204,
+        "date": "2025-10-22",
+        "equityIndex": 359.2082,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 205,
+        "date": "2025-10-23",
+        "equityIndex": 360.1674,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 206,
+        "date": "2025-10-24",
+        "equityIndex": 361.0111,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 207,
+        "date": "2025-10-25",
+        "equityIndex": 362.3542,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 208,
+        "date": "2025-10-26",
+        "equityIndex": 363.2632,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 209,
+        "date": "2025-10-27",
+        "equityIndex": 364.4407,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 210,
+        "date": "2025-10-28",
+        "equityIndex": 365.6391,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 211,
+        "date": "2025-10-29",
+        "equityIndex": 366.7614,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 212,
+        "date": "2025-10-30",
+        "equityIndex": 367.2716,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 213,
+        "date": "2025-10-31",
+        "equityIndex": 367.7967,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 214,
+        "date": "2025-11-01",
+        "equityIndex": 369.4348,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 215,
+        "date": "2025-11-02",
+        "equityIndex": 370.7086,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 216,
+        "date": "2025-11-03",
+        "equityIndex": 370.9971,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 217,
+        "date": "2025-11-04",
+        "equityIndex": 370.8175,
+        "drawdownPct": -0.0484
+      },
+      {
+        "index": 218,
+        "date": "2025-11-05",
+        "equityIndex": 370.975,
+        "drawdownPct": -0.006
+      },
+      {
+        "index": 219,
+        "date": "2025-11-06",
+        "equityIndex": 371.2112,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 220,
+        "date": "2025-11-07",
+        "equityIndex": 371.5734,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 221,
+        "date": "2025-11-08",
+        "equityIndex": 372.3736,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 222,
+        "date": "2025-11-09",
+        "equityIndex": 373.0195,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 223,
+        "date": "2025-11-10",
+        "equityIndex": 373.7006,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 224,
+        "date": "2025-11-11",
+        "equityIndex": 374.3072,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 225,
+        "date": "2025-11-12",
+        "equityIndex": 375.1511,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 226,
+        "date": "2025-11-13",
+        "equityIndex": 375.2012,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 227,
+        "date": "2025-11-14",
+        "equityIndex": 374.9433,
+        "drawdownPct": -0.0687
+      },
+      {
+        "index": 228,
+        "date": "2025-11-15",
+        "equityIndex": 375.4159,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 229,
+        "date": "2025-11-16",
+        "equityIndex": 375.9644,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 230,
+        "date": "2025-11-17",
+        "equityIndex": 375.9629,
+        "drawdownPct": -0.0004
+      },
+      {
+        "index": 231,
+        "date": "2025-11-18",
+        "equityIndex": 376.0743,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 232,
+        "date": "2025-11-19",
+        "equityIndex": 376.2265,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 233,
+        "date": "2025-11-20",
+        "equityIndex": 376.4215,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 234,
+        "date": "2025-11-21",
+        "equityIndex": 375.9433,
+        "drawdownPct": -0.127
+      },
+      {
+        "index": 235,
+        "date": "2025-11-22",
+        "equityIndex": 376.1879,
+        "drawdownPct": -0.062
+      },
+      {
+        "index": 236,
+        "date": "2025-11-23",
+        "equityIndex": 376.5946,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 237,
+        "date": "2025-11-24",
+        "equityIndex": 376.7899,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 238,
+        "date": "2025-11-25",
+        "equityIndex": 377.4199,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 239,
+        "date": "2025-11-26",
+        "equityIndex": 378.2258,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 240,
+        "date": "2025-11-27",
+        "equityIndex": 379.4324,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 241,
+        "date": "2025-11-28",
+        "equityIndex": 380.4599,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 242,
+        "date": "2025-11-29",
+        "equityIndex": 381.8303,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 243,
+        "date": "2025-11-30",
+        "equityIndex": 383.2198,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 244,
+        "date": "2025-12-01",
+        "equityIndex": 383.5175,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 245,
+        "date": "2025-12-02",
+        "equityIndex": 384.0076,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 246,
+        "date": "2025-12-03",
+        "equityIndex": 384.3974,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 247,
+        "date": "2025-12-04",
+        "equityIndex": 385.0921,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 248,
+        "date": "2025-12-05",
+        "equityIndex": 385.7671,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 249,
+        "date": "2025-12-06",
+        "equityIndex": 386.8543,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 250,
+        "date": "2025-12-07",
+        "equityIndex": 387.813,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 251,
+        "date": "2025-12-08",
+        "equityIndex": 388.5513,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 252,
+        "date": "2025-12-09",
+        "equityIndex": 389.2819,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 253,
+        "date": "2025-12-10",
+        "equityIndex": 389.8601,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 254,
+        "date": "2025-12-11",
+        "equityIndex": 390.4845,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 255,
+        "date": "2025-12-12",
+        "equityIndex": 391.266,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 256,
+        "date": "2025-12-13",
+        "equityIndex": 392.8083,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 257,
+        "date": "2025-12-14",
+        "equityIndex": 393.8513,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 258,
+        "date": "2025-12-15",
+        "equityIndex": 394.6036,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 259,
+        "date": "2025-12-16",
+        "equityIndex": 395.305,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 260,
+        "date": "2025-12-17",
+        "equityIndex": 395.6571,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 261,
+        "date": "2025-12-18",
+        "equityIndex": 396.2002,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 262,
+        "date": "2025-12-19",
+        "equityIndex": 396.7058,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 263,
+        "date": "2025-12-20",
+        "equityIndex": 397.9684,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 264,
+        "date": "2025-12-21",
+        "equityIndex": 399.167,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 265,
+        "date": "2025-12-22",
+        "equityIndex": 399.8245,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 266,
+        "date": "2025-12-23",
+        "equityIndex": 400.7648,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 267,
+        "date": "2025-12-24",
+        "equityIndex": 401.9385,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 268,
+        "date": "2025-12-25",
+        "equityIndex": 403.659,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 269,
+        "date": "2025-12-26",
+        "equityIndex": 404.8382,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 270,
+        "date": "2025-12-27",
+        "equityIndex": 406.4333,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 271,
+        "date": "2025-12-28",
+        "equityIndex": 408.0846,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 272,
+        "date": "2025-12-29",
+        "equityIndex": 409.2768,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 273,
+        "date": "2025-12-30",
+        "equityIndex": 410.8026,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 274,
+        "date": "2025-12-31",
+        "equityIndex": 412.6568,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 275,
+        "date": "2026-01-01",
+        "equityIndex": 414.3378,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 276,
+        "date": "2026-01-02",
+        "equityIndex": 415.5586,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 277,
+        "date": "2026-01-03",
+        "equityIndex": 417.3755,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 278,
+        "date": "2026-01-04",
+        "equityIndex": 418.9123,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 279,
+        "date": "2026-01-05",
+        "equityIndex": 420.1217,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 280,
+        "date": "2026-01-06",
+        "equityIndex": 421.5256,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 281,
+        "date": "2026-01-07",
+        "equityIndex": 422.8706,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 282,
+        "date": "2026-01-08",
+        "equityIndex": 423.9499,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 283,
+        "date": "2026-01-09",
+        "equityIndex": 425.0714,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 284,
+        "date": "2026-01-10",
+        "equityIndex": 426.9093,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 285,
+        "date": "2026-01-11",
+        "equityIndex": 428.9654,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 286,
+        "date": "2026-01-12",
+        "equityIndex": 430.1122,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 287,
+        "date": "2026-01-13",
+        "equityIndex": 431.3673,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 288,
+        "date": "2026-01-14",
+        "equityIndex": 432.5023,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 289,
+        "date": "2026-01-15",
+        "equityIndex": 433.6224,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 290,
+        "date": "2026-01-16",
+        "equityIndex": 435.0806,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 291,
+        "date": "2026-01-17",
+        "equityIndex": 436.9677,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 292,
+        "date": "2026-01-18",
+        "equityIndex": 438.8334,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 293,
+        "date": "2026-01-19",
+        "equityIndex": 440.6827,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 294,
+        "date": "2026-01-20",
+        "equityIndex": 441.6998,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 295,
+        "date": "2026-01-21",
+        "equityIndex": 442.5714,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 296,
+        "date": "2026-01-22",
+        "equityIndex": 443.8393,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 297,
+        "date": "2026-01-23",
+        "equityIndex": 444.9943,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 298,
+        "date": "2026-01-24",
+        "equityIndex": 446.6706,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 299,
+        "date": "2026-01-25",
+        "equityIndex": 448.1641,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 300,
+        "date": "2026-01-26",
+        "equityIndex": 448.9553,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 301,
+        "date": "2026-01-27",
+        "equityIndex": 450.1498,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 302,
+        "date": "2026-01-28",
+        "equityIndex": 451.383,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 303,
+        "date": "2026-01-29",
+        "equityIndex": 452.5744,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 304,
+        "date": "2026-01-30",
+        "equityIndex": 452.8995,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 305,
+        "date": "2026-01-31",
+        "equityIndex": 453.2465,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 306,
+        "date": "2026-02-01",
+        "equityIndex": 453.1241,
+        "drawdownPct": -0.027
+      },
+      {
+        "index": 307,
+        "date": "2026-02-02",
+        "equityIndex": 452.4497,
+        "drawdownPct": -0.1758
+      },
+      {
+        "index": 308,
+        "date": "2026-02-03",
+        "equityIndex": 452.1897,
+        "drawdownPct": -0.2332
+      },
+      {
+        "index": 309,
+        "date": "2026-02-04",
+        "equityIndex": 452.242,
+        "drawdownPct": -0.2216
+      },
+      {
+        "index": 310,
+        "date": "2026-02-05",
+        "equityIndex": 451.6197,
+        "drawdownPct": -0.3589
+      },
+      {
+        "index": 311,
+        "date": "2026-02-06",
+        "equityIndex": 451.3576,
+        "drawdownPct": -0.4167
+      },
+      {
+        "index": 312,
+        "date": "2026-02-07",
+        "equityIndex": 451.3598,
+        "drawdownPct": -0.4163
+      },
+      {
+        "index": 313,
+        "date": "2026-02-08",
+        "equityIndex": 451.4636,
+        "drawdownPct": -0.3934
+      },
+      {
+        "index": 314,
+        "date": "2026-02-09",
+        "equityIndex": 451.4003,
+        "drawdownPct": -0.4073
+      },
+      {
+        "index": 315,
+        "date": "2026-02-10",
+        "equityIndex": 451.3231,
+        "drawdownPct": -0.4244
+      },
+      {
+        "index": 316,
+        "date": "2026-02-11",
+        "equityIndex": 451.264,
+        "drawdownPct": -0.4374
+      },
+      {
+        "index": 317,
+        "date": "2026-02-12",
+        "equityIndex": 451.2528,
+        "drawdownPct": -0.4399
+      },
+      {
+        "index": 318,
+        "date": "2026-02-13",
+        "equityIndex": 451.3706,
+        "drawdownPct": -0.4139
+      },
+      {
+        "index": 319,
+        "date": "2026-02-14",
+        "equityIndex": 451.7458,
+        "drawdownPct": -0.3311
+      },
+      {
+        "index": 320,
+        "date": "2026-02-15",
+        "equityIndex": 452.0469,
+        "drawdownPct": -0.2647
+      },
+      {
+        "index": 321,
+        "date": "2026-02-16",
+        "equityIndex": 452.4843,
+        "drawdownPct": -0.1682
+      },
+      {
+        "index": 322,
+        "date": "2026-02-17",
+        "equityIndex": 452.7774,
+        "drawdownPct": -0.1035
+      },
+      {
+        "index": 323,
+        "date": "2026-02-18",
+        "equityIndex": 453.023,
+        "drawdownPct": -0.0493
+      },
+      {
+        "index": 324,
+        "date": "2026-02-19",
+        "equityIndex": 453.3827,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 325,
+        "date": "2026-02-20",
+        "equityIndex": 453.8398,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 326,
+        "date": "2026-02-21",
+        "equityIndex": 454.8581,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 327,
+        "date": "2026-02-22",
+        "equityIndex": 455.8529,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 328,
+        "date": "2026-02-23",
+        "equityIndex": 456.1581,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 329,
+        "date": "2026-02-24",
+        "equityIndex": 456.2379,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 330,
+        "date": "2026-02-25",
+        "equityIndex": 456.3853,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 331,
+        "date": "2026-02-26",
+        "equityIndex": 456.6086,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 332,
+        "date": "2026-02-27",
+        "equityIndex": 456.891,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 333,
+        "date": "2026-02-28",
+        "equityIndex": 457.2161,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 334,
+        "date": "2026-03-01",
+        "equityIndex": 457.3929,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 335,
+        "date": "2026-03-02",
+        "equityIndex": 457.3831,
+        "drawdownPct": -0.0021
+      },
+      {
+        "index": 336,
+        "date": "2026-03-03",
+        "equityIndex": 457.3625,
+        "drawdownPct": -0.0067
+      },
+      {
+        "index": 337,
+        "date": "2026-03-04",
+        "equityIndex": 457.1825,
+        "drawdownPct": -0.046
+      },
+      {
+        "index": 338,
+        "date": "2026-03-05",
+        "equityIndex": 457.3132,
+        "drawdownPct": -0.0174
+      },
+      {
+        "index": 339,
+        "date": "2026-03-06",
+        "equityIndex": 457.5415,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 340,
+        "date": "2026-03-07",
+        "equityIndex": 458.3554,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 341,
+        "date": "2026-03-08",
+        "equityIndex": 458.9009,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 342,
+        "date": "2026-03-09",
+        "equityIndex": 459.0516,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 343,
+        "date": "2026-03-10",
+        "equityIndex": 459.2343,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 344,
+        "date": "2026-03-11",
+        "equityIndex": 459.5824,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 345,
+        "date": "2026-03-12",
+        "equityIndex": 459.9283,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 346,
+        "date": "2026-03-13",
+        "equityIndex": 460.2574,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 347,
+        "date": "2026-03-14",
+        "equityIndex": 461.1503,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 348,
+        "date": "2026-03-15",
+        "equityIndex": 462.0155,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 349,
+        "date": "2026-03-16",
+        "equityIndex": 462.2125,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 350,
+        "date": "2026-03-17",
+        "equityIndex": 462.5727,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 351,
+        "date": "2026-03-18",
+        "equityIndex": 463.1723,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 352,
+        "date": "2026-03-19",
+        "equityIndex": 463.7162,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 353,
+        "date": "2026-03-20",
+        "equityIndex": 464.2257,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 354,
+        "date": "2026-03-21",
+        "equityIndex": 465.2327,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 355,
+        "date": "2026-03-22",
+        "equityIndex": 465.8827,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 356,
+        "date": "2026-03-23",
+        "equityIndex": 465.9894,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 357,
+        "date": "2026-03-24",
+        "equityIndex": 466.4386,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 358,
+        "date": "2026-03-25",
+        "equityIndex": 467.1477,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 359,
+        "date": "2026-03-26",
+        "equityIndex": 467.7619,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 360,
+        "date": "2026-03-27",
+        "equityIndex": 468.3116,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 361,
+        "date": "2026-03-28",
+        "equityIndex": 469.2686,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 362,
+        "date": "2026-03-29",
+        "equityIndex": 470.0468,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 363,
+        "date": "2026-03-30",
+        "equityIndex": 470.5181,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 364,
+        "date": "2026-03-31",
+        "equityIndex": 470.9333,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 365,
+        "date": "2026-04-01",
+        "equityIndex": 471.6481,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 366,
+        "date": "2026-04-02",
+        "equityIndex": 472.1637,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 367,
+        "date": "2026-04-03",
+        "equityIndex": 472.7895,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 368,
+        "date": "2026-04-04",
+        "equityIndex": 473.4622,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 369,
+        "date": "2026-04-05",
+        "equityIndex": 474.4532,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 370,
+        "date": "2026-04-06",
+        "equityIndex": 475.1883,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 371,
+        "date": "2026-04-07",
+        "equityIndex": 475.9499,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 372,
+        "date": "2026-04-08",
+        "equityIndex": 476.8087,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 373,
+        "date": "2026-04-09",
+        "equityIndex": 477.6391,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 374,
+        "date": "2026-04-10",
+        "equityIndex": 478.5938,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 375,
+        "date": "2026-04-11",
+        "equityIndex": 479.7979,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 376,
+        "date": "2026-04-12",
+        "equityIndex": 480.8938,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 377,
+        "date": "2026-04-13",
+        "equityIndex": 481.6724,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 378,
+        "date": "2026-04-14",
+        "equityIndex": 482.4687,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 379,
+        "date": "2026-04-15",
+        "equityIndex": 483.2454,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 380,
+        "date": "2026-04-16",
+        "equityIndex": 483.8344,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 381,
+        "date": "2026-04-17",
+        "equityIndex": 484.4331,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 382,
+        "date": "2026-04-18",
+        "equityIndex": 485.4738,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 383,
+        "date": "2026-04-19",
+        "equityIndex": 486.2278,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 384,
+        "date": "2026-04-20",
+        "equityIndex": 487.0205,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 385,
+        "date": "2026-04-21",
+        "equityIndex": 487.6351,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 386,
+        "date": "2026-04-22",
+        "equityIndex": 488.6736,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 387,
+        "date": "2026-04-23",
+        "equityIndex": 489.3843,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 388,
+        "date": "2026-04-24",
+        "equityIndex": 490.7504,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 389,
+        "date": "2026-04-25",
+        "equityIndex": 492.1285,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 390,
+        "date": "2026-04-26",
+        "equityIndex": 493.3568,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 391,
+        "date": "2026-04-27",
+        "equityIndex": 494.2356,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 392,
+        "date": "2026-04-28",
+        "equityIndex": 495.4133,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 393,
+        "date": "2026-04-29",
+        "equityIndex": 496.7475,
+        "drawdownPct": 0.0
+      },
+      {
+        "index": 394,
+        "date": "2026-04-30",
+        "equityIndex": 497.8506,
+        "drawdownPct": 0.0
       }
-    ],
-    "attributionPct": {
-      "spreadCapture": -38.492354579782315,
-      "inventoryMarkout": -278.1330092399657,
-      "makerCredit": 1341.3365538793162,
-      "takerCost": -626.8605821483508,
-      "priceAndSpread": -316.625363819748
-    },
-    "equity": {
-      "m1": [
-        {
-          "index": 0,
-          "date": "2025-04-01",
-          "equityIndex": 99.9596,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 1,
-          "date": "2025-04-02",
-          "equityIndex": 99.9644,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 2,
-          "date": "2025-04-03",
-          "equityIndex": 99.8622,
-          "drawdownPct": -0.1022
-        },
-        {
-          "index": 3,
-          "date": "2025-04-04",
-          "equityIndex": 99.79,
-          "drawdownPct": -0.1745
-        },
-        {
-          "index": 4,
-          "date": "2025-04-05",
-          "equityIndex": 100.1114,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 5,
-          "date": "2025-04-06",
-          "equityIndex": 100.3085,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 6,
-          "date": "2025-04-07",
-          "equityIndex": 99.7618,
-          "drawdownPct": -0.5451
-        },
-        {
-          "index": 7,
-          "date": "2025-04-08",
-          "equityIndex": 99.4791,
-          "drawdownPct": -0.8269
-        },
-        {
-          "index": 8,
-          "date": "2025-04-09",
-          "equityIndex": 99.115,
-          "drawdownPct": -1.1899
-        },
-        {
-          "index": 9,
-          "date": "2025-04-10",
-          "equityIndex": 98.9262,
-          "drawdownPct": -1.378
-        },
-        {
-          "index": 10,
-          "date": "2025-04-11",
-          "equityIndex": 98.8735,
-          "drawdownPct": -1.4306
-        },
-        {
-          "index": 11,
-          "date": "2025-04-12",
-          "equityIndex": 99.2161,
-          "drawdownPct": -1.0891
-        },
-        {
-          "index": 12,
-          "date": "2025-04-13",
-          "equityIndex": 99.2156,
-          "drawdownPct": -1.0895
-        },
-        {
-          "index": 13,
-          "date": "2025-04-14",
-          "equityIndex": 99.0989,
-          "drawdownPct": -1.2059
-        },
-        {
-          "index": 14,
-          "date": "2025-04-15",
-          "equityIndex": 99.3352,
-          "drawdownPct": -0.9703
-        },
-        {
-          "index": 15,
-          "date": "2025-04-16",
-          "equityIndex": 99.3411,
-          "drawdownPct": -0.9645
-        },
-        {
-          "index": 16,
-          "date": "2025-04-17",
-          "equityIndex": 99.7455,
-          "drawdownPct": -0.5613
-        },
-        {
-          "index": 17,
-          "date": "2025-04-18",
-          "equityIndex": 100.1796,
-          "drawdownPct": -0.1286
-        },
-        {
-          "index": 18,
-          "date": "2025-04-19",
-          "equityIndex": 100.8142,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 19,
-          "date": "2025-04-20",
-          "equityIndex": 101.33,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 20,
-          "date": "2025-04-21",
-          "equityIndex": 101.6568,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 21,
-          "date": "2025-04-22",
-          "equityIndex": 101.8937,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 22,
-          "date": "2025-04-23",
-          "equityIndex": 101.9609,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 23,
-          "date": "2025-04-24",
-          "equityIndex": 102.365,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 24,
-          "date": "2025-04-25",
-          "equityIndex": 102.6991,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 25,
-          "date": "2025-04-26",
-          "equityIndex": 103.1968,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 26,
-          "date": "2025-04-27",
-          "equityIndex": 103.6256,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 27,
-          "date": "2025-04-28",
-          "equityIndex": 104.037,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 28,
-          "date": "2025-04-29",
-          "equityIndex": 104.3964,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 29,
-          "date": "2025-04-30",
-          "equityIndex": 104.8669,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 30,
-          "date": "2025-05-01",
-          "equityIndex": 105.4348,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 31,
-          "date": "2025-05-02",
-          "equityIndex": 106.1376,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 32,
-          "date": "2025-05-03",
-          "equityIndex": 106.9431,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 33,
-          "date": "2025-05-04",
-          "equityIndex": 107.6994,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 34,
-          "date": "2025-05-05",
-          "equityIndex": 108.3016,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 35,
-          "date": "2025-05-06",
-          "equityIndex": 108.8207,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 36,
-          "date": "2025-05-07",
-          "equityIndex": 109.4437,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 37,
-          "date": "2025-05-08",
-          "equityIndex": 109.9796,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 38,
-          "date": "2025-05-09",
-          "equityIndex": 110.1113,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 39,
-          "date": "2025-05-10",
-          "equityIndex": 110.4749,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 40,
-          "date": "2025-05-11",
-          "equityIndex": 110.6659,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 41,
-          "date": "2025-05-12",
-          "equityIndex": 110.6621,
-          "drawdownPct": -0.0035
-        },
-        {
-          "index": 42,
-          "date": "2025-05-13",
-          "equityIndex": 110.9214,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 43,
-          "date": "2025-05-14",
-          "equityIndex": 111.0152,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 44,
-          "date": "2025-05-15",
-          "equityIndex": 111.1457,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 45,
-          "date": "2025-05-16",
-          "equityIndex": 111.4524,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 46,
-          "date": "2025-05-17",
-          "equityIndex": 111.8782,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 47,
-          "date": "2025-05-18",
-          "equityIndex": 112.0701,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 48,
-          "date": "2025-05-19",
-          "equityIndex": 112.1577,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 49,
-          "date": "2025-05-20",
-          "equityIndex": 112.5996,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 50,
-          "date": "2025-05-21",
-          "equityIndex": 112.5333,
-          "drawdownPct": -0.0589
-        },
-        {
-          "index": 51,
-          "date": "2025-05-22",
-          "equityIndex": 112.6569,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 52,
-          "date": "2025-05-23",
-          "equityIndex": 112.6358,
-          "drawdownPct": -0.0187
-        },
-        {
-          "index": 53,
-          "date": "2025-05-24",
-          "equityIndex": 112.9581,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 54,
-          "date": "2025-05-25",
-          "equityIndex": 113.4091,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 55,
-          "date": "2025-05-26",
-          "equityIndex": 113.8277,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 56,
-          "date": "2025-05-27",
-          "equityIndex": 114.1904,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 57,
-          "date": "2025-05-28",
-          "equityIndex": 114.5085,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 58,
-          "date": "2025-05-29",
-          "equityIndex": 114.8025,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 59,
-          "date": "2025-05-30",
-          "equityIndex": 114.9601,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 60,
-          "date": "2025-05-31",
-          "equityIndex": 115.3368,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 61,
-          "date": "2025-06-01",
-          "equityIndex": 115.7904,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 62,
-          "date": "2025-06-02",
-          "equityIndex": 116.1631,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 63,
-          "date": "2025-06-03",
-          "equityIndex": 116.7303,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 64,
-          "date": "2025-06-04",
-          "equityIndex": 117.2904,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 65,
-          "date": "2025-06-05",
-          "equityIndex": 117.5614,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 66,
-          "date": "2025-06-06",
-          "equityIndex": 118.4737,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 67,
-          "date": "2025-06-07",
-          "equityIndex": 119.2274,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 68,
-          "date": "2025-06-08",
-          "equityIndex": 119.8618,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 69,
-          "date": "2025-06-09",
-          "equityIndex": 120.5875,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 70,
-          "date": "2025-06-10",
-          "equityIndex": 121.2656,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 71,
-          "date": "2025-06-11",
-          "equityIndex": 121.7217,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 72,
-          "date": "2025-06-12",
-          "equityIndex": 122.2159,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 73,
-          "date": "2025-06-13",
-          "equityIndex": 121.8021,
-          "drawdownPct": -0.3386
-        },
-        {
-          "index": 74,
-          "date": "2025-06-14",
-          "equityIndex": 122.4256,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 75,
-          "date": "2025-06-15",
-          "equityIndex": 123.0495,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 76,
-          "date": "2025-06-16",
-          "equityIndex": 123.638,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 77,
-          "date": "2025-06-17",
-          "equityIndex": 123.8683,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 78,
-          "date": "2025-06-18",
-          "equityIndex": 124.2247,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 79,
-          "date": "2025-06-19",
-          "equityIndex": 124.6004,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 80,
-          "date": "2025-06-20",
-          "equityIndex": 125.0473,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 81,
-          "date": "2025-06-21",
-          "equityIndex": 125.3358,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 82,
-          "date": "2025-06-22",
-          "equityIndex": 124.9012,
-          "drawdownPct": -0.3468
-        },
-        {
-          "index": 83,
-          "date": "2025-06-23",
-          "equityIndex": 124.8614,
-          "drawdownPct": -0.3785
-        },
-        {
-          "index": 84,
-          "date": "2025-06-24",
-          "equityIndex": 125.0005,
-          "drawdownPct": -0.2675
-        },
-        {
-          "index": 85,
-          "date": "2025-06-25",
-          "equityIndex": 125.494,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 86,
-          "date": "2025-06-26",
-          "equityIndex": 125.9383,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 87,
-          "date": "2025-06-27",
-          "equityIndex": 126.4164,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 88,
-          "date": "2025-06-28",
-          "equityIndex": 126.7891,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 89,
-          "date": "2025-06-29",
-          "equityIndex": 127.627,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 90,
-          "date": "2025-06-30",
-          "equityIndex": 128.3283,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 91,
-          "date": "2025-07-01",
-          "equityIndex": 129.0107,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 92,
-          "date": "2025-07-02",
-          "equityIndex": 130.231,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 93,
-          "date": "2025-07-03",
-          "equityIndex": 131.036,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 94,
-          "date": "2025-07-04",
-          "equityIndex": 131.7874,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 95,
-          "date": "2025-07-05",
-          "equityIndex": 132.3399,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 96,
-          "date": "2025-07-06",
-          "equityIndex": 132.7004,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 97,
-          "date": "2025-07-07",
-          "equityIndex": 133.4887,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 98,
-          "date": "2025-07-08",
-          "equityIndex": 134.2923,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 99,
-          "date": "2025-07-09",
-          "equityIndex": 135.2518,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 100,
-          "date": "2025-07-10",
-          "equityIndex": 136.0792,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 101,
-          "date": "2025-07-11",
-          "equityIndex": 136.2869,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 102,
-          "date": "2025-07-12",
-          "equityIndex": 136.6817,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 103,
-          "date": "2025-07-13",
-          "equityIndex": 137.1284,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 104,
-          "date": "2025-07-14",
-          "equityIndex": 137.4283,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 105,
-          "date": "2025-07-15",
-          "equityIndex": 137.3756,
-          "drawdownPct": -0.0383
-        },
-        {
-          "index": 106,
-          "date": "2025-07-16",
-          "equityIndex": 137.5818,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 107,
-          "date": "2025-07-17",
-          "equityIndex": 137.649,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 108,
-          "date": "2025-07-18",
-          "equityIndex": 137.4426,
-          "drawdownPct": -0.15
-        },
-        {
-          "index": 109,
-          "date": "2025-07-19",
-          "equityIndex": 137.6072,
-          "drawdownPct": -0.0303
-        },
-        {
-          "index": 110,
-          "date": "2025-07-20",
-          "equityIndex": 137.6459,
-          "drawdownPct": -0.0022
-        },
-        {
-          "index": 111,
-          "date": "2025-07-21",
-          "equityIndex": 137.7223,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 112,
-          "date": "2025-07-22",
-          "equityIndex": 137.7808,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 113,
-          "date": "2025-07-23",
-          "equityIndex": 137.9395,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 114,
-          "date": "2025-07-24",
-          "equityIndex": 138.1069,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 115,
-          "date": "2025-07-25",
-          "equityIndex": 138.0384,
-          "drawdownPct": -0.0496
-        },
-        {
-          "index": 116,
-          "date": "2025-07-26",
-          "equityIndex": 138.4392,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 117,
-          "date": "2025-07-27",
-          "equityIndex": 139.0336,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 118,
-          "date": "2025-07-28",
-          "equityIndex": 139.0904,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 119,
-          "date": "2025-07-29",
-          "equityIndex": 139.1796,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 120,
-          "date": "2025-07-30",
-          "equityIndex": 139.4152,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 121,
-          "date": "2025-07-31",
-          "equityIndex": 139.7702,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 122,
-          "date": "2025-08-01",
-          "equityIndex": 139.1696,
-          "drawdownPct": -0.4297
-        },
-        {
-          "index": 123,
-          "date": "2025-08-02",
-          "equityIndex": 139.5055,
-          "drawdownPct": -0.1894
-        },
-        {
-          "index": 124,
-          "date": "2025-08-03",
-          "equityIndex": 140.0717,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 125,
-          "date": "2025-08-04",
-          "equityIndex": 140.3744,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 126,
-          "date": "2025-08-05",
-          "equityIndex": 140.4932,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 127,
-          "date": "2025-08-06",
-          "equityIndex": 140.8309,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 128,
-          "date": "2025-08-07",
-          "equityIndex": 141.8848,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 129,
-          "date": "2025-08-08",
-          "equityIndex": 143.4685,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 130,
-          "date": "2025-08-09",
-          "equityIndex": 146.4694,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 131,
-          "date": "2025-08-10",
-          "equityIndex": 149.3695,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 132,
-          "date": "2025-08-11",
-          "equityIndex": 151.3872,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 133,
-          "date": "2025-08-12",
-          "equityIndex": 154.4822,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 134,
-          "date": "2025-08-13",
-          "equityIndex": 156.3921,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 135,
-          "date": "2025-08-14",
-          "equityIndex": 157.8842,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 136,
-          "date": "2025-08-15",
-          "equityIndex": 160.472,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 137,
-          "date": "2025-08-16",
-          "equityIndex": 164.4002,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 138,
-          "date": "2025-08-17",
-          "equityIndex": 168.1753,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 139,
-          "date": "2025-08-18",
-          "equityIndex": 169.8637,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 140,
-          "date": "2025-08-19",
-          "equityIndex": 171.5215,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 141,
-          "date": "2025-08-20",
-          "equityIndex": 175.1902,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 142,
-          "date": "2025-08-21",
-          "equityIndex": 178.1085,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 143,
-          "date": "2025-08-22",
-          "equityIndex": 181.2427,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 144,
-          "date": "2025-08-23",
-          "equityIndex": 185.7863,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 145,
-          "date": "2025-08-24",
-          "equityIndex": 189.2359,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 146,
-          "date": "2025-08-25",
-          "equityIndex": 190.7798,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 147,
-          "date": "2025-08-26",
-          "equityIndex": 193.8716,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 148,
-          "date": "2025-08-27",
-          "equityIndex": 198.1254,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 149,
-          "date": "2025-08-28",
-          "equityIndex": 202.5317,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 150,
-          "date": "2025-08-29",
-          "equityIndex": 206.13,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 151,
-          "date": "2025-08-30",
-          "equityIndex": 211.7974,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 152,
-          "date": "2025-08-31",
-          "equityIndex": 217.4001,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 153,
-          "date": "2025-09-01",
-          "equityIndex": 220.5433,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 154,
-          "date": "2025-09-02",
-          "equityIndex": 224.6925,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 155,
-          "date": "2025-09-03",
-          "equityIndex": 229.3866,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 156,
-          "date": "2025-09-04",
-          "equityIndex": 233.7248,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 157,
-          "date": "2025-09-05",
-          "equityIndex": 238.9449,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 158,
-          "date": "2025-09-06",
-          "equityIndex": 243.9979,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 159,
-          "date": "2025-09-07",
-          "equityIndex": 249.4042,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 160,
-          "date": "2025-09-08",
-          "equityIndex": 255.1484,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 161,
-          "date": "2025-09-09",
-          "equityIndex": 260.7175,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 162,
-          "date": "2025-09-10",
-          "equityIndex": 264.9121,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 163,
-          "date": "2025-09-11",
-          "equityIndex": 265.9129,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 164,
-          "date": "2025-09-12",
-          "equityIndex": 267.374,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 165,
-          "date": "2025-09-13",
-          "equityIndex": 268.4509,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 166,
-          "date": "2025-09-14",
-          "equityIndex": 269.6465,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 167,
-          "date": "2025-09-15",
-          "equityIndex": 270.8861,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 168,
-          "date": "2025-09-16",
-          "equityIndex": 273.06,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 169,
-          "date": "2025-09-17",
-          "equityIndex": 274.8556,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 170,
-          "date": "2025-09-18",
-          "equityIndex": 276.7846,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 171,
-          "date": "2025-09-19",
-          "equityIndex": 279.0236,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 172,
-          "date": "2025-09-20",
-          "equityIndex": 281.1764,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 173,
-          "date": "2025-09-21",
-          "equityIndex": 284.9086,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 174,
-          "date": "2025-09-22",
-          "equityIndex": 286.583,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 175,
-          "date": "2025-09-23",
-          "equityIndex": 288.5932,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 176,
-          "date": "2025-09-24",
-          "equityIndex": 291.2966,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 177,
-          "date": "2025-09-25",
-          "equityIndex": 293.8602,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 178,
-          "date": "2025-09-26",
-          "equityIndex": 297.6121,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 179,
-          "date": "2025-09-27",
-          "equityIndex": 302.4244,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 180,
-          "date": "2025-09-28",
-          "equityIndex": 305.7354,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 181,
-          "date": "2025-09-29",
-          "equityIndex": 310.9286,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 182,
-          "date": "2025-09-30",
-          "equityIndex": 316.1337,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 183,
-          "date": "2025-10-01",
-          "equityIndex": 321.159,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 184,
-          "date": "2025-10-02",
-          "equityIndex": 325.4847,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 185,
-          "date": "2025-10-03",
-          "equityIndex": 329.3927,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 186,
-          "date": "2025-10-04",
-          "equityIndex": 334.5554,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 187,
-          "date": "2025-10-05",
-          "equityIndex": 337.7427,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 188,
-          "date": "2025-10-06",
-          "equityIndex": 340.524,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 189,
-          "date": "2025-10-07",
-          "equityIndex": 343.1528,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 190,
-          "date": "2025-10-08",
-          "equityIndex": 345.1752,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 191,
-          "date": "2025-10-09",
-          "equityIndex": 347.9982,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 192,
-          "date": "2025-10-10",
-          "equityIndex": 350.2175,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 193,
-          "date": "2025-10-11",
-          "equityIndex": 350.9254,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 194,
-          "date": "2025-10-12",
-          "equityIndex": 351.8181,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 195,
-          "date": "2025-10-13",
-          "equityIndex": 352.7756,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 196,
-          "date": "2025-10-14",
-          "equityIndex": 353.3098,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 197,
-          "date": "2025-10-15",
-          "equityIndex": 354.1067,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 198,
-          "date": "2025-10-16",
-          "equityIndex": 354.5903,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 199,
-          "date": "2025-10-17",
-          "equityIndex": 354.9998,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 200,
-          "date": "2025-10-18",
-          "equityIndex": 355.9222,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 201,
-          "date": "2025-10-19",
-          "equityIndex": 356.8552,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 202,
-          "date": "2025-10-20",
-          "equityIndex": 357.7971,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 203,
-          "date": "2025-10-21",
-          "equityIndex": 358.4785,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 204,
-          "date": "2025-10-22",
-          "equityIndex": 359.2082,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 205,
-          "date": "2025-10-23",
-          "equityIndex": 360.1674,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 206,
-          "date": "2025-10-24",
-          "equityIndex": 361.0111,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 207,
-          "date": "2025-10-25",
-          "equityIndex": 362.3542,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 208,
-          "date": "2025-10-26",
-          "equityIndex": 363.2632,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 209,
-          "date": "2025-10-27",
-          "equityIndex": 364.4407,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 210,
-          "date": "2025-10-28",
-          "equityIndex": 365.6391,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 211,
-          "date": "2025-10-29",
-          "equityIndex": 366.7614,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 212,
-          "date": "2025-10-30",
-          "equityIndex": 367.2716,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 213,
-          "date": "2025-10-31",
-          "equityIndex": 367.7967,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 214,
-          "date": "2025-11-01",
-          "equityIndex": 369.4348,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 215,
-          "date": "2025-11-02",
-          "equityIndex": 370.7086,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 216,
-          "date": "2025-11-03",
-          "equityIndex": 370.9971,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 217,
-          "date": "2025-11-04",
-          "equityIndex": 370.8175,
-          "drawdownPct": -0.0484
-        },
-        {
-          "index": 218,
-          "date": "2025-11-05",
-          "equityIndex": 370.975,
-          "drawdownPct": -0.006
-        },
-        {
-          "index": 219,
-          "date": "2025-11-06",
-          "equityIndex": 371.2112,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 220,
-          "date": "2025-11-07",
-          "equityIndex": 371.5734,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 221,
-          "date": "2025-11-08",
-          "equityIndex": 372.3736,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 222,
-          "date": "2025-11-09",
-          "equityIndex": 373.0195,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 223,
-          "date": "2025-11-10",
-          "equityIndex": 373.7006,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 224,
-          "date": "2025-11-11",
-          "equityIndex": 374.3072,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 225,
-          "date": "2025-11-12",
-          "equityIndex": 375.1511,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 226,
-          "date": "2025-11-13",
-          "equityIndex": 375.2012,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 227,
-          "date": "2025-11-14",
-          "equityIndex": 374.9433,
-          "drawdownPct": -0.0687
-        },
-        {
-          "index": 228,
-          "date": "2025-11-15",
-          "equityIndex": 375.4159,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 229,
-          "date": "2025-11-16",
-          "equityIndex": 375.9644,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 230,
-          "date": "2025-11-17",
-          "equityIndex": 375.9629,
-          "drawdownPct": -0.0004
-        },
-        {
-          "index": 231,
-          "date": "2025-11-18",
-          "equityIndex": 376.0743,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 232,
-          "date": "2025-11-19",
-          "equityIndex": 376.2265,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 233,
-          "date": "2025-11-20",
-          "equityIndex": 376.4215,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 234,
-          "date": "2025-11-21",
-          "equityIndex": 375.9433,
-          "drawdownPct": -0.127
-        },
-        {
-          "index": 235,
-          "date": "2025-11-22",
-          "equityIndex": 376.1879,
-          "drawdownPct": -0.062
-        },
-        {
-          "index": 236,
-          "date": "2025-11-23",
-          "equityIndex": 376.5946,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 237,
-          "date": "2025-11-24",
-          "equityIndex": 376.7899,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 238,
-          "date": "2025-11-25",
-          "equityIndex": 377.4199,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 239,
-          "date": "2025-11-26",
-          "equityIndex": 378.2258,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 240,
-          "date": "2025-11-27",
-          "equityIndex": 379.4324,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 241,
-          "date": "2025-11-28",
-          "equityIndex": 380.4599,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 242,
-          "date": "2025-11-29",
-          "equityIndex": 381.8303,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 243,
-          "date": "2025-11-30",
-          "equityIndex": 383.2198,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 244,
-          "date": "2025-12-01",
-          "equityIndex": 383.5175,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 245,
-          "date": "2025-12-02",
-          "equityIndex": 384.0076,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 246,
-          "date": "2025-12-03",
-          "equityIndex": 384.3974,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 247,
-          "date": "2025-12-04",
-          "equityIndex": 385.0921,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 248,
-          "date": "2025-12-05",
-          "equityIndex": 385.7671,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 249,
-          "date": "2025-12-06",
-          "equityIndex": 386.8543,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 250,
-          "date": "2025-12-07",
-          "equityIndex": 387.813,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 251,
-          "date": "2025-12-08",
-          "equityIndex": 388.5513,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 252,
-          "date": "2025-12-09",
-          "equityIndex": 389.2819,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 253,
-          "date": "2025-12-10",
-          "equityIndex": 389.8601,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 254,
-          "date": "2025-12-11",
-          "equityIndex": 390.4845,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 255,
-          "date": "2025-12-12",
-          "equityIndex": 391.266,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 256,
-          "date": "2025-12-13",
-          "equityIndex": 392.8083,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 257,
-          "date": "2025-12-14",
-          "equityIndex": 393.8513,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 258,
-          "date": "2025-12-15",
-          "equityIndex": 394.6036,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 259,
-          "date": "2025-12-16",
-          "equityIndex": 395.305,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 260,
-          "date": "2025-12-17",
-          "equityIndex": 395.6571,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 261,
-          "date": "2025-12-18",
-          "equityIndex": 396.2002,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 262,
-          "date": "2025-12-19",
-          "equityIndex": 396.7058,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 263,
-          "date": "2025-12-20",
-          "equityIndex": 397.9684,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 264,
-          "date": "2025-12-21",
-          "equityIndex": 399.167,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 265,
-          "date": "2025-12-22",
-          "equityIndex": 399.8245,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 266,
-          "date": "2025-12-23",
-          "equityIndex": 400.7648,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 267,
-          "date": "2025-12-24",
-          "equityIndex": 401.9385,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 268,
-          "date": "2025-12-25",
-          "equityIndex": 403.659,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 269,
-          "date": "2025-12-26",
-          "equityIndex": 404.8382,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 270,
-          "date": "2025-12-27",
-          "equityIndex": 406.4333,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 271,
-          "date": "2025-12-28",
-          "equityIndex": 408.0846,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 272,
-          "date": "2025-12-29",
-          "equityIndex": 409.2768,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 273,
-          "date": "2025-12-30",
-          "equityIndex": 410.8026,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 274,
-          "date": "2025-12-31",
-          "equityIndex": 412.6568,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 275,
-          "date": "2026-01-01",
-          "equityIndex": 414.3378,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 276,
-          "date": "2026-01-02",
-          "equityIndex": 415.5586,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 277,
-          "date": "2026-01-03",
-          "equityIndex": 417.3755,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 278,
-          "date": "2026-01-04",
-          "equityIndex": 418.9123,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 279,
-          "date": "2026-01-05",
-          "equityIndex": 420.1217,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 280,
-          "date": "2026-01-06",
-          "equityIndex": 421.5256,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 281,
-          "date": "2026-01-07",
-          "equityIndex": 422.8706,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 282,
-          "date": "2026-01-08",
-          "equityIndex": 423.9499,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 283,
-          "date": "2026-01-09",
-          "equityIndex": 425.0714,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 284,
-          "date": "2026-01-10",
-          "equityIndex": 426.9093,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 285,
-          "date": "2026-01-11",
-          "equityIndex": 428.9654,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 286,
-          "date": "2026-01-12",
-          "equityIndex": 430.1122,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 287,
-          "date": "2026-01-13",
-          "equityIndex": 431.3673,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 288,
-          "date": "2026-01-14",
-          "equityIndex": 432.5023,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 289,
-          "date": "2026-01-15",
-          "equityIndex": 433.6224,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 290,
-          "date": "2026-01-16",
-          "equityIndex": 435.0806,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 291,
-          "date": "2026-01-17",
-          "equityIndex": 436.9677,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 292,
-          "date": "2026-01-18",
-          "equityIndex": 438.8334,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 293,
-          "date": "2026-01-19",
-          "equityIndex": 440.6827,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 294,
-          "date": "2026-01-20",
-          "equityIndex": 441.6998,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 295,
-          "date": "2026-01-21",
-          "equityIndex": 442.5714,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 296,
-          "date": "2026-01-22",
-          "equityIndex": 443.8393,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 297,
-          "date": "2026-01-23",
-          "equityIndex": 444.9943,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 298,
-          "date": "2026-01-24",
-          "equityIndex": 446.6706,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 299,
-          "date": "2026-01-25",
-          "equityIndex": 448.1641,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 300,
-          "date": "2026-01-26",
-          "equityIndex": 448.9553,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 301,
-          "date": "2026-01-27",
-          "equityIndex": 450.1498,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 302,
-          "date": "2026-01-28",
-          "equityIndex": 451.383,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 303,
-          "date": "2026-01-29",
-          "equityIndex": 452.5744,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 304,
-          "date": "2026-01-30",
-          "equityIndex": 452.8995,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 305,
-          "date": "2026-01-31",
-          "equityIndex": 453.2465,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 306,
-          "date": "2026-02-01",
-          "equityIndex": 453.1241,
-          "drawdownPct": -0.027
-        },
-        {
-          "index": 307,
-          "date": "2026-02-02",
-          "equityIndex": 452.4497,
-          "drawdownPct": -0.1758
-        },
-        {
-          "index": 308,
-          "date": "2026-02-03",
-          "equityIndex": 452.1897,
-          "drawdownPct": -0.2332
-        },
-        {
-          "index": 309,
-          "date": "2026-02-04",
-          "equityIndex": 452.242,
-          "drawdownPct": -0.2216
-        },
-        {
-          "index": 310,
-          "date": "2026-02-05",
-          "equityIndex": 451.6197,
-          "drawdownPct": -0.3589
-        },
-        {
-          "index": 311,
-          "date": "2026-02-06",
-          "equityIndex": 451.3576,
-          "drawdownPct": -0.4167
-        },
-        {
-          "index": 312,
-          "date": "2026-02-07",
-          "equityIndex": 451.3598,
-          "drawdownPct": -0.4163
-        },
-        {
-          "index": 313,
-          "date": "2026-02-08",
-          "equityIndex": 451.4636,
-          "drawdownPct": -0.3934
-        },
-        {
-          "index": 314,
-          "date": "2026-02-09",
-          "equityIndex": 451.4003,
-          "drawdownPct": -0.4073
-        },
-        {
-          "index": 315,
-          "date": "2026-02-10",
-          "equityIndex": 451.3231,
-          "drawdownPct": -0.4244
-        },
-        {
-          "index": 316,
-          "date": "2026-02-11",
-          "equityIndex": 451.264,
-          "drawdownPct": -0.4374
-        },
-        {
-          "index": 317,
-          "date": "2026-02-12",
-          "equityIndex": 451.2528,
-          "drawdownPct": -0.4399
-        },
-        {
-          "index": 318,
-          "date": "2026-02-13",
-          "equityIndex": 451.3706,
-          "drawdownPct": -0.4139
-        },
-        {
-          "index": 319,
-          "date": "2026-02-14",
-          "equityIndex": 451.7458,
-          "drawdownPct": -0.3311
-        },
-        {
-          "index": 320,
-          "date": "2026-02-15",
-          "equityIndex": 452.0469,
-          "drawdownPct": -0.2647
-        },
-        {
-          "index": 321,
-          "date": "2026-02-16",
-          "equityIndex": 452.4843,
-          "drawdownPct": -0.1682
-        },
-        {
-          "index": 322,
-          "date": "2026-02-17",
-          "equityIndex": 452.7774,
-          "drawdownPct": -0.1035
-        },
-        {
-          "index": 323,
-          "date": "2026-02-18",
-          "equityIndex": 453.023,
-          "drawdownPct": -0.0493
-        },
-        {
-          "index": 324,
-          "date": "2026-02-19",
-          "equityIndex": 453.3827,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 325,
-          "date": "2026-02-20",
-          "equityIndex": 453.8398,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 326,
-          "date": "2026-02-21",
-          "equityIndex": 454.8581,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 327,
-          "date": "2026-02-22",
-          "equityIndex": 455.8529,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 328,
-          "date": "2026-02-23",
-          "equityIndex": 456.1581,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 329,
-          "date": "2026-02-24",
-          "equityIndex": 456.2379,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 330,
-          "date": "2026-02-25",
-          "equityIndex": 456.3853,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 331,
-          "date": "2026-02-26",
-          "equityIndex": 456.6086,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 332,
-          "date": "2026-02-27",
-          "equityIndex": 456.891,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 333,
-          "date": "2026-02-28",
-          "equityIndex": 457.2161,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 334,
-          "date": "2026-03-01",
-          "equityIndex": 457.3929,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 335,
-          "date": "2026-03-02",
-          "equityIndex": 457.3831,
-          "drawdownPct": -0.0021
-        },
-        {
-          "index": 336,
-          "date": "2026-03-03",
-          "equityIndex": 457.3625,
-          "drawdownPct": -0.0067
-        },
-        {
-          "index": 337,
-          "date": "2026-03-04",
-          "equityIndex": 457.1825,
-          "drawdownPct": -0.046
-        },
-        {
-          "index": 338,
-          "date": "2026-03-05",
-          "equityIndex": 457.3132,
-          "drawdownPct": -0.0174
-        },
-        {
-          "index": 339,
-          "date": "2026-03-06",
-          "equityIndex": 457.5415,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 340,
-          "date": "2026-03-07",
-          "equityIndex": 458.3554,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 341,
-          "date": "2026-03-08",
-          "equityIndex": 458.9009,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 342,
-          "date": "2026-03-09",
-          "equityIndex": 459.0516,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 343,
-          "date": "2026-03-10",
-          "equityIndex": 459.2343,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 344,
-          "date": "2026-03-11",
-          "equityIndex": 459.5824,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 345,
-          "date": "2026-03-12",
-          "equityIndex": 459.9283,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 346,
-          "date": "2026-03-13",
-          "equityIndex": 460.2574,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 347,
-          "date": "2026-03-14",
-          "equityIndex": 461.1503,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 348,
-          "date": "2026-03-15",
-          "equityIndex": 462.0155,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 349,
-          "date": "2026-03-16",
-          "equityIndex": 462.2125,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 350,
-          "date": "2026-03-17",
-          "equityIndex": 462.5727,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 351,
-          "date": "2026-03-18",
-          "equityIndex": 463.1723,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 352,
-          "date": "2026-03-19",
-          "equityIndex": 463.7162,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 353,
-          "date": "2026-03-20",
-          "equityIndex": 464.2257,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 354,
-          "date": "2026-03-21",
-          "equityIndex": 465.2327,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 355,
-          "date": "2026-03-22",
-          "equityIndex": 465.8827,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 356,
-          "date": "2026-03-23",
-          "equityIndex": 465.9894,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 357,
-          "date": "2026-03-24",
-          "equityIndex": 466.4386,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 358,
-          "date": "2026-03-25",
-          "equityIndex": 467.1477,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 359,
-          "date": "2026-03-26",
-          "equityIndex": 467.7619,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 360,
-          "date": "2026-03-27",
-          "equityIndex": 468.3116,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 361,
-          "date": "2026-03-28",
-          "equityIndex": 469.2686,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 362,
-          "date": "2026-03-29",
-          "equityIndex": 470.0468,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 363,
-          "date": "2026-03-30",
-          "equityIndex": 470.5181,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 364,
-          "date": "2026-03-31",
-          "equityIndex": 470.9333,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 365,
-          "date": "2026-04-01",
-          "equityIndex": 471.6481,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 366,
-          "date": "2026-04-02",
-          "equityIndex": 472.1637,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 367,
-          "date": "2026-04-03",
-          "equityIndex": 472.7895,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 368,
-          "date": "2026-04-04",
-          "equityIndex": 473.4622,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 369,
-          "date": "2026-04-05",
-          "equityIndex": 474.4532,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 370,
-          "date": "2026-04-06",
-          "equityIndex": 475.1883,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 371,
-          "date": "2026-04-07",
-          "equityIndex": 475.9499,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 372,
-          "date": "2026-04-08",
-          "equityIndex": 476.8087,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 373,
-          "date": "2026-04-09",
-          "equityIndex": 477.6391,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 374,
-          "date": "2026-04-10",
-          "equityIndex": 478.5938,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 375,
-          "date": "2026-04-11",
-          "equityIndex": 479.7979,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 376,
-          "date": "2026-04-12",
-          "equityIndex": 480.8938,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 377,
-          "date": "2026-04-13",
-          "equityIndex": 481.6724,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 378,
-          "date": "2026-04-14",
-          "equityIndex": 482.4687,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 379,
-          "date": "2026-04-15",
-          "equityIndex": 483.2454,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 380,
-          "date": "2026-04-16",
-          "equityIndex": 483.8344,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 381,
-          "date": "2026-04-17",
-          "equityIndex": 484.4331,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 382,
-          "date": "2026-04-18",
-          "equityIndex": 485.4738,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 383,
-          "date": "2026-04-19",
-          "equityIndex": 486.2278,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 384,
-          "date": "2026-04-20",
-          "equityIndex": 487.0205,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 385,
-          "date": "2026-04-21",
-          "equityIndex": 487.6351,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 386,
-          "date": "2026-04-22",
-          "equityIndex": 488.6736,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 387,
-          "date": "2026-04-23",
-          "equityIndex": 489.3843,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 388,
-          "date": "2026-04-24",
-          "equityIndex": 490.7504,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 389,
-          "date": "2026-04-25",
-          "equityIndex": 492.1285,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 390,
-          "date": "2026-04-26",
-          "equityIndex": 493.3568,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 391,
-          "date": "2026-04-27",
-          "equityIndex": 494.2356,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 392,
-          "date": "2026-04-28",
-          "equityIndex": 495.4133,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 393,
-          "date": "2026-04-29",
-          "equityIndex": 496.7475,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 394,
-          "date": "2026-04-30",
-          "equityIndex": 497.8506,
-          "drawdownPct": 0.0
-        }
-      ],
-      "symmetric": [
-        {
-          "index": 0,
-          "date": "2025-04-01",
-          "equityIndex": 100.4451,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 1,
-          "date": "2025-04-02",
-          "equityIndex": 100.6073,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 2,
-          "date": "2025-04-03",
-          "equityIndex": 100.5346,
-          "drawdownPct": -0.0722
-        },
-        {
-          "index": 3,
-          "date": "2025-04-04",
-          "equityIndex": 100.5041,
-          "drawdownPct": -0.1025
-        },
-        {
-          "index": 4,
-          "date": "2025-04-05",
-          "equityIndex": 101.0307,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 5,
-          "date": "2025-04-06",
-          "equityIndex": 101.3441,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 6,
-          "date": "2025-04-07",
-          "equityIndex": 100.5519,
-          "drawdownPct": -0.7817
-        },
-        {
-          "index": 7,
-          "date": "2025-04-08",
-          "equityIndex": 100.2401,
-          "drawdownPct": -1.0893
-        },
-        {
-          "index": 8,
-          "date": "2025-04-09",
-          "equityIndex": 99.6514,
-          "drawdownPct": -1.6702
-        },
-        {
-          "index": 9,
-          "date": "2025-04-10",
-          "equityIndex": 99.3979,
-          "drawdownPct": -1.9204
-        },
-        {
-          "index": 10,
-          "date": "2025-04-11",
-          "equityIndex": 99.4641,
-          "drawdownPct": -1.855
-        },
-        {
-          "index": 11,
-          "date": "2025-04-12",
-          "equityIndex": 99.9618,
-          "drawdownPct": -1.3639
-        },
-        {
-          "index": 12,
-          "date": "2025-04-13",
-          "equityIndex": 100.0513,
-          "drawdownPct": -1.2756
-        },
-        {
-          "index": 13,
-          "date": "2025-04-14",
-          "equityIndex": 99.9508,
-          "drawdownPct": -1.3748
-        },
-        {
-          "index": 14,
-          "date": "2025-04-15",
-          "equityIndex": 100.4734,
-          "drawdownPct": -0.8592
-        },
-        {
-          "index": 15,
-          "date": "2025-04-16",
-          "equityIndex": 100.7979,
-          "drawdownPct": -0.5389
-        },
-        {
-          "index": 16,
-          "date": "2025-04-17",
-          "equityIndex": 101.4589,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 17,
-          "date": "2025-04-18",
-          "equityIndex": 102.196,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 18,
-          "date": "2025-04-19",
-          "equityIndex": 103.1183,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 19,
-          "date": "2025-04-20",
-          "equityIndex": 104.0558,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 20,
-          "date": "2025-04-21",
-          "equityIndex": 104.7212,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 21,
-          "date": "2025-04-22",
-          "equityIndex": 105.1408,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 22,
-          "date": "2025-04-23",
-          "equityIndex": 105.5877,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 23,
-          "date": "2025-04-24",
-          "equityIndex": 106.2908,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 24,
-          "date": "2025-04-25",
-          "equityIndex": 107.0751,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 25,
-          "date": "2025-04-26",
-          "equityIndex": 107.8665,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 26,
-          "date": "2025-04-27",
-          "equityIndex": 108.5072,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 27,
-          "date": "2025-04-28",
-          "equityIndex": 109.3745,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 28,
-          "date": "2025-04-29",
-          "equityIndex": 110.156,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 29,
-          "date": "2025-04-30",
-          "equityIndex": 110.8995,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 30,
-          "date": "2025-05-01",
-          "equityIndex": 111.7797,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 31,
-          "date": "2025-05-02",
-          "equityIndex": 112.8571,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 32,
-          "date": "2025-05-03",
-          "equityIndex": 114.0824,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 33,
-          "date": "2025-05-04",
-          "equityIndex": 115.1551,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 34,
-          "date": "2025-05-05",
-          "equityIndex": 116.3018,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 35,
-          "date": "2025-05-06",
-          "equityIndex": 117.273,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 36,
-          "date": "2025-05-07",
-          "equityIndex": 118.4758,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 37,
-          "date": "2025-05-08",
-          "equityIndex": 119.5631,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 38,
-          "date": "2025-05-09",
-          "equityIndex": 120.0924,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 39,
-          "date": "2025-05-10",
-          "equityIndex": 120.6954,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 40,
-          "date": "2025-05-11",
-          "equityIndex": 121.1055,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 41,
-          "date": "2025-05-12",
-          "equityIndex": 121.4136,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 42,
-          "date": "2025-05-13",
-          "equityIndex": 121.8883,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 43,
-          "date": "2025-05-14",
-          "equityIndex": 122.3183,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 44,
-          "date": "2025-05-15",
-          "equityIndex": 122.7596,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 45,
-          "date": "2025-05-16",
-          "equityIndex": 123.3613,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 46,
-          "date": "2025-05-17",
-          "equityIndex": 124.076,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 47,
-          "date": "2025-05-18",
-          "equityIndex": 124.5879,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 48,
-          "date": "2025-05-19",
-          "equityIndex": 124.9672,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 49,
-          "date": "2025-05-20",
-          "equityIndex": 125.8161,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 50,
-          "date": "2025-05-21",
-          "equityIndex": 126.068,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 51,
-          "date": "2025-05-22",
-          "equityIndex": 126.4257,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 52,
-          "date": "2025-05-23",
-          "equityIndex": 126.6849,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 53,
-          "date": "2025-05-24",
-          "equityIndex": 127.3354,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 54,
-          "date": "2025-05-25",
-          "equityIndex": 128.1249,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 55,
-          "date": "2025-05-26",
-          "equityIndex": 128.9272,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 56,
-          "date": "2025-05-27",
-          "equityIndex": 129.8182,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 57,
-          "date": "2025-05-28",
-          "equityIndex": 130.685,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 58,
-          "date": "2025-05-29",
-          "equityIndex": 131.5224,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 59,
-          "date": "2025-05-30",
-          "equityIndex": 132.0277,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 60,
-          "date": "2025-05-31",
-          "equityIndex": 132.7531,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 61,
-          "date": "2025-06-01",
-          "equityIndex": 133.636,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 62,
-          "date": "2025-06-02",
-          "equityIndex": 134.6501,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 63,
-          "date": "2025-06-03",
-          "equityIndex": 135.8261,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 64,
-          "date": "2025-06-04",
-          "equityIndex": 137.056,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 65,
-          "date": "2025-06-05",
-          "equityIndex": 137.7306,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 66,
-          "date": "2025-06-06",
-          "equityIndex": 139.3471,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 67,
-          "date": "2025-06-07",
-          "equityIndex": 140.5425,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 68,
-          "date": "2025-06-08",
-          "equityIndex": 141.6492,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 69,
-          "date": "2025-06-09",
-          "equityIndex": 143.0973,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 70,
-          "date": "2025-06-10",
-          "equityIndex": 144.2418,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 71,
-          "date": "2025-06-11",
-          "equityIndex": 145.1519,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 72,
-          "date": "2025-06-12",
-          "equityIndex": 146.326,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 73,
-          "date": "2025-06-13",
-          "equityIndex": 145.8954,
-          "drawdownPct": -0.2943
-        },
-        {
-          "index": 74,
-          "date": "2025-06-14",
-          "equityIndex": 146.8695,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 75,
-          "date": "2025-06-15",
-          "equityIndex": 147.8401,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 76,
-          "date": "2025-06-16",
-          "equityIndex": 148.7871,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 77,
-          "date": "2025-06-17",
-          "equityIndex": 149.6723,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 78,
-          "date": "2025-06-18",
-          "equityIndex": 150.2021,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 79,
-          "date": "2025-06-19",
-          "equityIndex": 150.9621,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 80,
-          "date": "2025-06-20",
-          "equityIndex": 151.8672,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 81,
-          "date": "2025-06-21",
-          "equityIndex": 152.5473,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 82,
-          "date": "2025-06-22",
-          "equityIndex": 152.3653,
-          "drawdownPct": -0.1193
-        },
-        {
-          "index": 83,
-          "date": "2025-06-23",
-          "equityIndex": 152.7472,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 84,
-          "date": "2025-06-24",
-          "equityIndex": 153.2612,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 85,
-          "date": "2025-06-25",
-          "equityIndex": 154.3601,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 86,
-          "date": "2025-06-26",
-          "equityIndex": 155.3721,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 87,
-          "date": "2025-06-27",
-          "equityIndex": 156.4491,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 88,
-          "date": "2025-06-28",
-          "equityIndex": 157.0808,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 89,
-          "date": "2025-06-29",
-          "equityIndex": 158.4342,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 90,
-          "date": "2025-06-30",
-          "equityIndex": 159.9308,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 91,
-          "date": "2025-07-01",
-          "equityIndex": 161.2503,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 92,
-          "date": "2025-07-02",
-          "equityIndex": 163.6503,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 93,
-          "date": "2025-07-03",
-          "equityIndex": 165.1194,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 94,
-          "date": "2025-07-04",
-          "equityIndex": 166.8214,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 95,
-          "date": "2025-07-05",
-          "equityIndex": 167.6801,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 96,
-          "date": "2025-07-06",
-          "equityIndex": 168.4593,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 97,
-          "date": "2025-07-07",
-          "equityIndex": 169.8133,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 98,
-          "date": "2025-07-08",
-          "equityIndex": 171.2445,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 99,
-          "date": "2025-07-09",
-          "equityIndex": 172.7514,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 100,
-          "date": "2025-07-10",
-          "equityIndex": 174.3102,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 101,
-          "date": "2025-07-11",
-          "equityIndex": 175.2293,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 102,
-          "date": "2025-07-12",
-          "equityIndex": 175.8997,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 103,
-          "date": "2025-07-13",
-          "equityIndex": 176.69,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 104,
-          "date": "2025-07-14",
-          "equityIndex": 177.6001,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 105,
-          "date": "2025-07-15",
-          "equityIndex": 177.7937,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 106,
-          "date": "2025-07-16",
-          "equityIndex": 178.3529,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 107,
-          "date": "2025-07-17",
-          "equityIndex": 178.5248,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 108,
-          "date": "2025-07-18",
-          "equityIndex": 178.7714,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 109,
-          "date": "2025-07-19",
-          "equityIndex": 179.178,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 110,
-          "date": "2025-07-20",
-          "equityIndex": 179.5294,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 111,
-          "date": "2025-07-21",
-          "equityIndex": 180.163,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 112,
-          "date": "2025-07-22",
-          "equityIndex": 180.3775,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 113,
-          "date": "2025-07-23",
-          "equityIndex": 181.1051,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 114,
-          "date": "2025-07-24",
-          "equityIndex": 181.6079,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 115,
-          "date": "2025-07-25",
-          "equityIndex": 182.1218,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 116,
-          "date": "2025-07-26",
-          "equityIndex": 182.7461,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 117,
-          "date": "2025-07-27",
-          "equityIndex": 183.6571,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 118,
-          "date": "2025-07-28",
-          "equityIndex": 184.2198,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 119,
-          "date": "2025-07-29",
-          "equityIndex": 184.6802,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 120,
-          "date": "2025-07-30",
-          "equityIndex": 185.1173,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 121,
-          "date": "2025-07-31",
-          "equityIndex": 186.1613,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 122,
-          "date": "2025-08-01",
-          "equityIndex": 186.0391,
-          "drawdownPct": -0.0657
-        },
-        {
-          "index": 123,
-          "date": "2025-08-02",
-          "equityIndex": 186.6721,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 124,
-          "date": "2025-08-03",
-          "equityIndex": 187.6676,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 125,
-          "date": "2025-08-04",
-          "equityIndex": 188.3873,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 126,
-          "date": "2025-08-05",
-          "equityIndex": 188.9738,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 127,
-          "date": "2025-08-06",
-          "equityIndex": 189.7386,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 128,
-          "date": "2025-08-07",
-          "equityIndex": 191.795,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 129,
-          "date": "2025-08-08",
-          "equityIndex": 195.0922,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 130,
-          "date": "2025-08-09",
-          "equityIndex": 200.3844,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 131,
-          "date": "2025-08-10",
-          "equityIndex": 205.5972,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 132,
-          "date": "2025-08-11",
-          "equityIndex": 210.3479,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 133,
-          "date": "2025-08-12",
-          "equityIndex": 215.7701,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 134,
-          "date": "2025-08-13",
-          "equityIndex": 219.4447,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 135,
-          "date": "2025-08-14",
-          "equityIndex": 222.7404,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 136,
-          "date": "2025-08-15",
-          "equityIndex": 227.846,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 137,
-          "date": "2025-08-16",
-          "equityIndex": 234.384,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 138,
-          "date": "2025-08-17",
-          "equityIndex": 240.529,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 139,
-          "date": "2025-08-18",
-          "equityIndex": 243.476,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 140,
-          "date": "2025-08-19",
-          "equityIndex": 246.8184,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 141,
-          "date": "2025-08-20",
-          "equityIndex": 253.2527,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 142,
-          "date": "2025-08-21",
-          "equityIndex": 258.2727,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 143,
-          "date": "2025-08-22",
-          "equityIndex": 263.4072,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 144,
-          "date": "2025-08-23",
-          "equityIndex": 271.3977,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 145,
-          "date": "2025-08-24",
-          "equityIndex": 276.8928,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 146,
-          "date": "2025-08-25",
-          "equityIndex": 280.1627,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 147,
-          "date": "2025-08-26",
-          "equityIndex": 285.5135,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 148,
-          "date": "2025-08-27",
-          "equityIndex": 293.2305,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 149,
-          "date": "2025-08-28",
-          "equityIndex": 300.9903,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 150,
-          "date": "2025-08-29",
-          "equityIndex": 308.028,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 151,
-          "date": "2025-08-30",
-          "equityIndex": 317.3374,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 152,
-          "date": "2025-08-31",
-          "equityIndex": 326.2865,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 153,
-          "date": "2025-09-01",
-          "equityIndex": 332.4219,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 154,
-          "date": "2025-09-02",
-          "equityIndex": 339.7627,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 155,
-          "date": "2025-09-03",
-          "equityIndex": 347.632,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 156,
-          "date": "2025-09-04",
-          "equityIndex": 355.8029,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 157,
-          "date": "2025-09-05",
-          "equityIndex": 364.9998,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 158,
-          "date": "2025-09-06",
-          "equityIndex": 372.8275,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 159,
-          "date": "2025-09-07",
-          "equityIndex": 381.3738,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 160,
-          "date": "2025-09-08",
-          "equityIndex": 390.2396,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 161,
-          "date": "2025-09-09",
-          "equityIndex": 399.8726,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 162,
-          "date": "2025-09-10",
-          "equityIndex": 406.4009,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 163,
-          "date": "2025-09-11",
-          "equityIndex": 407.5526,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 164,
-          "date": "2025-09-12",
-          "equityIndex": 409.3844,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 165,
-          "date": "2025-09-13",
-          "equityIndex": 410.7954,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 166,
-          "date": "2025-09-14",
-          "equityIndex": 412.5145,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 167,
-          "date": "2025-09-15",
-          "equityIndex": 414.1733,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 168,
-          "date": "2025-09-16",
-          "equityIndex": 416.9766,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 169,
-          "date": "2025-09-17",
-          "equityIndex": 419.6257,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 170,
-          "date": "2025-09-18",
-          "equityIndex": 422.2845,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 171,
-          "date": "2025-09-19",
-          "equityIndex": 425.652,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 172,
-          "date": "2025-09-20",
-          "equityIndex": 428.7529,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 173,
-          "date": "2025-09-21",
-          "equityIndex": 434.1486,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 174,
-          "date": "2025-09-22",
-          "equityIndex": 436.4187,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 175,
-          "date": "2025-09-23",
-          "equityIndex": 439.0959,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 176,
-          "date": "2025-09-24",
-          "equityIndex": 442.7355,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 177,
-          "date": "2025-09-25",
-          "equityIndex": 446.6993,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 178,
-          "date": "2025-09-26",
-          "equityIndex": 452.5101,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 179,
-          "date": "2025-09-27",
-          "equityIndex": 459.2889,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 180,
-          "date": "2025-09-28",
-          "equityIndex": 463.8455,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 181,
-          "date": "2025-09-29",
-          "equityIndex": 472.0575,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 182,
-          "date": "2025-09-30",
-          "equityIndex": 479.8158,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 183,
-          "date": "2025-10-01",
-          "equityIndex": 487.1856,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 184,
-          "date": "2025-10-02",
-          "equityIndex": 493.8135,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 185,
-          "date": "2025-10-03",
-          "equityIndex": 499.6459,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 186,
-          "date": "2025-10-04",
-          "equityIndex": 506.6819,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 187,
-          "date": "2025-10-05",
-          "equityIndex": 511.3008,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 188,
-          "date": "2025-10-06",
-          "equityIndex": 515.177,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 189,
-          "date": "2025-10-07",
-          "equityIndex": 518.8876,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 190,
-          "date": "2025-10-08",
-          "equityIndex": 521.6436,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 191,
-          "date": "2025-10-09",
-          "equityIndex": 525.5617,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 192,
-          "date": "2025-10-10",
-          "equityIndex": 528.5601,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 193,
-          "date": "2025-10-11",
-          "equityIndex": 529.5017,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 194,
-          "date": "2025-10-12",
-          "equityIndex": 530.3883,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 195,
-          "date": "2025-10-13",
-          "equityIndex": 531.6713,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 196,
-          "date": "2025-10-14",
-          "equityIndex": 532.3778,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 197,
-          "date": "2025-10-15",
-          "equityIndex": 533.514,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 198,
-          "date": "2025-10-16",
-          "equityIndex": 534.1596,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 199,
-          "date": "2025-10-17",
-          "equityIndex": 534.7728,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 200,
-          "date": "2025-10-18",
-          "equityIndex": 536.0169,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 201,
-          "date": "2025-10-19",
-          "equityIndex": 537.0764,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 202,
-          "date": "2025-10-20",
-          "equityIndex": 538.4227,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 203,
-          "date": "2025-10-21",
-          "equityIndex": 539.3309,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 204,
-          "date": "2025-10-22",
-          "equityIndex": 540.3901,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 205,
-          "date": "2025-10-23",
-          "equityIndex": 541.579,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 206,
-          "date": "2025-10-24",
-          "equityIndex": 542.6502,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 207,
-          "date": "2025-10-25",
-          "equityIndex": 544.2678,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 208,
-          "date": "2025-10-26",
-          "equityIndex": 545.4181,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 209,
-          "date": "2025-10-27",
-          "equityIndex": 547.139,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 210,
-          "date": "2025-10-28",
-          "equityIndex": 548.7331,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 211,
-          "date": "2025-10-29",
-          "equityIndex": 550.1841,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 212,
-          "date": "2025-10-30",
-          "equityIndex": 550.9552,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 213,
-          "date": "2025-10-31",
-          "equityIndex": 551.7683,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 214,
-          "date": "2025-11-01",
-          "equityIndex": 553.6498,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 215,
-          "date": "2025-11-02",
-          "equityIndex": 555.2195,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 216,
-          "date": "2025-11-03",
-          "equityIndex": 555.7734,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 217,
-          "date": "2025-11-04",
-          "equityIndex": 555.6527,
-          "drawdownPct": -0.0217
-        },
-        {
-          "index": 218,
-          "date": "2025-11-05",
-          "equityIndex": 555.8999,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 219,
-          "date": "2025-11-06",
-          "equityIndex": 556.2033,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 220,
-          "date": "2025-11-07",
-          "equityIndex": 556.7181,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 221,
-          "date": "2025-11-08",
-          "equityIndex": 557.6942,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 222,
-          "date": "2025-11-09",
-          "equityIndex": 558.4397,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 223,
-          "date": "2025-11-10",
-          "equityIndex": 559.237,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 224,
-          "date": "2025-11-11",
-          "equityIndex": 560.2442,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 225,
-          "date": "2025-11-12",
-          "equityIndex": 561.3919,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 226,
-          "date": "2025-11-13",
-          "equityIndex": 561.5793,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 227,
-          "date": "2025-11-14",
-          "equityIndex": 561.3763,
-          "drawdownPct": -0.0361
-        },
-        {
-          "index": 228,
-          "date": "2025-11-15",
-          "equityIndex": 561.9294,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 229,
-          "date": "2025-11-16",
-          "equityIndex": 562.6516,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 230,
-          "date": "2025-11-17",
-          "equityIndex": 562.7283,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 231,
-          "date": "2025-11-18",
-          "equityIndex": 562.9238,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 232,
-          "date": "2025-11-19",
-          "equityIndex": 563.2492,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 233,
-          "date": "2025-11-20",
-          "equityIndex": 563.5402,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 234,
-          "date": "2025-11-21",
-          "equityIndex": 563.0745,
-          "drawdownPct": -0.0826
-        },
-        {
-          "index": 235,
-          "date": "2025-11-22",
-          "equityIndex": 563.3547,
-          "drawdownPct": -0.0329
-        },
-        {
-          "index": 236,
-          "date": "2025-11-23",
-          "equityIndex": 563.9552,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 237,
-          "date": "2025-11-24",
-          "equityIndex": 564.2759,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 238,
-          "date": "2025-11-25",
-          "equityIndex": 565.1936,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 239,
-          "date": "2025-11-26",
-          "equityIndex": 566.2914,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 240,
-          "date": "2025-11-27",
-          "equityIndex": 567.779,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 241,
-          "date": "2025-11-28",
-          "equityIndex": 569.0137,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 242,
-          "date": "2025-11-29",
-          "equityIndex": 570.6069,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 243,
-          "date": "2025-11-30",
-          "equityIndex": 572.2636,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 244,
-          "date": "2025-12-01",
-          "equityIndex": 572.7159,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 245,
-          "date": "2025-12-02",
-          "equityIndex": 573.305,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 246,
-          "date": "2025-12-03",
-          "equityIndex": 573.907,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 247,
-          "date": "2025-12-04",
-          "equityIndex": 574.6516,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 248,
-          "date": "2025-12-05",
-          "equityIndex": 575.598,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 249,
-          "date": "2025-12-06",
-          "equityIndex": 576.8912,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 250,
-          "date": "2025-12-07",
-          "equityIndex": 578.0419,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 251,
-          "date": "2025-12-08",
-          "equityIndex": 578.9833,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 252,
-          "date": "2025-12-09",
-          "equityIndex": 579.9995,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 253,
-          "date": "2025-12-10",
-          "equityIndex": 580.7488,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 254,
-          "date": "2025-12-11",
-          "equityIndex": 581.5423,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 255,
-          "date": "2025-12-12",
-          "equityIndex": 582.5405,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 256,
-          "date": "2025-12-13",
-          "equityIndex": 584.4224,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 257,
-          "date": "2025-12-14",
-          "equityIndex": 585.6791,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 258,
-          "date": "2025-12-15",
-          "equityIndex": 586.6759,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 259,
-          "date": "2025-12-16",
-          "equityIndex": 587.5999,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 260,
-          "date": "2025-12-17",
-          "equityIndex": 588.1829,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 261,
-          "date": "2025-12-18",
-          "equityIndex": 588.8969,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 262,
-          "date": "2025-12-19",
-          "equityIndex": 589.468,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 263,
-          "date": "2025-12-20",
-          "equityIndex": 590.9386,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 264,
-          "date": "2025-12-21",
-          "equityIndex": 592.4521,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 265,
-          "date": "2025-12-22",
-          "equityIndex": 593.2839,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 266,
-          "date": "2025-12-23",
-          "equityIndex": 594.592,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 267,
-          "date": "2025-12-24",
-          "equityIndex": 596.1175,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 268,
-          "date": "2025-12-25",
-          "equityIndex": 598.1781,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 269,
-          "date": "2025-12-26",
-          "equityIndex": 599.6189,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 270,
-          "date": "2025-12-27",
-          "equityIndex": 601.5596,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 271,
-          "date": "2025-12-28",
-          "equityIndex": 603.6611,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 272,
-          "date": "2025-12-29",
-          "equityIndex": 605.5378,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 273,
-          "date": "2025-12-30",
-          "equityIndex": 607.5995,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 274,
-          "date": "2025-12-31",
-          "equityIndex": 610.1895,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 275,
-          "date": "2026-01-01",
-          "equityIndex": 612.2103,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 276,
-          "date": "2026-01-02",
-          "equityIndex": 613.6649,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 277,
-          "date": "2026-01-03",
-          "equityIndex": 615.8893,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 278,
-          "date": "2026-01-04",
-          "equityIndex": 617.7595,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 279,
-          "date": "2026-01-05",
-          "equityIndex": 619.4683,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 280,
-          "date": "2026-01-06",
-          "equityIndex": 621.5528,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 281,
-          "date": "2026-01-07",
-          "equityIndex": 623.5831,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 282,
-          "date": "2026-01-08",
-          "equityIndex": 625.1531,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 283,
-          "date": "2026-01-09",
-          "equityIndex": 626.6416,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 284,
-          "date": "2026-01-10",
-          "equityIndex": 628.9993,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 285,
-          "date": "2026-01-11",
-          "equityIndex": 631.6495,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 286,
-          "date": "2026-01-12",
-          "equityIndex": 633.3754,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 287,
-          "date": "2026-01-13",
-          "equityIndex": 634.947,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 288,
-          "date": "2026-01-14",
-          "equityIndex": 636.4981,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 289,
-          "date": "2026-01-15",
-          "equityIndex": 638.1029,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 290,
-          "date": "2026-01-16",
-          "equityIndex": 639.9103,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 291,
-          "date": "2026-01-17",
-          "equityIndex": 642.2553,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 292,
-          "date": "2026-01-18",
-          "equityIndex": 644.5633,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 293,
-          "date": "2026-01-19",
-          "equityIndex": 646.8293,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 294,
-          "date": "2026-01-20",
-          "equityIndex": 648.2428,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 295,
-          "date": "2026-01-21",
-          "equityIndex": 649.5757,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 296,
-          "date": "2026-01-22",
-          "equityIndex": 651.283,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 297,
-          "date": "2026-01-23",
-          "equityIndex": 652.7902,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 298,
-          "date": "2026-01-24",
-          "equityIndex": 654.8817,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 299,
-          "date": "2026-01-25",
-          "equityIndex": 656.9456,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 300,
-          "date": "2026-01-26",
-          "equityIndex": 658.0393,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 301,
-          "date": "2026-01-27",
-          "equityIndex": 659.6092,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 302,
-          "date": "2026-01-28",
-          "equityIndex": 661.352,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 303,
-          "date": "2026-01-29",
-          "equityIndex": 662.8584,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 304,
-          "date": "2026-01-30",
-          "equityIndex": 663.392,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 305,
-          "date": "2026-01-31",
-          "equityIndex": 663.6851,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 306,
-          "date": "2026-02-01",
-          "equityIndex": 663.4174,
-          "drawdownPct": -0.0403
-        },
-        {
-          "index": 307,
-          "date": "2026-02-02",
-          "equityIndex": 662.6722,
-          "drawdownPct": -0.1526
-        },
-        {
-          "index": 308,
-          "date": "2026-02-03",
-          "equityIndex": 662.3664,
-          "drawdownPct": -0.1987
-        },
-        {
-          "index": 309,
-          "date": "2026-02-04",
-          "equityIndex": 662.4237,
-          "drawdownPct": -0.1901
-        },
-        {
-          "index": 310,
-          "date": "2026-02-05",
-          "equityIndex": 661.7856,
-          "drawdownPct": -0.2862
-        },
-        {
-          "index": 311,
-          "date": "2026-02-06",
-          "equityIndex": 661.4753,
-          "drawdownPct": -0.333
-        },
-        {
-          "index": 312,
-          "date": "2026-02-07",
-          "equityIndex": 661.5316,
-          "drawdownPct": -0.3245
-        },
-        {
-          "index": 313,
-          "date": "2026-02-08",
-          "equityIndex": 661.6123,
-          "drawdownPct": -0.3123
-        },
-        {
-          "index": 314,
-          "date": "2026-02-09",
-          "equityIndex": 661.5165,
-          "drawdownPct": -0.3268
-        },
-        {
-          "index": 315,
-          "date": "2026-02-10",
-          "equityIndex": 661.4614,
-          "drawdownPct": -0.3351
-        },
-        {
-          "index": 316,
-          "date": "2026-02-11",
-          "equityIndex": 661.3991,
-          "drawdownPct": -0.3444
-        },
-        {
-          "index": 317,
-          "date": "2026-02-12",
-          "equityIndex": 661.5244,
-          "drawdownPct": -0.3256
-        },
-        {
-          "index": 318,
-          "date": "2026-02-13",
-          "equityIndex": 661.6656,
-          "drawdownPct": -0.3043
-        },
-        {
-          "index": 319,
-          "date": "2026-02-14",
-          "equityIndex": 662.2096,
-          "drawdownPct": -0.2223
-        },
-        {
-          "index": 320,
-          "date": "2026-02-15",
-          "equityIndex": 662.6567,
-          "drawdownPct": -0.155
-        },
-        {
-          "index": 321,
-          "date": "2026-02-16",
-          "equityIndex": 663.1922,
-          "drawdownPct": -0.0743
-        },
-        {
-          "index": 322,
-          "date": "2026-02-17",
-          "equityIndex": 663.5946,
-          "drawdownPct": -0.0136
-        },
-        {
-          "index": 323,
-          "date": "2026-02-18",
-          "equityIndex": 663.9374,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 324,
-          "date": "2026-02-19",
-          "equityIndex": 664.4633,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 325,
-          "date": "2026-02-20",
-          "equityIndex": 665.1481,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 326,
-          "date": "2026-02-21",
-          "equityIndex": 666.5753,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 327,
-          "date": "2026-02-22",
-          "equityIndex": 667.8969,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 328,
-          "date": "2026-02-23",
-          "equityIndex": 668.3666,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 329,
-          "date": "2026-02-24",
-          "equityIndex": 668.554,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 330,
-          "date": "2026-02-25",
-          "equityIndex": 668.7386,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 331,
-          "date": "2026-02-26",
-          "equityIndex": 669.1609,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 332,
-          "date": "2026-02-27",
-          "equityIndex": 669.6215,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 333,
-          "date": "2026-02-28",
-          "equityIndex": 670.0332,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 334,
-          "date": "2026-03-01",
-          "equityIndex": 670.2612,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 335,
-          "date": "2026-03-02",
-          "equityIndex": 670.4096,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 336,
-          "date": "2026-03-03",
-          "equityIndex": 670.4454,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 337,
-          "date": "2026-03-04",
-          "equityIndex": 670.5247,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 338,
-          "date": "2026-03-05",
-          "equityIndex": 670.7628,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 339,
-          "date": "2026-03-06",
-          "equityIndex": 671.1236,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 340,
-          "date": "2026-03-07",
-          "equityIndex": 672.1088,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 341,
-          "date": "2026-03-08",
-          "equityIndex": 672.8789,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 342,
-          "date": "2026-03-09",
-          "equityIndex": 673.2164,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 343,
-          "date": "2026-03-10",
-          "equityIndex": 673.4336,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 344,
-          "date": "2026-03-11",
-          "equityIndex": 674.0321,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 345,
-          "date": "2026-03-12",
-          "equityIndex": 674.6083,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 346,
-          "date": "2026-03-13",
-          "equityIndex": 675.3073,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 347,
-          "date": "2026-03-14",
-          "equityIndex": 676.5071,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 348,
-          "date": "2026-03-15",
-          "equityIndex": 677.5978,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 349,
-          "date": "2026-03-16",
-          "equityIndex": 678.1011,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 350,
-          "date": "2026-03-17",
-          "equityIndex": 678.7732,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 351,
-          "date": "2026-03-18",
-          "equityIndex": 679.7323,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 352,
-          "date": "2026-03-19",
-          "equityIndex": 680.5815,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 353,
-          "date": "2026-03-20",
-          "equityIndex": 681.3373,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 354,
-          "date": "2026-03-21",
-          "equityIndex": 682.6815,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 355,
-          "date": "2026-03-22",
-          "equityIndex": 683.4664,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 356,
-          "date": "2026-03-23",
-          "equityIndex": 683.812,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 357,
-          "date": "2026-03-24",
-          "equityIndex": 684.6581,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 358,
-          "date": "2026-03-25",
-          "equityIndex": 685.7674,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 359,
-          "date": "2026-03-26",
-          "equityIndex": 686.5789,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 360,
-          "date": "2026-03-27",
-          "equityIndex": 687.4,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 361,
-          "date": "2026-03-28",
-          "equityIndex": 688.577,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 362,
-          "date": "2026-03-29",
-          "equityIndex": 689.5377,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 363,
-          "date": "2026-03-30",
-          "equityIndex": 690.3625,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 364,
-          "date": "2026-03-31",
-          "equityIndex": 691.0046,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 365,
-          "date": "2026-04-01",
-          "equityIndex": 691.9984,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 366,
-          "date": "2026-04-02",
-          "equityIndex": 692.7618,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 367,
-          "date": "2026-04-03",
-          "equityIndex": 693.5434,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 368,
-          "date": "2026-04-04",
-          "equityIndex": 694.5066,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 369,
-          "date": "2026-04-05",
-          "equityIndex": 695.7848,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 370,
-          "date": "2026-04-06",
-          "equityIndex": 696.7444,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 371,
-          "date": "2026-04-07",
-          "equityIndex": 697.7886,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 372,
-          "date": "2026-04-08",
-          "equityIndex": 699.1137,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 373,
-          "date": "2026-04-09",
-          "equityIndex": 700.3529,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 374,
-          "date": "2026-04-10",
-          "equityIndex": 701.7555,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 375,
-          "date": "2026-04-11",
-          "equityIndex": 703.2794,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 376,
-          "date": "2026-04-12",
-          "equityIndex": 704.7307,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 377,
-          "date": "2026-04-13",
-          "equityIndex": 705.7845,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 378,
-          "date": "2026-04-14",
-          "equityIndex": 707.0442,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 379,
-          "date": "2026-04-15",
-          "equityIndex": 708.2243,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 380,
-          "date": "2026-04-16",
-          "equityIndex": 709.1619,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 381,
-          "date": "2026-04-17",
-          "equityIndex": 710.0197,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 382,
-          "date": "2026-04-18",
-          "equityIndex": 711.5049,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 383,
-          "date": "2026-04-19",
-          "equityIndex": 712.6666,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 384,
-          "date": "2026-04-20",
-          "equityIndex": 713.6166,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 385,
-          "date": "2026-04-21",
-          "equityIndex": 714.4828,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 386,
-          "date": "2026-04-22",
-          "equityIndex": 716.1581,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 387,
-          "date": "2026-04-23",
-          "equityIndex": 717.1902,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 388,
-          "date": "2026-04-24",
-          "equityIndex": 719.0395,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 389,
-          "date": "2026-04-25",
-          "equityIndex": 720.8315,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 390,
-          "date": "2026-04-26",
-          "equityIndex": 722.4137,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 391,
-          "date": "2026-04-27",
-          "equityIndex": 723.5897,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 392,
-          "date": "2026-04-28",
-          "equityIndex": 725.1811,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 393,
-          "date": "2026-04-29",
-          "equityIndex": 726.9904,
-          "drawdownPct": 0.0
-        },
-        {
-          "index": 394,
-          "date": "2026-04-30",
-          "equityIndex": 728.4815,
-          "drawdownPct": 0.0
-        }
-      ]
-    }
+    ]
   },
   "trace": [
     {

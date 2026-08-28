@@ -5,16 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Verified BTC perpetual high-frequency trading and market-making research using tick trades, one-second L1/L10 states, 30-second forecasts, and constrained historical simulation."
+      content="High-frequency futures price prediction and market-making research using tick trades, one-second L1/L10 states, 30-second forecasts, and constrained historical simulation."
     />
     <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#07100c" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="BTC High-Frequency Trading &amp; Market Making" />
+    <meta property="og:url" content="https://chandleryao720.github.io/btc-high-frequency-trading-market-making/" />
+    <meta property="og:title" content="High-Frequency Futures Price Prediction &amp; Market-Making Strategy" />
     <meta
       property="og:description"
       content="Tick trades, one-second L1/L10 states, execution-aware 30-second forecasting, five-second quote decisions, and transparent maker-simulation evidence."
     />
-    <title>BTC High-Frequency Trading &amp; Market Making</title>
+    <link rel="canonical" href="https://chandleryao720.github.io/btc-high-frequency-trading-market-making/" />
+    <title>High-Frequency Futures Price Prediction &amp; Market-Making Strategy</title>
     <link
       rel="icon"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2307100c'/%3E%3Cpath d='M18 20l14 12-14 12M35 44h12' fill='none' stroke='%237fffc1' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"
@@ -58,15 +61,19 @@
     <main id="main">
       <section class="hero section-shell" id="overview" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="eyebrow" data-i18n="heroEyebrow">BTC HIGH-FREQUENCY TRADING × MARKET MAKING</p>
+          <p class="eyebrow" data-i18n="heroEyebrow">BTC/USDT PERPETUAL · ONE-SECOND RESEARCH</p>
           <h1 id="hero-title" data-i18n="heroTitle">
-            Forecasting the next move is only useful when the order survives contact with the market.
+            High-Frequency Futures Price Prediction &amp; Market-Making Strategy
           </h1>
           <p class="hero-lede" data-i18n="heroLead">
-            A point-in-time BTC perpetual high-frequency trading and market-making research stack mapping tick trades
-            and one-second L1/L10 states into microstructure factors, a 30-second execution-aware forecast, five-second
-            quote decisions, and a constrained historical maker simulation.
+            A point-in-time research stack mapping tick trades and one-second L1/L10 states into market-microstructure
+            factors, a 30-second execution-aware forecast, five-second quote decisions, and constrained two-sided
+            market-making simulation.
           </p>
+          <div class="hero-actions" aria-label="Research shortcuts">
+            <a class="primary-action" href="#factors" data-i18n="heroSignalAction">Inspect prediction evidence</a>
+            <a class="secondary-action" href="#market-making" data-i18n="heroMakerAction">Explore market-making research</a>
+          </div>
           <div class="hero-tags" aria-label="Research scope">
             <span id="scopePeriod">Loading evaluation window…</span>
             <span id="scopeLeverage">Loading leverage…</span>
@@ -97,10 +104,10 @@
                 <strong id="metricThroughput">—</strong>
                 <small id="metricThroughputContext">—</small>
               </article>
-              <article class="metric-card metric-card-warn">
-                <p data-i18n="metricNetReturn">Simulated net return</p>
-                <strong id="metricNetReturn">—</strong>
-                <small id="metricNetReturnContext">—</small>
+              <article class="metric-card metric-card-focal">
+                <p data-i18n="metricMakerImprovement">30-second adverse-selection reduction</p>
+                <strong id="metricMakerImprovement">—</strong>
+                <small id="metricMakerImprovementContext">—</small>
               </article>
             </div>
             <p class="terminal-note" id="heroBoundary">Loading evidence boundary…</p>
@@ -261,11 +268,11 @@
         <div class="section-heading">
           <div>
             <p class="section-index" data-i18n="sectionMarket">04 / MARKET MAKING</p>
-            <h2 id="market-title" data-i18n="marketTitle">The account made money in the fee scenario; price and spread economics did not.</h2>
+            <h2 id="market-title" data-i18n="marketTitle">Model-driven quote skew improved fill quality and drawdown control.</h2>
           </div>
           <p data-i18n="marketIntro">
-            A transparent result needs both sides: net account performance and the attribution that produced it. The
-            model's defensible execution gain is lower adverse selection, not superior net Sharpe versus symmetric quoting.
+            The 30-second score tilts two-sided quote size while inventory control, fees, leverage, and execution rules
+            remain fixed. The comparison isolates what the prediction signal changes in historical maker simulation.
           </p>
         </div>
 
@@ -275,43 +282,65 @@
         </div>
 
         <div class="stat-row" id="marketStats">
-          <article><span data-i18n="statReturn">Net return</span><strong id="marketReturn">—</strong><small data-i18n="statReturnNote">fee-scenario simulation</small></article>
-          <article><span data-i18n="statSharpe">Sharpe</span><strong id="marketSharpe">—</strong><small data-i18n="statSharpeNote">UTC daily, annualized</small></article>
-          <article><span data-i18n="statDrawdown">Maximum drawdown</span><strong id="marketDrawdown">—</strong><small data-i18n="statDrawdownNote">sequential equity</small></article>
-          <article><span data-i18n="statAdverse">Adverse selection</span><strong id="marketAdverse">—</strong><small data-i18n="statAdverseNote">relative reduction at the long markout</small></article>
+          <article><span data-i18n="statAdverse">Adverse selection</span><strong id="marketAdverse">—</strong><small data-i18n="statAdverseNote">relative reduction at 30 seconds</small></article>
+          <article><span data-i18n="statMarkout">30-second post-fill change</span><strong id="marketMarkout">—</strong><small data-i18n="statMarkoutNote">notional-weighted model fills</small></article>
+          <article><span data-i18n="statDrawdown">Maximum drawdown</span><strong id="marketDrawdown">—</strong><small id="marketDrawdownNote">—</small></article>
+          <article><span data-i18n="statFill">Fill-opportunity rate</span><strong id="marketFill">—</strong><small data-i18n="statFillNote">historical touch + volume proxy</small></article>
         </div>
 
-        <div class="market-grid">
-          <article class="panel chart-panel equity-panel">
+        <div class="market-edge-grid">
+          <article class="panel chart-panel model-equity-panel">
             <div class="panel-header">
               <div>
-                <p class="panel-kicker" data-i18n="equityKicker">EQUITY + DRAWDOWN</p>
-                <h3 data-i18n="equityTitle">Model skew versus symmetric quoting</h3>
+                <p class="panel-kicker" data-i18n="modelEquityKicker">MODEL STRATEGY PATH</p>
+                <h3 data-i18n="modelEquityTitle">Locked out-of-sample model equity, normalized to 100</h3>
               </div>
-              <div class="mini-legend" aria-label="Equity chart legend">
-                <span><i class="legend-line m1"></i>M1</span><span><i class="legend-line symmetric"></i><span data-i18n="symmetricLabel">Symmetric</span></span>
-              </div>
+              <span class="status-tag" data-i18n="feeLeverageTag">FROZEN FEES · 1×</span>
             </div>
-            <svg id="equityChart" class="chart" role="img" aria-labelledby="equity-title equity-desc">
-              <title id="equity-title">M1 and symmetric maker equity with M1 drawdown</title>
-              <desc id="equity-desc">Chronological historical simulation under identical fees and leverage.</desc>
+            <svg id="modelEquityChart" class="chart" role="img" aria-labelledby="model-equity-title model-equity-desc">
+              <title id="model-equity-title">Chronological model-strategy equity curve</title>
+              <desc id="model-equity-desc">Model-only historical out-of-sample equity under frozen fees and one-times leverage.</desc>
             </svg>
-            <p class="figure-caption" id="equityCaption">—</p>
-          </article>
-
-          <article class="panel chart-panel attribution-panel">
-            <div class="panel-header">
-              <div>
-                <p class="panel-kicker" data-i18n="attributionKicker">PNL ATTRIBUTION</p>
-                <h3 data-i18n="attributionTitle">Fee credit is visible, not hidden.</h3>
-              </div>
-            </div>
-            <div id="attributionBars" class="attribution-bars" role="img" aria-label="M1 PnL attribution as return on initial equity"></div>
-            <p class="attribution-total" id="attributionTotal">—</p>
+            <p class="figure-caption" id="modelEquityCaption">—</p>
             <details class="data-fallback">
               <summary data-i18n="tableToggle">View accessible data table</summary>
-              <div class="table-scroll"><table id="attributionTable"></table></div>
+              <div class="table-scroll"><table id="modelEquityTable"></table></div>
             </details>
+          </article>
+
+          <article class="panel chart-panel edge-panel">
+            <div class="panel-header">
+              <div>
+                <p class="panel-kicker" data-i18n="edgeKicker">EXECUTION EDGE</p>
+                <h3 data-i18n="edgeTitle">Same controls, prediction signal isolated</h3>
+              </div>
+              <span class="status-tag" data-i18n="oosTag">OOS</span>
+            </div>
+            <div id="edgeComparison" class="edge-comparison" role="img" aria-label="Model quote-skew improvements"></div>
+            <p class="edge-summary" id="edgeSummary">—</p>
+            <details class="data-fallback">
+              <summary data-i18n="tableToggle">View accessible data table</summary>
+              <div class="table-scroll"><table id="edgeTable"></table></div>
+            </details>
+          </article>
+
+          <article class="panel chart-panel quote-path-panel">
+            <div class="panel-header">
+              <div>
+                <p class="panel-kicker" data-i18n="quotePathKicker">ALPHA → QUOTE</p>
+                <h3 data-i18n="quotePathTitle">Where the forecast changes market making</h3>
+              </div>
+            </div>
+            <p class="quote-path-intro" data-i18n="quotePathIntro">
+              The model does not replace the market-making controls. It contributes one bounded directional input to
+              quote sizing; inventory, depth, exposure, and order-type gates remain independent.
+            </p>
+            <div class="quote-path" aria-label="Forecast-to-quote decision path">
+              <span data-i18n="quoteScoreNode">30-second score</span><i aria-hidden="true"></i>
+              <span data-i18n="quoteSkewNode">Bounded size skew</span><i aria-hidden="true"></i>
+              <span data-i18n="quoteRiskNode">Inventory + risk gates</span><i aria-hidden="true"></i>
+              <span data-i18n="quoteOrderNode">Post-only bid / ask</span>
+            </div>
           </article>
         </div>
 
@@ -322,16 +351,12 @@
         <div class="section-heading">
           <div>
             <p class="section-index" data-i18n="sectionRegimes">05 / REGIME STABILITY</p>
-            <h2 id="regimes-title" data-i18n="regimeTitle">Prediction stays positive across regimes; execution does not.</h2>
+            <h2 id="regimes-title" data-i18n="regimeTitle">Alpha ordering remains positive across all nine frozen market regimes.</h2>
           </div>
           <p data-i18n="regimeIntro">
-            Volatility and liquidity thresholds were fitted on training data and then frozen. Toggle between forecast
-            ordering and simulated return to see where evidence remains stable and where economics break.
+            Volatility and liquidity thresholds were fitted on training data and then frozen. The locked test keeps
+            positive 30-second forecast ordering in every state combination.
           </p>
-        </div>
-        <div class="segmented-control" role="group" aria-label="Regime metric">
-          <button type="button" class="active" data-regime-view="prediction" aria-pressed="true" data-i18n="regimePrediction">Prediction Rank IC</button>
-          <button type="button" data-regime-view="execution" aria-pressed="false" data-i18n="regimeExecution">Simulated return</button>
         </div>
         <div id="regimeHeatmap" class="heatmap" role="img" aria-label="Volatility by liquidity regime heatmap"></div>
         <div class="heatmap-legend" id="regimeLegend"></div>

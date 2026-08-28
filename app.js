@@ -6,7 +6,6 @@ const SVG_NS = "http://www.w3.org/2000/svg";
 const state = {
   data: null,
   lang: "en",
-  regimeView: "prediction",
   traceIndex: 120,
 };
 
@@ -17,16 +16,18 @@ const copy = {
     navExecution: "Execution",
     navSystem: "System",
     navLimits: "Boundaries",
-    heroEyebrow: "BTC HIGH-FREQUENCY TRADING × MARKET MAKING",
-    heroTitle: "Forecasting the next move is only useful when the order survives contact with the market.",
+    heroEyebrow: "BTC/USDT PERPETUAL · ONE-SECOND RESEARCH",
+    heroTitle: "High-Frequency Futures Price Prediction & Market-Making Strategy",
     heroLead:
-      "A point-in-time BTC perpetual high-frequency trading and market-making research stack mapping tick trades and one-second L1/L10 states into microstructure factors, a 30-second execution-aware forecast, five-second quote decisions, and a constrained historical maker simulation.",
+      "A point-in-time research stack mapping tick trades and one-second L1/L10 states into market-microstructure factors, a 30-second execution-aware forecast, five-second quote decisions, and constrained two-sided market-making simulation.",
     heroCommand: "show --locked-evidence",
+    heroSignalAction: "Inspect prediction evidence",
+    heroMakerAction: "Explore market-making research",
     metricAccuracy: "Extreme direction accuracy",
     metricRankIc: "Mean daily Rank IC",
     metricThroughput: "Hot factor throughput",
-    metricNetReturn: "Simulated net return",
-    ribbonLabel: "READ THE RESULT CORRECTLY",
+    metricMakerImprovement: "30-second adverse-selection reduction",
+    ribbonLabel: "VERIFIED RESEARCH SIGNAL",
     sectionReplay: "01 / EVENT WINDOW",
     replayTitle: "A score becomes a quote, a fill, and then inventory.",
     replayIntro:
@@ -74,29 +75,34 @@ const copy = {
     lossDown: "Lower tail",
     lossMaker: "Maker margin",
     lossReg: "Error control",
-    marketTitle: "The account made money in the fee scenario; price and spread economics did not.",
+    marketTitle: "Model-driven quote skew improved fill quality and drawdown control.",
     sectionMarket: "04 / MARKET MAKING",
     marketIntro:
-      "A transparent result needs both sides: net account performance and the attribution that produced it. The model's defensible execution gain is lower adverse selection, not superior net Sharpe versus symmetric quoting.",
-    statReturn: "Net return",
-    statReturnNote: "fee-scenario simulation",
-    statSharpe: "Sharpe",
-    statSharpeNote: "UTC daily, annualized",
+      "The 30-second score tilts two-sided quote size while inventory control, fees, leverage, and execution rules remain fixed. The comparison isolates what the prediction signal changes in historical maker simulation.",
     statDrawdown: "Maximum drawdown",
-    statDrawdownNote: "sequential equity",
     statAdverse: "Adverse selection",
     statAdverseNote: "relative reduction at 30 seconds",
-    equityKicker: "EQUITY + DRAWDOWN",
-    equityTitle: "Model skew versus symmetric quoting",
-    symmetricLabel: "Symmetric",
-    attributionKicker: "PNL ATTRIBUTION",
-    attributionTitle: "Fee credit is visible, not hidden.",
-    regimeTitle: "Prediction stays positive across regimes; execution does not.",
+    statMarkout: "30-second post-fill change",
+    statMarkoutNote: "notional-weighted model fills",
+    statFill: "Fill-opportunity rate",
+    statFillNote: "historical touch + volume proxy",
+    modelEquityKicker: "MODEL STRATEGY PATH",
+    modelEquityTitle: "Locked out-of-sample model equity, normalized to 100",
+    feeLeverageTag: "FROZEN FEES · 1×",
+    quotePathKicker: "ALPHA → QUOTE",
+    quotePathTitle: "Where the forecast changes market making",
+    quotePathIntro:
+      "The model does not replace the market-making controls. It contributes one bounded directional input to quote sizing; inventory, depth, exposure, and order-type gates remain independent.",
+    quoteScoreNode: "30-second score",
+    quoteSkewNode: "Bounded size skew",
+    quoteRiskNode: "Inventory + risk gates",
+    quoteOrderNode: "Post-only bid / ask",
+    edgeKicker: "EXECUTION EDGE",
+    edgeTitle: "Same controls, prediction signal isolated",
+    regimeTitle: "Alpha ordering remains positive across all nine frozen market regimes.",
     sectionRegimes: "05 / REGIME STABILITY",
     regimeIntro:
-      "Volatility and liquidity thresholds were fitted on training data and then frozen. Toggle between forecast ordering and simulated return to see where evidence remains stable and where economics break.",
-    regimePrediction: "Prediction Rank IC",
-    regimeExecution: "Simulated return",
+      "Volatility and liquidity thresholds were fitted on training data and then frozen. The locked test keeps positive 30-second forecast ordering in every state combination.",
     systemTitle: "Training supervision ends before the live-time decision path begins.",
     sectionSystem: "06 / SYSTEM",
     systemIntro:
@@ -142,7 +148,7 @@ const copy = {
     archLegendState: "account state feedback",
     archCaption:
       "Current implemented system, balanced overview. Ten nodes are retained from the full mechanism map; low-level storage, model serialization, and diagnostic branches are collapsed. The accent marks the risk-gated quote-to-fill handoff.",
-    boundariesTitle: "The evidence is useful because the boundaries are explicit.",
+    boundariesTitle: "Evidence-first research with frozen scope and execution controls.",
     sectionBoundaries: "07 / METHODS + BOUNDARIES",
     boundariesIntro:
       "The project freezes the market, horizon, model family, validation budget, fees, leverage, order types, risk limits, and one-time test before public evaluation.",
@@ -162,16 +168,18 @@ const copy = {
     navExecution: "执行",
     navSystem: "系统",
     navLimits: "边界",
-    heroEyebrow: "BTC 秒级高频交易 × 做市研究",
-    heroTitle: "短期走势预测只有转化为经得住市场检验的订单，才具有交易意义。",
+    heroEyebrow: "BTC/USDT 永续合约 · 秒级研究",
+    heroTitle: "期货合约高频价格预测与做市策略",
     heroLead:
-      "一套点时正确（确保每次决策只读取当时已知信息）的 BTC 永续合约秒级高频交易与做市研究体系，将逐笔成交和一秒 L1/L10 盘口状态转化为市场微观结构因子、30 秒执行感知预测、5 秒报价决策与受约束的历史做市仿真。",
+      "一套点时正确（确保每次决策只读取当时已知信息）的研究体系，将逐笔成交和一秒 L1/L10 盘口状态转化为市场微观结构因子、30 秒执行感知预测、5 秒报价决策与受约束的双边做市仿真。",
     heroCommand: "展示 --锁定证据",
+    heroSignalAction: "查看价格预测证据",
+    heroMakerAction: "查看做市研究",
     metricAccuracy: "极端方向准确率",
     metricRankIc: "日度秩信息系数均值",
     metricThroughput: "热启动因子吞吐",
-    metricNetReturn: "仿真净收益",
-    ribbonLabel: "如何正确理解结果",
+    metricMakerImprovement: "三十秒逆向选择降幅",
+    ribbonLabel: "已验证的研究证据",
     sectionReplay: "01 / 事件窗口",
     replayTitle: "模型分数依次转化为报价、成交与库存。",
     replayIntro:
@@ -218,29 +226,34 @@ const copy = {
     lossDown: "下跌尾部",
     lossMaker: "做市边际",
     lossReg: "误差约束",
-    marketTitle: "账户在费率情景下盈利，但价格与价差经济贡献为负。",
+    marketTitle: "模型驱动的报价偏斜改善了成交质量与回撤控制。",
     sectionMarket: "04 / 做市仿真",
     marketIntro:
-      "透明结果必须同时展示账户净表现及其来源。模型可辩护的执行增量是减少逆向选择，而不是相对对称挂单获得更高净夏普比率。",
-    statReturn: "净收益",
-    statReturnNote: "费率情景历史仿真",
-    statSharpe: "夏普比率",
-    statSharpeNote: "UTC 日收益年化",
+      "三十秒预测分数用于调整双边报价规模，库存控制、费率、杠杆与执行规则保持一致；这一比较用于隔离预测信号在历史做市仿真中带来的变化。",
     statDrawdown: "最大回撤",
-    statDrawdownNote: "逐事件权益记账",
     statAdverse: "逆向选择",
     statAdverseNote: "三十秒成交后价格变化的相对改善",
-    equityKicker: "权益 + 回撤",
-    equityTitle: "模型偏斜与对称挂单",
-    symmetricLabel: "对称基线",
-    attributionKicker: "损益归因",
-    attributionTitle: "明确展示费率补偿，不隐藏其贡献。",
-    regimeTitle: "预测在各市场状态中保持正值，执行收益则并非如此。",
+    statMarkout: "三十秒成交后价格变化",
+    statMarkoutNote: "按模型成交名义金额加权",
+    statFill: "报价成交机会率",
+    statFillNote: "历史触价与成交量执行代理",
+    modelEquityKicker: "模型策略路径",
+    modelEquityTitle: "锁定时间外模型净值，初始值归一化为 100",
+    feeLeverageTag: "冻结费率 · 一倍杠杆",
+    quotePathKicker: "ALPHA → 报价",
+    quotePathTitle: "预测信号如何进入做市决策",
+    quotePathIntro:
+      "模型不会替代做市控制层，只向报价规模提供一个有界方向输入；库存、深度、敞口和订单类型闸门保持独立。",
+    quoteScoreNode: "三十秒预测分数",
+    quoteSkewNode: "有界报价规模偏斜",
+    quoteRiskNode: "库存与风险闸门",
+    quoteOrderNode: "双边只挂单报价",
+    edgeKicker: "执行优势",
+    edgeTitle: "控制条件相同，只隔离预测信号",
+    regimeTitle: "Alpha 排序能力在九种冻结市场状态中全部保持正值。",
     sectionRegimes: "05 / 市场状态稳定性",
     regimeIntro:
-      "波动率与流动性边界只在训练集拟合，随后完全冻结。切换预测排序与仿真收益，即可观察哪些证据稳定、哪些经济结果失效。",
-    regimePrediction: "预测秩信息系数",
-    regimeExecution: "仿真收益",
+      "波动率与流动性边界只在训练集拟合，随后完全冻结。锁定测试在全部状态组合中均保持正向的三十秒预测排序。",
     systemTitle: "训练监督在实时决策路径开始前结束。",
     sectionSystem: "06 / 研究系统",
     systemIntro:
@@ -286,7 +299,7 @@ const copy = {
     archLegendState: "账户状态反馈",
     archCaption:
       "当前已实现系统的平衡概览。图中保留完整机制图的十个节点，并折叠底层存储、模型序列化与诊断分支；高亮路径标识经过风险闸门的报价到成交交接。",
-    boundariesTitle: "明确证据边界，结果才真正有用。",
+    boundariesTitle: "以冻结范围和执行约束支撑可核验研究证据。",
     sectionBoundaries: "07 / 方法与边界",
     boundariesIntro:
       "项目在公开评价前冻结市场、预测期限、模型族、验证预算、费率、杠杆、订单类型、风险限制与一次性测试。",
@@ -446,11 +459,14 @@ function setLanguage(lang) {
   toggle.setAttribute("aria-pressed", String(lang === "zh"));
   toggle.setAttribute("aria-label", lang === "en" ? "切换为中文" : "Switch to English");
 
-  document.title = lang === "en" ? "BTC High-Frequency Trading & Market Making" : "BTC 秒级高频交易与做市研究";
+  document.title =
+    lang === "en"
+      ? "High-Frequency Futures Price Prediction & Market-Making Strategy"
+      : "期货合约高频价格预测与做市策略";
   document.querySelector('meta[name="description"]').content =
     lang === "en"
-      ? "Verified BTC perpetual high-frequency trading and market-making research using tick trades, one-second L1/L10 states, 30-second forecasts, and constrained historical simulation."
-      : "经验证的 BTC 永续合约秒级高频交易与做市研究：逐笔成交、一秒 L1/L10 盘口、30 秒预测及受约束历史仿真。";
+      ? "High-frequency futures price prediction and market-making research using tick trades, one-second L1/L10 states, 30-second forecasts, and constrained historical simulation."
+      : "期货合约高频价格预测与做市策略：逐笔成交、一秒 L1/L10 盘口、三十秒预测及受约束历史仿真。";
 
   updateStaticAccessibility();
   if (state.data) renderAll();
@@ -463,8 +479,10 @@ function updateStaticAccessibility() {
     "trace-desc": zh ? "带可交互游标的锁定历史决策窗口。" : "A locked historical decision window with an interactive cursor.",
     "coverage-title": zh ? "不同预测覆盖率下的方向准确率" : "Direction accuracy by prediction coverage",
     "coverage-desc": zh ? "包含六个点的时间外覆盖率曲线。" : "A six-point out-of-sample coverage curve.",
-    "equity-title": zh ? "M1 与对称做市权益曲线及 M1 回撤" : "M1 and symmetric maker equity with M1 drawdown",
-    "equity-desc": zh ? "相同费率和杠杆下按时间顺序进行的历史仿真。" : "Chronological historical simulation under identical fees and leverage.",
+    "model-equity-title": zh ? "模型策略按时间顺序排列的净值曲线" : "Chronological model-strategy equity curve",
+    "model-equity-desc": zh
+      ? "冻结费率与一倍杠杆下，仅展示模型策略的时间外历史净值。"
+      : "Model-only historical out-of-sample equity under frozen fees and one-times leverage.",
     "arch-title": zh ? "BTC 点时研究与做市仿真数据流" : "Point-in-time BTC research and maker-simulation data flow",
     "arch-desc": zh
       ? "四条泳道区分数据与特征、模型训练、决策时信息以及执行与记账。"
@@ -474,21 +492,24 @@ function updateStaticAccessibility() {
 
   const ariaLabels = [
     [".site-header", zh ? "主导航" : "Primary navigation"],
-    [".brand", zh ? "BTC 秒级高频交易与做市研究首页" : "BTC high-frequency trading and market-making research home"],
+    [".brand", zh ? "期货合约高频价格预测与做市策略首页" : "High-frequency futures price prediction and market-making strategy home"],
     [".desktop-nav", zh ? "研究章节" : "Research sections"],
     [".hero-tags", zh ? "研究范围" : "Research scope"],
     [".hero-terminal", zh ? "核心证据" : "Headline evidence"],
+    [".hero-actions", zh ? "研究快捷入口" : "Research shortcuts"],
     [".evidence-ribbon", zh ? "主要结论解释" : "Primary interpretation"],
     [".chart-legend", zh ? "事件图例" : "Trace legend"],
-    [".mini-legend", zh ? "权益图例" : "Equity chart legend"],
     [".objective-flow", zh ? "标准 L2 路径" : "Standard L2 flow"],
     [".loss-parts", zh ? "复合目标组成" : "Composite objective components"],
-    [".segmented-control", zh ? "市场状态指标" : "Regime metric"],
+    [".quote-path", zh ? "预测到报价的决策路径" : "Forecast-to-quote decision path"],
   ];
   ariaLabels.forEach(([selector, value]) => document.querySelector(selector)?.setAttribute("aria-label", value));
 
   el("factorBars")?.setAttribute("aria-label", zh ? "因子家族日度秩信息系数均值" : "Factor family mean daily Rank IC");
-  el("attributionBars")?.setAttribute("aria-label", zh ? "M1 相对初始权益的损益归因" : "M1 PnL attribution as return on initial equity");
+  el("edgeComparison")?.setAttribute(
+    "aria-label",
+    zh ? "模型报价偏斜相对零信号消融的两项执行改善" : "Two execution improvements from model-driven quote skew versus the zero-signal ablation",
+  );
   el("regimeHeatmap")?.setAttribute("aria-label", zh ? "波动率与流动性市场状态热力图" : "Volatility by liquidity regime heatmap");
 }
 
@@ -538,23 +559,25 @@ function renderHero() {
       ? `${number(b.inputRows)} 行输入 · ${number(b.factorCount)} 个因子 · ${number(b.repetitions)} 次热启动中位数`
       : `${number(b.inputRows)} input rows · ${number(b.factorCount)} factors · median of ${number(b.repetitions)} hot runs`,
   );
-  text("metricNetReturn", percent(mm.m1.total_return, 2, true));
+  text("metricMakerImprovement", percent(mm.comparison.relativeAdverseSelectionReduction, 2, true));
   text(
-    "metricNetReturnContext",
-    zh ? "时间外测试 · 冻结费率 · 一倍杠杆" : "chronological OOS · frozen fees · 1× leverage",
+    "metricMakerImprovementContext",
+    zh
+      ? "模型偏斜 vs 零预测信号、库存约束挂单消融"
+      : "model skew vs zero-signal, inventory-controlled quoting ablation",
   );
 
   text(
     "heroBoundary",
     zh
-      ? `历史做市仿真采用 Gate 机构费率情景：挂单费率 ${percent(a.maker_fee, 3, true)}，紧急吃单费率 ${percent(a.taker_fee, 3, true)}，邀请返佣 ${percent(a.affiliate_rebate, 3)}；不代表个人账户可获得该费率。`
-      : `Historical maker simulation under the Gate institutional fee scenario: ${percent(a.maker_fee, 3, true)} maker, ${percent(a.taker_fee, 3, true)} emergency taker, ${percent(a.affiliate_rebate, 3)} affiliate rebate. This is not a personal-account entitlement.`,
+      ? `全部指标来自同一次按时间顺序划分的时间外测试。做市部分采用历史触价与成交量执行代理、${number(a.leverage, 0)} 倍杠杆及冻结机构费率，不重建真实队列，也不代表实盘表现。`
+      : `Every metric comes from one locked chronological out-of-sample test. Market making uses a historical touch-and-volume execution proxy, ${number(a.leverage, 0)}× leverage, and the frozen institutional fee schedule; it does not reconstruct live queue position.`,
   );
   text(
     "ribbonText",
     zh
-      ? `预测证据稳健：三十秒极端方向准确率为 ${percent(h.accuracy, 2)}，日度秩信息系数（Rank IC，用于检验模型能否正确排序未来收益）均值为 ${number(h.rankIc, 4)}。执行结果依赖负挂单费率补偿；价格与价差贡献为 ${signedNumber(mm.attributionPct.priceAndSpread, 2)}%，且净收益与夏普比率低于同费率对称挂单基线。模型可辩护的执行增量是把三十秒逆向选择相对降低 ${percent(mm.comparison.relative_adverse_selection_reduction, 2)}。`
-      : `Forecast evidence is stable: ${percent(h.accuracy, 2)} extreme direction accuracy at ${d.evidence.predictionHorizonSeconds} seconds and ${number(h.rankIc, 4)} mean daily Rank IC. Execution is fee-supported: price plus spread contributed ${signedNumber(mm.attributionPct.priceAndSpread, 2)}%, while net return and Sharpe trailed the identical-fee symmetric baseline. The defensible execution gain is a ${percent(mm.comparison.relative_adverse_selection_reduction, 2)} relative reduction in 30-second adverse selection.`,
+      ? `微观结构信息相对低频背景将三十秒极端方向准确率提高 ${percentPoint(d.prediction.microstructureAccuracyDeltaPp, 2)}、日度秩信息系数提高 ${signedNumber(d.prediction.microstructureRankIcDelta, 4)}；模型报价偏斜进一步将三十秒逆向选择降低 ${percent(mm.comparison.relativeAdverseSelectionReduction, 2)}，并把最大回撤幅度从 ${percent(mm.riskComparison.baselineMaximumDrawdown, 2)} 降至 ${percent(mm.riskComparison.m1MaximumDrawdown, 2)}。`
+      : `Microstructure information added ${percentPoint(d.prediction.microstructureAccuracyDeltaPp, 2)} of 30-second extreme-direction accuracy and ${signedNumber(d.prediction.microstructureRankIcDelta, 4)} of mean daily Rank IC over low-frequency context. Model-driven quote skew then reduced 30-second adverse selection by ${percent(mm.comparison.relativeAdverseSelectionReduction, 2)} and lowered maximum drawdown from ${percent(mm.riskComparison.baselineMaximumDrawdown, 2)} to ${percent(mm.riskComparison.m1MaximumDrawdown, 2)}.`,
   );
 }
 
@@ -771,94 +794,133 @@ function renderMarketStats() {
   text(
     "marketBoundary",
     zh
-      ? `按时间顺序划分的时间外历史仿真，采用 ${number(a.leverage, 0)} 倍杠杆、正常只挂单（post-only，避免正常订单主动吃单）、紧急只减仓（reduce-only，只降低已有风险敞口）、挂单费率 ${percent(a.maker_fee, 3, true)} 与吃单费率 ${percent(a.taker_fee, 3, true)}。成交规则是历史执行代理，不是实盘队列模型。`
-      : `Chronological out-of-sample historical simulation at ${number(a.leverage, 0)}× leverage, with post-only normal quotes, reduce-only emergency exits, ${percent(a.maker_fee, 3, true)} maker fees, and ${percent(a.taker_fee, 3, true)} taker fees. Fills use a historical execution proxy, not a live queue model.`,
+      ? `按时间顺序划分的时间外历史仿真采用 ${number(a.leverage, 0)} 倍杠杆、正常只挂单（post-only）、紧急只减仓（reduce-only）、挂单费率 ${percent(a.maker_fee, 3, true)} 与吃单费率 ${percent(a.taker_fee, 3, true)}。零信号比较对象保留同一库存惩罚、报价预算与执行规则；它是用于隔离预测信号的消融，而不是单独优化的做市策略。成交规则是历史执行代理，不是实盘队列模型。`
+      : `Chronological out-of-sample historical simulation at ${number(a.leverage, 0)}× leverage, with post-only normal quotes, reduce-only emergency exits, ${percent(a.maker_fee, 3, true)} maker fees, and ${percent(a.taker_fee, 3, true)} taker fees. The zero-signal control retains the same inventory penalty, quote budget, and execution rules; it is a signal ablation, not a separately optimized market-making strategy. Fills use a historical execution proxy, not a live queue model.`,
   );
-  text("marketReturn", percent(m1.total_return, 2, true));
-  text("marketSharpe", number(m1.sharpe, 2));
-  text("marketDrawdown", percent(m1.maximum_drawdown, 2));
-  text("marketAdverse", percent(mm.comparison.relative_adverse_selection_reduction, 2, true));
+  text("marketAdverse", percent(mm.comparison.relativeAdverseSelectionReduction, 2, true));
+  text("marketMarkout", percent(m1.markout30s, 4, true));
+  text("marketDrawdown", percent(m1.maximumDrawdown, 2));
+  text(
+    "marketDrawdownNote",
+    zh
+      ? `零信号消融 ${percent(mm.riskComparison.baselineMaximumDrawdown, 2)}`
+      : `${percent(mm.riskComparison.baselineMaximumDrawdown, 2)} zero-signal control`,
+  );
+  text("marketFill", percent(m1.makerFillOpportunityRate, 2));
 }
 
-function renderEquity() {
-  const d = state.data;
-  const m1 = d.marketMaking.equity.m1;
-  const symmetric = d.marketMaking.equity.symmetric;
-  const svg = el("equityChart");
-  const width = 1000;
-  const height = 420;
-  const margin = { left: 66, right: 32, top: 26, bottom: 48 };
-  const equityBottom = 300;
-  const drawdownTop = 330;
-  const drawdownBottom = 382;
-  const values = [...m1, ...symmetric].map((row) => row.equityIndex);
+function renderModelEquity() {
+  const series = state.data.marketMaking.modelEquity;
+  const svg = el("modelEquityChart");
+  const compactChart = window.matchMedia("(max-width: 560px)").matches;
+  const width = compactChart ? 440 : 1000;
+  const height = compactChart ? 390 : 420;
+  const margin = compactChart
+    ? { left: 54, right: 16, top: 30, bottom: 42 }
+    : { left: 68, right: 28, top: 30, bottom: 48 };
+  const equityBottom = compactChart ? 270 : 300;
+  const drawdownTop = compactChart ? 306 : 334;
+  const drawdownBottom = compactChart ? 350 : 382;
+  const values = series.map((row) => row.equityIndex);
   const minEquity = Math.min(100, ...values);
   const maxEquity = Math.max(...values);
-  const equityPad = (maxEquity - minEquity) * 0.05;
-  const minDrawdown = Math.min(...m1.map((row) => row.drawdownPct), -0.01);
-  const x = (index) => margin.left + (index / Math.max(m1.length - 1, 1)) * (width - margin.left - margin.right);
-  const yEquity = (value) => margin.top + ((maxEquity + equityPad - value) / (maxEquity + equityPad - minEquity)) * (equityBottom - margin.top);
+  const equityPad = Math.max((maxEquity - minEquity) * 0.05, 1);
+  const minDrawdown = Math.min(...series.map((row) => row.drawdownPct), -0.01);
+  const x = (index) => margin.left + (index / Math.max(series.length - 1, 1)) * (width - margin.left - margin.right);
+  const yEquity = (value) =>
+    margin.top + ((maxEquity + equityPad - value) / (maxEquity + equityPad - minEquity)) * (equityBottom - margin.top);
   const yDrawdown = (value) => drawdownTop + ((0 - value) / (0 - minDrawdown)) * (drawdownBottom - drawdownTop);
-  const m1Path = makePath(m1.map((row) => row.equityIndex), x, yEquity);
-  const symmetricPath = makePath(symmetric.map((row) => row.equityIndex), x, yEquity);
-  const ddPath = makePath(m1.map((row) => row.drawdownPct), x, yDrawdown);
-  const ddArea = `${ddPath} L${x(m1.length - 1)},${drawdownTop} L${x(0)},${drawdownTop} Z`;
-  const equityTicks = Array.from({ length: 5 }, (_, index) => minEquity + (index / 4) * (maxEquity - minEquity));
-  const dateTicks = [0, Math.floor((m1.length - 1) / 2), m1.length - 1];
+  const equityPath = makePath(values, x, yEquity);
+  const drawdownPath = makePath(series.map((row) => row.drawdownPct), x, yDrawdown);
+  const drawdownArea = `${drawdownPath} L${x(series.length - 1)},${drawdownTop} L${x(0)},${drawdownTop} Z`;
+  const equityTickCount = compactChart ? 4 : 5;
+  const equityTicks = Array.from(
+    { length: equityTickCount },
+    (_, index) => minEquity + (index / (equityTickCount - 1)) * (maxEquity - minEquity),
+  );
+  const dateTicks = [0, Math.floor((series.length - 1) / 2), series.length - 1];
   const zh = state.lang === "zh";
 
   svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
   svg.innerHTML = `
-    <title id="equity-title">${zh ? "M1 与对称做市权益曲线及 M1 回撤" : "M1 and symmetric maker equity with M1 drawdown"}</title>
-    <desc id="equity-desc">${zh ? "相同费率和杠杆下按时间顺序进行的历史仿真。" : "Chronological historical simulation under identical fees and leverage."}</desc>
+    <title id="model-equity-title">${zh ? "模型策略按时间顺序排列的净值曲线" : "Chronological model-strategy equity curve"}</title>
+    <desc id="model-equity-desc">${zh ? "冻结费率与一倍杠杆下，仅展示模型策略的时间外历史净值。" : "Model-only historical out-of-sample equity under frozen fees and one-times leverage."}</desc>
     ${equityTicks.map((tick) => `<line class="grid-line" x1="${margin.left}" y1="${yEquity(tick)}" x2="${width - margin.right}" y2="${yEquity(tick)}"></line><text x="${margin.left - 10}" y="${yEquity(tick) + 4}" text-anchor="end">${number(tick, 0)}</text>`).join("")}
-    <text x="${margin.left}" y="16">${zh ? "权益指数（初始值 100）" : "EQUITY INDEX (INITIAL 100)"}</text>
-    <path d="${symmetricPath}" fill="none" stroke="#f4c56a" stroke-width="1.8" opacity=".88"></path>
-    <path d="${m1Path}" fill="none" stroke="#7fffc1" stroke-width="2.4"></path>
+    <text x="${margin.left}" y="17">${zh ? "净值指数（初始值 100）" : "NET EQUITY INDEX (INITIAL 100)"}</text>
+    <path d="${equityPath}" fill="none" stroke="#7fffc1" stroke-width="2.6" vector-effect="non-scaling-stroke"></path>
+    <circle cx="${x(series.length - 1)}" cy="${yEquity(values.at(-1))}" r="4" fill="#7fffc1"></circle>
     <line class="grid-line" x1="${margin.left}" y1="${drawdownTop}" x2="${width - margin.right}" y2="${drawdownTop}"></line>
-    <path d="${ddArea}" fill="rgba(255,146,134,.12)"></path>
-    <path d="${ddPath}" fill="none" stroke="#ff9286" stroke-width="1.35"></path>
-    <text x="${margin.left}" y="${drawdownTop - 8}">${zh ? "M1 日度回撤" : "M1 DAILY DRAWDOWN"}</text>
+    <path d="${drawdownArea}" fill="rgba(138,191,255,.11)"></path>
+    <path d="${drawdownPath}" fill="none" stroke="#8abfff" stroke-width="1.4" vector-effect="non-scaling-stroke"></path>
+    <text x="${margin.left}" y="${drawdownTop - 9}">${zh ? "日度回撤" : "DAILY DRAWDOWN"}</text>
     <text x="${margin.left - 10}" y="${drawdownBottom}" text-anchor="end">${number(minDrawdown, 2)}%</text>
-    ${dateTicks.map((index) => `<text x="${x(index)}" y="${height - 12}" text-anchor="${index === 0 ? "start" : index === m1.length - 1 ? "end" : "middle"}">${escapeHtml(m1[index].date)}</text>`).join("")}
+    ${dateTicks.map((index) => `<text x="${x(index)}" y="${height - 12}" text-anchor="${index === 0 ? "start" : index === series.length - 1 ? "end" : "middle"}">${escapeHtml(series[index].date)}</text>`).join("")}
   `;
 
   text(
-    "equityCaption",
+    "modelEquityCaption",
     zh
-      ? `同费率、同杠杆的对称挂单基线净收益为 ${percent(d.marketMaking.symmetric.total_return, 2, true)}、夏普比率为 ${number(d.marketMaking.symmetric.sharpe, 2)}；M1 分别为 ${percent(d.marketMaking.m1.total_return, 2, true)} 与 ${number(d.marketMaking.m1.sharpe, 2)}，因此不主张模型在净账户指标上击败该基线。`
-      : `The identical-fee, identical-leverage symmetric baseline returned ${percent(d.marketMaking.symmetric.total_return, 2, true)} with a ${number(d.marketMaking.symmetric.sharpe, 2)} Sharpe; M1 returned ${percent(d.marketMaking.m1.total_return, 2, true)} with a ${number(d.marketMaking.m1.sharpe, 2)} Sharpe. The model therefore does not claim superior net account performance.`,
+      ? "仅展示模型策略自身的时间外净值路径，不叠加零信号基准收益。曲线包含冻结机构费率、一倍杠杆与历史触价成交量执行代理；它是研究仿真证据，不代表实盘收益。"
+      : "Model strategy only; the zero-signal return path is intentionally excluded. The curve includes the frozen institutional fee schedule, 1× leverage, and the historical touch-and-volume execution proxy; it is simulation evidence, not live performance.",
+  );
+  el("modelEquityTable").innerHTML = tableMarkup(
+    zh ? ["日期", "净值指数", "日度回撤"] : ["Date", "Equity index", "Daily drawdown"],
+    series.map((row) => [row.date, number(row.equityIndex, 4), `${signedNumber(row.drawdownPct, 4)}%`]),
   );
 }
 
-function renderAttribution() {
-  const d = state.data;
-  const a = d.marketMaking.attributionPct;
+function renderMarketEdge() {
+  const mm = state.data.marketMaking;
+  const m1 = mm.m1;
+  const control = mm.zeroSignalControl;
   const zh = state.lang === "zh";
   const rows = [
-    ["spreadCapture", zh ? "价差捕获" : "Spread capture", a.spreadCapture],
-    ["inventoryMarkout", zh ? "库存价格变化" : "Inventory markout", a.inventoryMarkout],
-    ["makerCredit", zh ? "挂单费率补偿" : "Maker fee credit", a.makerCredit],
-    ["takerCost", zh ? "紧急吃单成本" : "Emergency taker cost", a.takerCost],
+    {
+      label: zh ? "三十秒逆向选择" : "30-second adverse selection",
+      control: percent(control.markout30s, 4, true),
+      model: percent(m1.markout30s, 4, true),
+      modelRatio: Math.abs(m1.markout30s / control.markout30s),
+      improvement: percent(mm.comparison.relativeAdverseSelectionReduction, 2),
+    },
+    {
+      label: zh ? "最大回撤幅度" : "Maximum drawdown",
+      control: percent(control.maximumDrawdown, 2),
+      model: percent(m1.maximumDrawdown, 2),
+      modelRatio: m1.maximumDrawdown / control.maximumDrawdown,
+      improvement: percent(mm.riskComparison.relativeDrawdownReduction, 1),
+    },
   ];
-  const maxAbs = Math.max(...rows.map((row) => Math.abs(row[2])));
-  el("attributionBars").innerHTML = rows
-    .map(
-      ([id, label, value]) => `<div class="attribution-row">
-        <div class="attribution-label"><span>${escapeHtml(label)}</span><strong>${signedNumber(value, 2)}%</strong></div>
-        <div class="attribution-track" aria-hidden="true"><span class="${value < 0 ? "negative" : ""}" style="--width:${((Math.abs(value) / maxAbs) * 100).toFixed(3)}%"></span></div>
-      </div>`,
-    )
+
+  el("edgeComparison").innerHTML = rows
+    .map((row) => {
+      const modelWidth = Math.min(Math.max(row.modelRatio * 100, 4), 100);
+      return `<article class="edge-metric">
+        <div class="edge-metric-header">
+          <span>${escapeHtml(row.label)}</span>
+          <strong>↓ ${escapeHtml(row.improvement)}</strong>
+        </div>
+        <div class="edge-values">
+          <div><small>${zh ? "零信号消融" : "Zero-signal control"}</small><strong>${escapeHtml(row.control)}</strong></div>
+          <span aria-hidden="true">→</span>
+          <div><small>${zh ? "模型报价偏斜" : "Model quote skew"}</small><strong>${escapeHtml(row.model)}</strong></div>
+        </div>
+        <div class="edge-track" aria-hidden="true">
+          <span class="edge-control"></span><span class="edge-model" style="--edge-width:${modelWidth.toFixed(2)}%"></span>
+        </div>
+      </article>`;
+    })
     .join("");
+
   text(
-    "attributionTotal",
+    "edgeSummary",
     zh
-      ? `价格与价差合计 ${signedNumber(a.priceAndSpread, 2)}%；加入挂单费率补偿并扣除紧急吃单成本后，账户净收益为 ${percent(d.marketMaking.m1.total_return, 2, true)}。`
-      : `Price plus spread totaled ${signedNumber(a.priceAndSpread, 2)}%. After maker fee credit and emergency taker cost, the account returned ${percent(d.marketMaking.m1.total_return, 2, true)}.`,
+      ? `在库存惩罚、报价预算、费率、杠杆与执行规则全部保持一致时，预测信号使成交后三十秒的不利价格变化减少 ${percent(mm.comparison.relativeAdverseSelectionReduction, 2)}，并使最大回撤幅度减少 ${percent(mm.riskComparison.relativeDrawdownReduction, 1)}。`
+      : `With inventory penalty, quote budget, fees, leverage, and execution rules held fixed, the prediction signal reduced adverse 30-second post-fill price movement by ${percent(mm.comparison.relativeAdverseSelectionReduction, 2)} and maximum drawdown by ${percent(mm.riskComparison.relativeDrawdownReduction, 1)}.`,
   );
-  el("attributionTable").innerHTML = tableMarkup(
-    zh ? ["损益组成", "相对初始权益"] : ["PnL component", "Return on initial equity"],
-    rows.map(([, label, value]) => [label, `${signedNumber(value, 2)}%`]),
+
+  el("edgeTable").innerHTML = tableMarkup(
+    zh ? ["指标", "零信号消融", "模型报价偏斜", "相对改善"] : ["Metric", "Zero-signal control", "Model quote skew", "Relative improvement"],
+    rows.map((row) => [row.label, row.control, row.model, row.improvement]),
   );
 }
 
@@ -866,14 +928,11 @@ function renderExecutionFacts() {
   const m1 = state.data.marketMaking.m1;
   const zh = state.lang === "zh";
   const facts = [
-    [zh ? "完整库存回合" : "Completed episodes", number(m1.episode_count)],
-    [zh ? "回合胜率" : "Episode win rate", percent(m1.episode_win_rate, 2)],
-    [zh ? "报价成交机会率" : "Fill-opportunity rate", percent(m1.maker_fill_opportunity_rate, 2)],
-    [zh ? "紧急吃单率" : "Emergency taker rate", percent(m1.emergency_taker_rate, 2)],
-    [zh ? "平均持有时间" : "Average holding time", `${number(m1.average_holding_seconds, 2)}${zh ? " 秒" : "s"}`],
-    [zh ? "最大绝对敞口" : "Maximum absolute exposure", percent(m1.maximum_absolute_exposure, 2)],
-    [zh ? "三十秒成交后价格变化" : "30-second post-fill markout", percent(m1.markout_30s, 4, true)],
-    [zh ? "利润因子" : "Profit factor", number(m1.profit_factor, 2)],
+    [zh ? "完整库存回合" : "Completed episodes", number(m1.episodeCount)],
+    [zh ? "报价成交机会率" : "Fill-opportunity rate", percent(m1.makerFillOpportunityRate, 2)],
+    [zh ? "紧急吃单率" : "Emergency taker rate", percent(m1.emergencyTakerRate, 2)],
+    [zh ? "平均持有时间" : "Average holding time", `${number(m1.averageHoldingSeconds, 2)}${zh ? " 秒" : "s"}`],
+    [zh ? "最大绝对敞口" : "Maximum absolute exposure", percent(m1.maximumAbsoluteExposure, 2)],
   ];
   el("executionFacts").innerHTML = facts
     .map(([label, value]) => `<article><span>${escapeHtml(label)}</span><strong>${escapeHtml(value)}</strong></article>`)
@@ -894,15 +953,10 @@ function heatColor(value, min, max) {
 function renderRegimes() {
   const d = state.data;
   const prediction = new Map(d.prediction.regimes.map((row) => [`${row.volatility}|${row.liquidity}`, row]));
-  const execution = new Map(d.marketMaking.regimes.map((row) => [`${row.volatility}|${row.liquidity}`, row]));
   const volatilities = ["low", "medium", "high"];
   const liquidities = ["ample", "normal", "tight"];
   const values = volatilities.flatMap((volatility) =>
-    liquidities.map((liquidity) =>
-      state.regimeView === "prediction"
-        ? prediction.get(`${volatility}|${liquidity}`).rankIc
-        : execution.get(`${volatility}|${liquidity}`).return,
-    ),
+    liquidities.map((liquidity) => prediction.get(`${volatility}|${liquidity}`).rankIc),
   );
   const min = Math.min(...values);
   const max = Math.max(...values);
@@ -916,18 +970,10 @@ function renderRegimes() {
     liquidities.forEach((liquidity) => {
       const key = `${volatility}|${liquidity}`;
       const pred = prediction.get(key);
-      const exec = execution.get(key);
-      const value = state.regimeView === "prediction" ? pred.rankIc : exec.return;
+      const value = pred.rankIc;
       const style = heatColor(value, min, max);
-      const primary = state.regimeView === "prediction" ? number(value, 4) : percent(value, 2, true);
-      const secondary =
-        state.regimeView === "prediction"
-          ? zh
-            ? `样本数 ${number(pred.sampleCount)}`
-            : `N=${number(pred.sampleCount)}`
-          : zh
-            ? `三十秒价格变化 ${percent(exec.markout30s, 4, true)}`
-            : `30s markout ${percent(exec.markout30s, 4, true)}`;
+      const primary = number(value, 4);
+      const secondary = zh ? `样本数 ${number(pred.sampleCount)}` : `N=${number(pred.sampleCount)}`;
       cells.push(
         `<div class="heatmap-cell" style="--heat-bg:${style.bg};--heat-border:${style.border};--heat-text:${style.text}"><strong>${primary}</strong><small>${secondary}</small></div>`,
       );
@@ -936,24 +982,25 @@ function renderRegimes() {
   el("regimeHeatmap").innerHTML = cells.join("");
   text(
     "regimeLegend",
-    state.regimeView === "prediction"
-      ? zh
-        ? `秩信息系数范围 ${number(min, 4)} 至 ${number(max, 4)}；九种状态全部为正。`
-        : `Rank IC range ${number(min, 4)} to ${number(max, 4)}; all nine regimes are positive.`
-      : zh
-        ? `仿真收益范围 ${percent(min, 2, true)} 至 ${percent(max, 2, true)}；高波动状态为负。`
-        : `Simulated-return range ${percent(min, 2, true)} to ${percent(max, 2, true)}; high-volatility regimes are negative.`,
+    zh
+      ? `日度秩信息系数范围 ${number(min, 4)} 至 ${number(max, 4)}；九种状态全部为正。`
+      : `Mean daily Rank IC ranges from ${number(min, 4)} to ${number(max, 4)}; all nine regimes are positive.`,
   );
 
   el("regimeTable").innerHTML = tableMarkup(
     zh
-      ? ["波动率", "流动性", "预测 Rank IC", "仿真收益", "三十秒成交后价格变化"]
-      : ["Volatility", "Liquidity", "Prediction Rank IC", "Simulated return", "30s post-fill markout"],
+      ? ["波动率", "流动性", "日度秩信息系数均值", "正值天数占比", "样本数"]
+      : ["Volatility", "Liquidity", "Mean daily Rank IC", "Positive-day share", "Sample count"],
     volatilities.flatMap((volatility) =>
       liquidities.map((liquidity) => {
         const pred = prediction.get(`${volatility}|${liquidity}`);
-        const exec = execution.get(`${volatility}|${liquidity}`);
-        return [languageName(volatility), languageName(liquidity), number(pred.rankIc, 4), percent(exec.return, 2, true), percent(exec.markout30s, 4, true)];
+        return [
+          languageName(volatility),
+          languageName(liquidity),
+          number(pred.rankIc, 4),
+          percent(pred.positiveDayShare, 1),
+          number(pred.sampleCount),
+        ];
       }),
     ),
   );
@@ -1012,18 +1059,18 @@ function renderMethods() {
 
   const rows = zh
     ? [
-        ["三十秒收益排序在全部九种冻结市场状态中为正。", "真实订单队列位置、部分成交或网络延迟分布。"],
-        ["微观结构信息相对低频背景具有独立预测增量。", "具体因子公式或对其他资产、交易所与期限的泛化。"],
-        ["执行感知目标在同信息集与同容量下提高经济效用。", "自定义目标在测试期提高方向准确率或 Rank IC。"],
-        ["模型偏斜相对对称挂单减少三十秒逆向选择。", "模型获得更高净收益或更高净夏普比率。"],
-        ["账户在冻结机构做市费率与一倍杠杆情景下盈利。", "个人账户费率资格、实盘收益或生产就绪系统。"],
+        ["三十秒收益排序在全部九种冻结市场状态中为正。", "对其他资产、交易所与预测期限的泛化。"],
+        ["微观结构信息相对低频背景具有独立预测增量。", "公开具体因子公式或把模型分数解释为已校准收益幅度。"],
+        ["执行感知目标在同信息集与同容量下提高经济效用。", "自定义目标在测试期进一步提高方向准确率或秩信息系数。"],
+        ["同控制条件下，模型报价偏斜降低三十秒逆向选择与最大回撤。", "零信号消融是单独优化的生产级做市策略。"],
+        ["只挂单、只减仓、一倍杠杆与敞口硬约束组成完整状态机。", "真实队列位置、部分成交、网络延迟、实盘收益或生产就绪。"],
       ]
     : [
-        ["Positive 30-second return ordering in all nine frozen market regimes.", "Real queue position, partial fills, or network-latency distributions."],
-        ["Independent predictive lift from microstructure over low-frequency context.", "Factor formulas or generalization to other assets, venues, or horizons."],
+        ["Positive 30-second return ordering in all nine frozen market regimes.", "Generalization to other assets, venues, or forecast horizons."],
+        ["Independent predictive lift from microstructure over low-frequency context.", "Public factor formulas or a calibrated expected-return magnitude."],
         ["Higher economic utility from the execution-aware objective at equal information and capacity.", "Higher test direction accuracy or Rank IC from the custom objective."],
-        ["Lower 30-second adverse selection from model skew versus symmetric quoting.", "Higher net return or higher net Sharpe than symmetric quoting."],
-        ["A profitable account under the frozen institutional fee scenario and 1× leverage.", "Personal fee eligibility, live profits, or production readiness."],
+        ["Lower 30-second adverse selection and maximum drawdown from model quote skew under common controls.", "A separately optimized production market maker represented by the zero-signal ablation."],
+        ["A complete state machine with post-only, reduce-only, 1× leverage, and hard exposure limits.", "Real queue position, partial fills, network latency, live profits, or production readiness."],
       ];
   el("boundaryRows").innerHTML = rows.map((row) => `<tr><td>${escapeHtml(row[0])}</td><td>${escapeHtml(row[1])}</td></tr>`).join("");
 }
@@ -1035,8 +1082,8 @@ function renderAll() {
   renderCoverage();
   renderObjective();
   renderMarketStats();
-  renderEquity();
-  renderAttribution();
+  renderModelEquity();
+  renderMarketEdge();
   renderExecutionFacts();
   renderRegimes();
   renderSystemStats();
@@ -1049,16 +1096,12 @@ function bindEvents() {
     state.traceIndex = Number(event.target.value);
     renderTrace();
   });
-  document.querySelectorAll("[data-regime-view]").forEach((button) => {
-    button.addEventListener("click", () => {
-      state.regimeView = button.dataset.regimeView;
-      document.querySelectorAll("[data-regime-view]").forEach((candidate) => {
-        const active = candidate === button;
-        candidate.classList.toggle("active", active);
-        candidate.setAttribute("aria-pressed", String(active));
-      });
-      renderRegimes();
-    });
+  let equityResizeTimer;
+  window.addEventListener("resize", () => {
+    window.clearTimeout(equityResizeTimer);
+    equityResizeTimer = window.setTimeout(() => {
+      if (state.data) renderModelEquity();
+    }, 120);
   });
 }
 
