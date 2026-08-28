@@ -17,10 +17,10 @@ const copy = {
     navExecution: "Execution",
     navSystem: "System",
     navLimits: "Boundaries",
-    heroEyebrow: "CHRONOLOGICAL OUT-OF-SAMPLE RESEARCH",
+    heroEyebrow: "BTC HIGH-FREQUENCY TRADING × MARKET MAKING",
     heroTitle: "Forecasting the next move is only useful when the order survives contact with the market.",
     heroLead:
-      "A point-in-time BTC perpetual research stack connecting tick trades and one-second order-book states to microstructure factors, an execution-aware tree model, and a constrained historical maker simulation.",
+      "A point-in-time BTC perpetual high-frequency trading and market-making research stack mapping tick trades and one-second L1/L10 states into microstructure factors, a 30-second execution-aware forecast, five-second quote decisions, and a constrained historical maker simulation.",
     heroCommand: "show --locked-evidence",
     metricAccuracy: "Extreme direction accuracy",
     metricRankIc: "Mean daily Rank IC",
@@ -162,10 +162,10 @@ const copy = {
     navExecution: "执行",
     navSystem: "系统",
     navLimits: "边界",
-    heroEyebrow: "按时间顺序划分的时间外研究",
+    heroEyebrow: "BTC 秒级高频交易 × 做市研究",
     heroTitle: "短期走势预测只有转化为经得住市场检验的订单，才具有交易意义。",
     heroLead:
-      "这套 BTC 永续合约研究系统用点时数据（Point-in-time Data，确保每次决策只读取当时已知信息）连接逐笔成交、一秒 L1/L10 盘口、市场微观结构因子、执行感知树模型与受约束的历史做市仿真。",
+      "一套点时正确（确保每次决策只读取当时已知信息）的 BTC 永续合约秒级高频交易与做市研究体系，将逐笔成交和一秒 L1/L10 盘口状态转化为市场微观结构因子、30 秒执行感知预测、5 秒报价决策与受约束的历史做市仿真。",
     heroCommand: "展示 --锁定证据",
     metricAccuracy: "极端方向准确率",
     metricRankIc: "日度秩信息系数均值",
@@ -446,11 +446,11 @@ function setLanguage(lang) {
   toggle.setAttribute("aria-pressed", String(lang === "zh"));
   toggle.setAttribute("aria-label", lang === "en" ? "切换为中文" : "Switch to English");
 
-  document.title = lang === "en" ? "BTC Microstructure Research" : "BTC 微观结构研究";
+  document.title = lang === "en" ? "BTC High-Frequency Trading & Market Making" : "BTC 秒级高频交易与做市研究";
   document.querySelector('meta[name="description"]').content =
     lang === "en"
-      ? "A verified BTC perpetual microstructure forecasting and constrained historical maker-simulation portfolio project."
-      : "经验证的 BTC 永续合约微观结构预测与受约束历史做市仿真项目。";
+      ? "Verified BTC perpetual high-frequency trading and market-making research using tick trades, one-second L1/L10 states, 30-second forecasts, and constrained historical simulation."
+      : "经验证的 BTC 永续合约秒级高频交易与做市研究：逐笔成交、一秒 L1/L10 盘口、30 秒预测及受约束历史仿真。";
 
   updateStaticAccessibility();
   if (state.data) renderAll();
@@ -474,7 +474,7 @@ function updateStaticAccessibility() {
 
   const ariaLabels = [
     [".site-header", zh ? "主导航" : "Primary navigation"],
-    [".brand", zh ? "BTC 微观结构研究首页" : "BTC Microstructure Research home"],
+    [".brand", zh ? "BTC 秒级高频交易与做市研究首页" : "BTC high-frequency trading and market-making research home"],
     [".desktop-nav", zh ? "研究章节" : "Research sections"],
     [".hero-tags", zh ? "研究范围" : "Research scope"],
     [".hero-terminal", zh ? "核心证据" : "Headline evidence"],
@@ -1067,7 +1067,7 @@ async function load() {
     const response = await fetch(DATA_URL, { cache: "no-store" });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const data = await response.json();
-    if (data.schemaVersion !== "btc_microstructure_public_showcase_v1") {
+    if (data.schemaVersion !== "1.0") {
       throw new Error("Unexpected public metric schema");
     }
     state.data = data;

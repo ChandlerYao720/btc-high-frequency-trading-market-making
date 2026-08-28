@@ -1,6 +1,6 @@
-# BTC Perpetual Microstructure Research
+# BTC High-Frequency Trading & Market-Making Research
 
-An English-first, instantly bilingual research showcase for short-horizon BTC/USDT perpetual forecasting, microstructure factors, an execution-aware LightGBM objective, and a constrained historical maker simulation.
+An English-first, instantly bilingual research showcase for BTC/USDT perpetual high-frequency trading and market making: tick trades, one-second L1/L10 states, a 30-second execution-aware forecast, five-second quote decisions, and a constrained historical maker simulation.
 
 ## Verified highlights
 

@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "btc_microstructure_public_showcase_v1",
+  "schemaVersion": "1.0",
   "evidence": {
     "evaluation": "chronological out-of-sample simulation",
     "market": "Gate BTC/USDT USDT-margined perpetual",
