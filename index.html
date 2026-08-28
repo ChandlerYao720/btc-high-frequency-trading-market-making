@@ -8,7 +8,7 @@
       content="High-frequency futures price prediction and market-making research using tick trades, one-second L1/L10 states, 30-second forecasts, and constrained historical simulation."
     />
     <meta name="color-scheme" content="dark" />
-    <meta name="theme-color" content="#07100c" />
+    <meta name="theme-color" content="#020617" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://chandleryao720.github.io/btc-high-frequency-trading-market-making/" />
     <meta property="og:title" content="High-Frequency Futures Price Prediction &amp; Market-Making Strategy" />
@@ -20,12 +20,12 @@
     <title>High-Frequency Futures Price Prediction &amp; Market-Making Strategy</title>
     <link
       rel="icon"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2307100c'/%3E%3Cpath d='M18 20l14 12-14 12M35 44h12' fill='none' stroke='%237fffc1' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23020617'/%3E%3Cpath d='M18 20l14 12-14 12M35 44h12' fill='none' stroke='%2322c55e' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&amp;family=Space+Mono:wght@400;700&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -37,7 +37,9 @@
     <header class="site-header" aria-label="Primary navigation">
       <a class="brand" href="#overview" aria-label="BTC high-frequency trading and market-making research home">
         <span class="brand-prompt" aria-hidden="true">$</span>
-        <span>btc.hft.market-making</span>
+        <span>BTC.PERP</span>
+        <span class="brand-divider" aria-hidden="true">//</span>
+        <span>HFT·MM</span>
       </a>
       <nav class="desktop-nav" aria-label="Research sections">
         <a href="#factors" data-i18n="navSignals">Signals</a>
@@ -58,10 +60,47 @@
       </button>
     </header>
 
+    <aside class="research-tape" aria-label="Locked research protocol">
+      <div class="section-shell tape-grid">
+        <div class="tape-symbol">
+          <span>GATE</span>
+          <strong>BTCUSDT.PERP</strong>
+          <em data-i18n="protocolState">LOCKED OOS</em>
+        </div>
+        <div class="protocol-cell">
+          <span data-i18n="protocolTargetLabel">TARGET</span>
+          <strong id="protocolTarget">MID RETURN / +1S→+31S</strong>
+        </div>
+        <div class="protocol-cell">
+          <span data-i18n="protocolDecisionLabel">DECISION</span>
+          <strong id="protocolDecision">5S QUOTE REFRESH</strong>
+        </div>
+        <div class="protocol-cell">
+          <span data-i18n="protocolModelLabel">MODEL PATH</span>
+          <strong>LIGHTGBM / B0→B1→M1</strong>
+        </div>
+        <div class="protocol-cell">
+          <span data-i18n="protocolOrdersLabel">ORDER MODE</span>
+          <strong id="protocolOrders">POST-ONLY / REDUCE-ONLY</strong>
+        </div>
+        <div class="protocol-cell">
+          <span data-i18n="protocolRiskLabel">RISK</span>
+          <strong id="protocolRisk">1× / −100%…+100%</strong>
+        </div>
+        <div class="protocol-cell protocol-test">
+          <span data-i18n="protocolTestLabel">TEST WINDOW</span>
+          <strong id="protocolTest">2025-04-01→2026-04-30</strong>
+        </div>
+      </div>
+    </aside>
+
     <main id="main">
       <section class="hero section-shell" id="overview" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="eyebrow" data-i18n="heroEyebrow">BTC/USDT PERPETUAL · ONE-SECOND RESEARCH</p>
+          <div class="hero-meta">
+            <p class="eyebrow" data-i18n="heroEyebrow">BTC/USDT PERPETUAL · ONE-SECOND RESEARCH</p>
+            <span class="evidence-status"><i aria-hidden="true"></i><span data-i18n="heroStatus">VERIFIED OOS EVIDENCE</span></span>
+          </div>
           <h1 id="hero-title" data-i18n="heroTitle">
             High-Frequency Futures Price Prediction &amp; Market-Making Strategy
           </h1>
@@ -74,17 +113,13 @@
             <a class="primary-action" href="#factors" data-i18n="heroSignalAction">Inspect prediction evidence</a>
             <a class="secondary-action" href="#market-making" data-i18n="heroMakerAction">Explore market-making research</a>
           </div>
-          <div class="hero-tags" aria-label="Research scope">
-            <span id="scopePeriod">Loading evaluation window…</span>
-            <span id="scopeLeverage">Loading leverage…</span>
-            <span id="scopeOrders">Loading order rules…</span>
-          </div>
         </div>
 
         <div class="hero-terminal" aria-label="Headline evidence">
           <div class="terminal-titlebar" aria-hidden="true">
             <span class="terminal-dot active"></span><span class="terminal-dot"></span><span class="terminal-dot"></span>
-            <span>evidence.log</span>
+            <span>research.snapshot</span>
+            <span class="terminal-session">OOS / 30S / 5S</span>
           </div>
           <div class="terminal-body">
             <div class="command"><span>$</span> <span data-i18n="heroCommand">show --locked-evidence</span></div>
@@ -109,6 +144,12 @@
                 <strong id="metricNetReturn">—</strong>
                 <small id="metricNetReturnContext">—</small>
               </article>
+            </div>
+            <div class="headline-submetrics" aria-label="Supporting headline statistics">
+              <article><span data-i18n="submetricAccuracyDelta">30S TAIL ΔACC VS B0</span><strong id="submetricAccuracyDelta">—</strong></article>
+              <article><span data-i18n="submetricRankIr">RANK IC IR</span><strong id="submetricRankIr">—</strong></article>
+              <article><span data-i18n="submetricPositiveDays">POSITIVE IC DAYS</span><strong id="submetricPositiveDays">—</strong></article>
+              <article><span data-i18n="submetricObservations">OOS OBSERVATIONS</span><strong id="submetricObservations">—</strong></article>
             </div>
             <p class="terminal-note" id="heroBoundary">Loading evidence boundary…</p>
           </div>
@@ -390,23 +431,23 @@
             <desc id="arch-desc">Four lanes distinguish data and features, training, live decisions, and execution with accounting.</desc>
             <defs>
               <pattern id="arch-dots" width="22" height="22" patternUnits="userSpaceOnUse">
-                <circle cx="11" cy="11" r="0.8" fill="rgba(245,245,245,.06)"></circle>
+                <circle cx="11" cy="11" r="0.8" fill="rgba(148,163,184,.08)"></circle>
               </pattern>
               <marker id="arch-arr-muted" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
-                <path d="M0,0 L8,4 L0,8 Z" fill="#8a9992"></path>
+                <path d="M0,0 L8,4 L0,8 Z" fill="#64748b"></path>
               </marker>
               <marker id="arch-arr-accent" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
-                <path d="M0,0 L8,4 L0,8 Z" fill="#7fffc1"></path>
+                <path d="M0,0 L8,4 L0,8 Z" fill="#22c55e"></path>
               </marker>
               <marker id="arch-arr-link" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
-                <path d="M0,0 L8,4 L0,8 Z" fill="#d8e4df"></path>
+                <path d="M0,0 L8,4 L0,8 Z" fill="#cbd5e1"></path>
               </marker>
             </defs>
-            <rect width="1280" height="720" rx="12" fill="#111714"></rect>
+            <rect width="1280" height="720" rx="6" fill="#07111f"></rect>
             <rect width="1280" height="720" rx="12" fill="url(#arch-dots)"></rect>
             <rect x="40" y="120" width="1200" height="96" fill="rgba(245,245,245,.018)"></rect>
             <rect x="40" y="344" width="1200" height="96" fill="rgba(245,245,245,.018)"></rect>
-            <g stroke="#29332e" stroke-width="1">
+            <g stroke="#1e293b" stroke-width="1">
               <line x1="40" y1="120" x2="1240" y2="120"></line>
               <line x1="40" y1="216" x2="1240" y2="216"></line>
               <line x1="40" y1="232" x2="1240" y2="232"></line>
@@ -419,7 +460,7 @@
               <line x1="152" y1="80" x2="152" y2="552"></line>
             </g>
 
-            <g class="arch-arrows" fill="none" stroke="#8a9992" stroke-width="2" marker-end="url(#arch-arr-muted)">
+            <g class="arch-arrows" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arch-arr-muted)">
               <path d="M308 168 H348"></path>
               <path d="M484 168 H524"></path>
               <path d="M416 204 V280 H524"></path>
@@ -429,11 +470,11 @@
               <path d="M836 392 H876"></path>
               <path d="M944 428 V468" stroke-dasharray="7 6"></path>
             </g>
-            <path d="M1012 504 H1052" fill="none" stroke="#7fffc1" stroke-width="3" marker-end="url(#arch-arr-accent)"></path>
-            <rect x="970" y="442" width="124" height="24" rx="4" fill="#111714"></rect>
+            <path d="M1012 504 H1052" fill="none" stroke="#22c55e" stroke-width="3" marker-end="url(#arch-arr-accent)"></path>
+            <rect x="970" y="442" width="124" height="24" rx="3" fill="#07111f"></rect>
             <text x="1032" y="459" text-anchor="middle" class="arch-arrow-label" data-i18n="archQuoteArrow">bounded quotes</text>
-            <path d="M1120 528 V560 H768 V528" fill="none" stroke="#d8e4df" stroke-width="2" marker-end="url(#arch-arr-link)"></path>
-            <path d="M836 504 H876" fill="none" stroke="#d8e4df" stroke-width="2" stroke-dasharray="7 6" marker-end="url(#arch-arr-link)"></path>
+            <path d="M1120 528 V560 H768 V528" fill="none" stroke="#cbd5e1" stroke-width="2" marker-end="url(#arch-arr-link)"></path>
+            <path d="M836 504 H876" fill="none" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="7 6" marker-end="url(#arch-arr-link)"></path>
 
             <g class="arch-steps">
               <g transform="translate(216 68)"><rect x="-22" y="-16" width="44" height="24" rx="12"></rect><text y="1">01</text><text y="30" data-i18n="archStep1">INGEST</text></g>
@@ -484,11 +525,11 @@
 
             <g class="arch-legend">
               <text x="48" y="636" data-i18n="archLegend">FLOW</text>
-              <line x1="152" y1="632" x2="200" y2="632" stroke="#8a9992" stroke-width="2" marker-end="url(#arch-arr-muted)"></line>
+              <line x1="152" y1="632" x2="200" y2="632" stroke="#64748b" stroke-width="2" marker-end="url(#arch-arr-muted)"></line>
               <text x="216" y="638" data-i18n="archLegendData">data / parameter handoff</text>
-              <line x1="468" y1="632" x2="516" y2="632" stroke="#7fffc1" stroke-width="3" marker-end="url(#arch-arr-accent)"></line>
+              <line x1="468" y1="632" x2="516" y2="632" stroke="#22c55e" stroke-width="3" marker-end="url(#arch-arr-accent)"></line>
               <text x="532" y="638" data-i18n="archLegendFocal">focal quote-to-fill path</text>
-              <line x1="820" y1="632" x2="868" y2="632" stroke="#d8e4df" stroke-width="2" marker-end="url(#arch-arr-link)"></line>
+              <line x1="820" y1="632" x2="868" y2="632" stroke="#cbd5e1" stroke-width="2" marker-end="url(#arch-arr-link)"></line>
               <text x="884" y="638" data-i18n="archLegendState">account state feedback</text>
             </g>
           </svg>

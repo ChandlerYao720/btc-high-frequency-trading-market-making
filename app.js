@@ -16,7 +16,15 @@ const copy = {
     navExecution: "Execution",
     navSystem: "System",
     navLimits: "Boundaries",
+    protocolState: "LOCKED OOS",
+    protocolTargetLabel: "TARGET",
+    protocolDecisionLabel: "DECISION",
+    protocolModelLabel: "MODEL PATH",
+    protocolOrdersLabel: "ORDER MODE",
+    protocolRiskLabel: "RISK",
+    protocolTestLabel: "TEST WINDOW",
     heroEyebrow: "BTC/USDT PERPETUAL · ONE-SECOND RESEARCH",
+    heroStatus: "VERIFIED OOS EVIDENCE",
     heroTitle: "High-Frequency Futures Price Prediction & Market-Making Strategy",
     heroLead:
       "A point-in-time research stack mapping tick trades and one-second L1/L10 states into market-microstructure factors, a mid-price simple-return forecast from executable t+1s to t+31s, five-second quote decisions, and constrained two-sided market-making simulation.",
@@ -27,6 +35,10 @@ const copy = {
     metricRankIc: "Mean daily Rank IC",
     metricThroughput: "Hot factor throughput",
     metricNetReturn: "Cumulative net return",
+    submetricAccuracyDelta: "30S TAIL ΔACC VS B0",
+    submetricRankIr: "RANK IC IR",
+    submetricPositiveDays: "POSITIVE IC DAYS",
+    submetricObservations: "OOS OBSERVATIONS",
     ribbonLabel: "VERIFIED RESEARCH SIGNAL",
     sectionReplay: "01 / EVENT WINDOW",
     replayTitle: "A score becomes a quote, a fill, and then inventory.",
@@ -169,7 +181,15 @@ const copy = {
     navExecution: "执行",
     navSystem: "系统",
     navLimits: "边界",
+    protocolState: "锁定时间外测试",
+    protocolTargetLabel: "预测目标",
+    protocolDecisionLabel: "决策频率",
+    protocolModelLabel: "模型路径",
+    protocolOrdersLabel: "订单模式",
+    protocolRiskLabel: "风险约束",
+    protocolTestLabel: "测试区间",
     heroEyebrow: "BTC/USDT 永续合约 · 秒级研究",
+    heroStatus: "已验证时间外证据",
     heroTitle: "期货合约高频价格预测与做市策略",
     heroLead:
       "一套点时正确（确保每次决策只读取当时已知信息）的研究体系，将逐笔成交和一秒 L1/L10 盘口状态转化为市场微观结构因子、从可执行时点 t+1 秒至 t+31 秒的中间价简单收益率预测、5 秒报价决策与受约束的双边做市仿真。",
@@ -180,6 +200,10 @@ const copy = {
     metricRankIc: "日度秩信息系数均值",
     metricThroughput: "热启动因子吞吐",
     metricNetReturn: "累计净收益",
+    submetricAccuracyDelta: "三十秒尾部准确率增量 / B0",
+    submetricRankIr: "秩信息系数信息比率",
+    submetricPositiveDays: "秩信息系数为正天数",
+    submetricObservations: "时间外观测数",
     ribbonLabel: "已验证的研究证据",
     sectionReplay: "01 / 事件窗口",
     replayTitle: "模型分数依次转化为报价、成交与库存。",
@@ -496,8 +520,9 @@ function updateStaticAccessibility() {
     [".site-header", zh ? "主导航" : "Primary navigation"],
     [".brand", zh ? "期货合约高频价格预测与做市策略首页" : "High-frequency futures price prediction and market-making strategy home"],
     [".desktop-nav", zh ? "研究章节" : "Research sections"],
-    [".hero-tags", zh ? "研究范围" : "Research scope"],
+    [".research-tape", zh ? "锁定研究协议" : "Locked research protocol"],
     [".hero-terminal", zh ? "核心证据" : "Headline evidence"],
+    [".headline-submetrics", zh ? "核心指标的补充统计" : "Supporting headline statistics"],
     [".hero-actions", zh ? "研究快捷入口" : "Research shortcuts"],
     [".evidence-ribbon", zh ? "主要结论解释" : "Primary interpretation"],
     [".chart-legend", zh ? "事件图例" : "Trace legend"],
@@ -523,22 +548,16 @@ function renderHero() {
   const a = mm.assumptions;
   const zh = state.lang === "zh";
 
+  text("protocolTarget", zh ? "中间价收益 / +1秒→+31秒" : "MID RETURN / +1S→+31S");
+  text("protocolDecision", zh ? `${number(d.evidence.decisionIntervalSeconds, 0)} 秒报价刷新` : `${number(d.evidence.decisionIntervalSeconds, 0)}S QUOTE REFRESH`);
+  text("protocolOrders", zh ? "只挂单 / 紧急只减仓" : "POST-ONLY / REDUCE-ONLY");
   text(
-    "scopePeriod",
+    "protocolRisk",
     zh
-      ? `时间外 ${d.evidence.testStart} → ${d.evidence.testEnd}`
-      : `OOS ${d.evidence.testStart} → ${d.evidence.testEnd}`,
+      ? `${number(a.leverage, 0)} 倍 / 敞口 ${percent(a.exposure_min, 0)}…+${percent(a.exposure_max, 0)}`
+      : `${number(a.leverage, 0)}× / ${percent(a.exposure_min, 0)}…+${percent(a.exposure_max, 0)}`,
   );
-  text(
-    "scopeLeverage",
-    zh
-      ? `${number(a.leverage, 0)} 倍杠杆 · 敞口 ${percent(a.exposure_min, 0)} 至 +${percent(a.exposure_max, 0)}`
-      : `${number(a.leverage, 0)}× leverage · exposure ${percent(a.exposure_min, 0)} to +${percent(a.exposure_max, 0)}`,
-  );
-  text(
-    "scopeOrders",
-    zh ? "正常只挂单 · 紧急只减仓" : "post-only normal · reduce-only emergency",
-  );
+  text("protocolTest", `${d.evidence.testStart}→${d.evidence.testEnd}`);
 
   text("metricAccuracy", percent(h.accuracy, 2));
   text(
@@ -568,6 +587,10 @@ function renderHero() {
       ? "时间外历史仿真 · Gate 机构做市费率情景 · 一倍杠杆"
       : "historical OOS · Gate institutional MM fee scenario · 1×",
   );
+  text("submetricAccuracyDelta", percentPoint(d.prediction.microstructureAccuracyDeltaPp, 2));
+  text("submetricRankIr", number(h.rankIcIr, 4));
+  text("submetricPositiveDays", `${percent(h.positiveDayShare, 1)} / ${number(h.rankIcDayCount)}D`);
+  text("submetricObservations", compact(d.data.eligibleSamples));
 
   text(
     "heroBoundary",
@@ -617,7 +640,7 @@ function renderTrace() {
     .filter(({ row }) => row.fill !== "none")
     .map(
       ({ row, index }) =>
-        `<circle cx="${x(index).toFixed(2)}" cy="${yPrice(row.midIndex).toFixed(2)}" r="2.6" fill="#edf7f1" aria-hidden="true"></circle>`,
+        `<circle cx="${x(index).toFixed(2)}" cy="${yPrice(row.midIndex).toFixed(2)}" r="2.6" fill="#e2e8f0" aria-hidden="true"></circle>`,
     )
     .join("");
   const selected = Math.min(state.traceIndex, trace.length - 1);
@@ -638,13 +661,13 @@ function renderTrace() {
     <text x="${margin.left - 8}" y="${yPrice(minPrice).toFixed(2)}" text-anchor="end">${number(minPrice, 4)}</text>
     <text x="${margin.left - 8}" y="${yScore(scoreAbs).toFixed(2)}" text-anchor="end">${signedNumber(scoreAbs, 3)}</text>
     <text x="${margin.left - 8}" y="${yScore(-scoreAbs).toFixed(2)}" text-anchor="end">${signedNumber(-scoreAbs, 3)}</text>
-    <path d="${bidPath}" fill="none" stroke="#8abfff" stroke-width="1.15" opacity=".72"></path>
-    <path d="${askPath}" fill="none" stroke="#8abfff" stroke-width="1.15" opacity=".72"></path>
-    <path d="${midPath}" fill="none" stroke="#7fffc1" stroke-width="2.25"></path>
-    <path d="${scorePath}" fill="none" stroke="#bea6ff" stroke-width="1.8"></path>
+    <path d="${bidPath}" fill="none" stroke="#38bdf8" stroke-width="1.15" opacity=".72"></path>
+    <path d="${askPath}" fill="none" stroke="#38bdf8" stroke-width="1.15" opacity=".72"></path>
+    <path d="${midPath}" fill="none" stroke="#22c55e" stroke-width="2.25"></path>
+    <path d="${scorePath}" fill="none" stroke="#a78bfa" stroke-width="1.8"></path>
     ${fillDots}
     <line class="focus-line" x1="${selectedX}" y1="${margin.top}" x2="${selectedX}" y2="${scoreBottom}"></line>
-    <circle cx="${selectedX}" cy="${yPrice(trace[selected].midIndex)}" r="4" fill="#07100c" stroke="#7fffc1" stroke-width="2"></circle>
+    <circle cx="${selectedX}" cy="${yPrice(trace[selected].midIndex)}" r="4" fill="#020617" stroke="#22c55e" stroke-width="2"></circle>
   `;
 
   const slider = el("traceCursor");
@@ -709,6 +732,8 @@ function renderFactors() {
         <dl>
           <div><dt>${zh ? "极端准确率" : "Extreme accuracy"}</dt><dd>${percent(model.accuracy, 2)}</dd></div>
           <div><dt>${zh ? "日度 Rank IC" : "Daily Rank IC"}</dt><dd>${number(model.rankIc, 4)}</dd></div>
+          <div><dt>${zh ? "Rank IC 信息比率" : "Rank IC IR"}</dt><dd>${number(model.rankIcIr, 4)}</dd></div>
+          <div><dt>${zh ? "正值天数占比" : "Positive IC days"}</dt><dd>${percent(model.positiveDayShare, 1)}</dd></div>
           <div><dt>${zh ? "经济效用" : "Economic utility"}</dt><dd>${scientific(model.economicUtility, 2)}</dd></div>
         </dl>
       </article>`,
@@ -747,10 +772,10 @@ function renderCoverage() {
     <desc id="coverage-desc">${zh ? "包含六个点的时间外覆盖率曲线。" : "A six-point out-of-sample coverage curve."}</desc>
     ${yTicks.map((tick) => `<line class="grid-line" x1="${margin.left}" y1="${y(tick)}" x2="${width - margin.right}" y2="${y(tick)}"></line><text x="${margin.left - 10}" y="${y(tick) + 4}" text-anchor="end">${percent(tick, 1)}</text>`).join("")}
     <line class="axis-line" x1="${margin.left}" y1="${height - margin.bottom}" x2="${width - margin.right}" y2="${height - margin.bottom}"></line>
-    <path d="${path}" fill="none" stroke="#7fffc1" stroke-width="2.5"></path>
+    <path d="${path}" fill="none" stroke="#22c55e" stroke-width="2.5"></path>
     ${points
       .map(
-        (row, index) => `<g><circle cx="${x(row.requestedCoverage)}" cy="${y(row.accuracy)}" r="${index === 0 ? 6 : 4}" fill="${index === 0 ? "#7fffc1" : "#07100c"}" stroke="#7fffc1" stroke-width="2"><title>${percent(row.requestedCoverage, 1)} · ${percent(row.accuracy, 2)} · N=${number(row.sampleCount)}</title></circle><text x="${x(row.requestedCoverage)}" y="${height - margin.bottom + 24}" text-anchor="middle">${percent(row.requestedCoverage, 1)}</text></g>`,
+        (row, index) => `<g><circle cx="${x(row.requestedCoverage)}" cy="${y(row.accuracy)}" r="${index === 0 ? 6 : 4}" fill="${index === 0 ? "#22c55e" : "#020617"}" stroke="#22c55e" stroke-width="2"><title>${percent(row.requestedCoverage, 1)} · ${percent(row.accuracy, 2)} · N=${number(row.sampleCount)}</title></circle><text x="${x(row.requestedCoverage)}" y="${height - margin.bottom + 24}" text-anchor="middle">${percent(row.requestedCoverage, 1)}</text></g>`,
       )
       .join("")}
     <text x="${width / 2}" y="${height - 9}" text-anchor="middle">${zh ? "预测覆盖率（对数坐标）" : "PREDICTION COVERAGE (LOG SCALE)"}</text>
@@ -856,11 +881,11 @@ function renderModelEquity() {
     <desc id="model-equity-desc">${zh ? "冻结费率与一倍杠杆下，仅展示模型策略的时间外历史净值。" : "Model-only historical out-of-sample equity under frozen fees and one-times leverage."}</desc>
     ${equityTicks.map((tick) => `<line class="grid-line" x1="${margin.left}" y1="${yEquity(tick)}" x2="${width - margin.right}" y2="${yEquity(tick)}"></line><text x="${margin.left - 10}" y="${yEquity(tick) + 4}" text-anchor="end">${number(tick, 0)}</text>`).join("")}
     <text x="${margin.left}" y="17">${zh ? "净值指数（初始值 100）" : "NET EQUITY INDEX (INITIAL 100)"}</text>
-    <path d="${equityPath}" fill="none" stroke="#7fffc1" stroke-width="2.6" vector-effect="non-scaling-stroke"></path>
-    <circle cx="${x(series.length - 1)}" cy="${yEquity(values.at(-1))}" r="4" fill="#7fffc1"></circle>
+    <path d="${equityPath}" fill="none" stroke="#22c55e" stroke-width="2.6" vector-effect="non-scaling-stroke"></path>
+    <circle cx="${x(series.length - 1)}" cy="${yEquity(values.at(-1))}" r="4" fill="#22c55e"></circle>
     <line class="grid-line" x1="${margin.left}" y1="${drawdownTop}" x2="${width - margin.right}" y2="${drawdownTop}"></line>
-    <path d="${drawdownArea}" fill="rgba(138,191,255,.11)"></path>
-    <path d="${drawdownPath}" fill="none" stroke="#8abfff" stroke-width="1.4" vector-effect="non-scaling-stroke"></path>
+    <path d="${drawdownArea}" fill="rgba(56,189,248,.11)"></path>
+    <path d="${drawdownPath}" fill="none" stroke="#38bdf8" stroke-width="1.4" vector-effect="non-scaling-stroke"></path>
     <text x="${margin.left}" y="${drawdownTop - 9}">${zh ? "日度回撤" : "DAILY DRAWDOWN"}</text>
     <text x="${margin.left - 10}" y="${drawdownBottom}" text-anchor="end">${number(minDrawdown, 2)}%</text>
     ${dateTicks.map((index) => `<text x="${x(index)}" y="${height - 12}" text-anchor="${index === 0 ? "start" : index === series.length - 1 ? "end" : "middle"}">${escapeHtml(series[index].date)}</text>`).join("")}
@@ -954,10 +979,10 @@ function heatColor(value, min, max) {
   const normalized = (value - min) / range;
   if (value < 0) {
     const alpha = 0.11 + (1 - normalized) * 0.18;
-    return { bg: `rgba(255,146,134,${alpha.toFixed(3)})`, border: "rgba(255,146,134,.42)", text: "#ffd2cc" };
+    return { bg: `rgba(251,113,133,${alpha.toFixed(3)})`, border: "rgba(251,113,133,.42)", text: "#fecdd3" };
   }
   const alpha = 0.07 + normalized * 0.23;
-  return { bg: `rgba(127,255,193,${alpha.toFixed(3)})`, border: "rgba(127,255,193,.38)", text: "#d9ffeb" };
+  return { bg: `rgba(34,197,94,${alpha.toFixed(3)})`, border: "rgba(34,197,94,.38)", text: "#dcfce7" };
 }
 
 function renderRegimes() {
